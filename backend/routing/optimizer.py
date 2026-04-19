@@ -54,20 +54,24 @@ class _State:
 def plan(
     graph: nx.MultiDiGraph,
     features: list[dict],
+    trailheads: list[dict],
     spec: TripSpec,
     beam_width: int = 8,
 ) -> Itinerary | None:
-    features_by_name: dict[str, dict] = {f["name"]: f for f in features}
-    if spec.start not in features_by_name:
+    trailheads_by_name: dict[str, dict] = {t["name"]: t for t in trailheads}
+    if spec.start not in trailheads_by_name:
         raise ValueError(
-            f"Unknown start feature '{spec.start}'. Must be a name in the features JSON."
+            f"Unknown start trailhead '{spec.start}'. "
+            f"Valid trailheads: {list(trailheads_by_name)}"
         )
     end_name = spec.end or spec.start
-    if end_name not in features_by_name:
-        raise ValueError(f"Unknown end feature '{end_name}'.")
+    if end_name not in trailheads_by_name:
+        raise ValueError(f"Unknown end trailhead '{end_name}'.")
 
-    start_node = features_by_name[spec.start]["node_id"]
-    end_node = features_by_name[end_name]["node_id"]
+    start_node = trailheads_by_name[spec.start]["node_id"]
+    end_node = trailheads_by_name[end_name]["node_id"]
+
+    features_by_name: dict[str, dict] = {f["name"]: f for f in features}
 
     # node_id -> list of features at that node (for path-hit detection)
     features_at_node: dict[int, list[dict]] = defaultdict(list)
@@ -99,6 +103,7 @@ def plan(
                 is_last_day=is_last_day,
                 is_penultimate_day=is_penultimate_day,
                 end_node=end_node,
+                end_name=end_name,
             )
 
             for camp in candidate_camps:
@@ -210,37 +215,42 @@ def _plan_day_hike(
 
 
 def _relabel_last_day_camp(itinerary: Itinerary, end_node: int, spec: TripSpec) -> None:
-    """When multiple curated features snap to the same graph node, the optimizer
-    may pick a neighbor's name as the last-day camp. Force the display name to
-    match the spec's declared end (or start, for loops)."""
+    """When the final day lands at the trailhead node, the optimizer may label
+    it with whichever feature happens to also snap to that node. Force the
+    display to match the declared trailhead for clarity."""
     if not itinerary.days:
         return
     end_name = spec.end or spec.start
     last_day = itinerary.days[-1]
-    if last_day.camp_node == end_node and last_day.camp_name != end_name:
+    if last_day.camp_node == end_node:
         last_day.camp_name = end_name
 
 
 def _candidate_camps_for_day(
-    graph, state, camps, target_m, is_last_day, is_penultimate_day, end_node,
+    graph, state, camps, target_m, is_last_day, is_penultimate_day, end_node, end_name,
 ):
     """Candidates for the next camp, filtered by straight-line plausibility.
 
-    On the penultimate day we additionally require the candidate to be within
-    loop-back range of end_node — without this, beam search happily commits to
-    camps that have no feasible return path, and then fails on the final day.
+    On the last day the candidate MUST land at the end trailhead node, which
+    is typically not in the features list, so we synthesize an end-of-trip
+    camp pointing at it. On the penultimate day we additionally require the
+    candidate to be within loop-back range of end_node — without this, beam
+    search happily commits to camps that have no feasible return path, and
+    then fails on the final day.
     """
+    if is_last_day:
+        # The "camp" at the end of the trip is just the trailhead — we don't
+        # literally camp at a parking lot. The optimizer treats it as the
+        # terminal node for the search.
+        return [{"name": end_name, "node_id": end_node, "category": "trailhead"}]
+
     max_straight = MAX_DAY_LENGTH_RATIO * target_m * STRAIGHT_LINE_SAFETY_FACTOR
     current = state.current_node
 
     candidates = []
     for camp in camps:
-        if is_last_day:
-            if camp["node_id"] != end_node:
-                continue
-        else:
-            if camp["node_id"] == end_node and state.days_done:
-                continue
+        if camp["node_id"] == end_node and state.days_done:
+            continue
         straight = haversine_m(graph, current, camp["node_id"])
         if straight > max_straight:
             continue

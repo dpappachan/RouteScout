@@ -34,8 +34,9 @@ async def lifespan(app: FastAPI):
     log.info("startup: preloading graph and features")
     STATE.load()
     log.info(
-        "ready: %d graph nodes, %d edges, %d features",
-        STATE.graph.number_of_nodes(), STATE.graph.number_of_edges(), len(STATE.features),
+        "ready: %d nodes, %d edges, %d features, %d trailheads",
+        STATE.graph.number_of_nodes(), STATE.graph.number_of_edges(),
+        len(STATE.features), len(STATE.trailheads),
     )
     yield
     log.info("shutdown")
@@ -79,8 +80,9 @@ async def planner_error_handler(request: Request, exc: PlannerError):
 @app.exception_handler(GenaiClientError)
 async def genai_error_handler(request: Request, exc: GenaiClientError):
     # 429 from Gemini = daily/RPM quota exhausted; surface clearly, don't
-    # bury it in a generic 500.
-    status_code = getattr(exc, "status_code", 500)
+    # bury it in a generic 500. `ClientError` stores the upstream status as
+    # `.code` (older SDKs) or `.status_code` (newer); check both.
+    status_code = getattr(exc, "status_code", None) or getattr(exc, "code", 500)
     if status_code == 429:
         log.warning("gemini quota exhausted")
         return JSONResponse(

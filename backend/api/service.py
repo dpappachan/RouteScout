@@ -29,7 +29,7 @@ def plan_from_prompt(prompt: str, *, beam_width: int) -> PlanResponse:
     log.info("planning: %r", prompt)
 
     t0 = time.perf_counter()
-    parsed_spec = parse(prompt, STATE.features)
+    parsed_spec = parse(prompt, STATE.features, STATE.trailheads)
     timings["parse"] = round(time.perf_counter() - t0, 3)
     log.info(
         "parsed start=%s days=%s miles/day=%s categories=%s",
@@ -40,7 +40,7 @@ def plan_from_prompt(prompt: str, *, beam_width: int) -> PlanResponse:
     spec = _to_trip_spec(parsed_spec)
 
     t0 = time.perf_counter()
-    itinerary = plan(STATE.graph, STATE.features, spec, beam_width=beam_width)
+    itinerary = plan(STATE.graph, STATE.features, STATE.trailheads, spec, beam_width=beam_width)
     timings["plan"] = round(time.perf_counter() - t0, 3)
 
     if itinerary is None:

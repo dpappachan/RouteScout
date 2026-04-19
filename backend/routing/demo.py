@@ -13,6 +13,7 @@ from pathlib import Path
 
 from backend.graph.build import DATA_DIR, build
 from backend.graph.features import FEATURES_PATH
+from backend.graph.trailheads import build_trailheads
 
 from .optimizer import plan
 from .plot import render_itinerary
@@ -28,13 +29,13 @@ PRESETS: dict[str, TripSpec] = {
     "lakes": TripSpec(
         days=3,
         miles_per_day=9,
-        start="Tuolumne Pass",
+        start="Tuolumne Meadows Ranger Station",
         preferred_categories=("lake",),
     ),
     "summits": TripSpec(
         days=3,
         miles_per_day=10,
-        start="Tuolumne Pass",
+        start="Cathedral Lakes trailhead",
         preferred_categories=("peak",),
     ),
 }
@@ -73,9 +74,10 @@ def run(preset: str, output_png: Path) -> Itinerary | None:
 
     graph = build()
     features = json.loads(FEATURES_PATH.read_text())
+    trailheads = build_trailheads()
 
     t0 = time.perf_counter()
-    it = plan(graph, features, spec, beam_width=12)
+    it = plan(graph, features, trailheads, spec, beam_width=12)
     elapsed = time.perf_counter() - t0
 
     if it is None:

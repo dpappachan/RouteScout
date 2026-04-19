@@ -13,6 +13,7 @@ from datetime import date
 
 from backend.graph.build import build
 from backend.graph.features import FEATURES_PATH
+from backend.graph.trailheads import build_trailheads
 
 
 class PlannerState:
@@ -20,6 +21,7 @@ class PlannerState:
         self._lock = threading.Lock()
         self._graph = None
         self._features: list[dict] | None = None
+        self._trailheads: list[dict] | None = None
         self._plans_today = 0
         self._counter_day = date.today()
 
@@ -29,6 +31,8 @@ class PlannerState:
                 self._graph = build()
             if self._features is None:
                 self._features = json.loads(FEATURES_PATH.read_text())
+            if self._trailheads is None:
+                self._trailheads = build_trailheads()
 
     @property
     def graph(self):
@@ -41,6 +45,12 @@ class PlannerState:
         if self._features is None:
             self.load()
         return self._features  # type: ignore[return-value]
+
+    @property
+    def trailheads(self) -> list[dict]:
+        if self._trailheads is None:
+            self.load()
+        return self._trailheads  # type: ignore[return-value]
 
     def bump_daily_counter(self) -> int:
         """Increment today's counter (resetting at midnight) and return new value."""

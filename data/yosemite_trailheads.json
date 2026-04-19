@@ -1,0 +1,121 @@
+[
+  {
+    "name": "Happy Isles",
+    "lat": 37.7326,
+    "lon": -119.5584,
+    "region": "Yosemite Valley",
+    "accesses": "Mist Trail, John Muir Trail, Vernal & Nevada Falls, Half Dome, Little Yosemite Valley"
+  },
+  {
+    "name": "Yosemite Falls trailhead",
+    "lat": 37.7428,
+    "lon": -119.5964,
+    "region": "Yosemite Valley",
+    "accesses": "Upper & Lower Yosemite Falls, Eagle Peak, Yosemite Point"
+  },
+  {
+    "name": "Bridalveil Fall trailhead",
+    "lat": 37.7196,
+    "lon": -119.6501,
+    "region": "Yosemite Valley",
+    "accesses": "Bridalveil Fall, Pohono Trail access"
+  },
+  {
+    "name": "Mirror Lake / Tenaya Canyon trailhead",
+    "lat": 37.7432,
+    "lon": -119.5477,
+    "region": "Yosemite Valley",
+    "accesses": "Mirror Lake, Snow Creek Trail, Tenaya Canyon"
+  },
+  {
+    "name": "Glacier Point",
+    "lat": 37.7284,
+    "lon": -119.5737,
+    "region": "South Rim",
+    "accesses": "Panorama Trail, Four Mile Trail, Pohono Trail, Illilouette Fall, Nevada Fall loop"
+  },
+  {
+    "name": "Taft Point trailhead",
+    "lat": 37.7133,
+    "lon": -119.5893,
+    "region": "South Rim",
+    "accesses": "Taft Point, Sentinel Dome, Pohono Trail"
+  },
+  {
+    "name": "Mariposa Grove trailhead",
+    "lat": 37.5032,
+    "lon": -119.6051,
+    "region": "Wawona",
+    "accesses": "Mariposa Grove, Wawona Point"
+  },
+  {
+    "name": "Chilnualna Falls trailhead",
+    "lat": 37.5449,
+    "lon": -119.6361,
+    "region": "Wawona",
+    "accesses": "Chilnualna Falls, Buena Vista Trail, Royal Arch Lake"
+  },
+  {
+    "name": "Tenaya Lake trailhead",
+    "lat": 37.8287,
+    "lon": -119.4483,
+    "region": "Tioga Road",
+    "accesses": "Tenaya Lake, Sunrise Lakes, Clouds Rest via Tenaya, Mildred Lake"
+  },
+  {
+    "name": "May Lake trailhead",
+    "lat": 37.8437,
+    "lon": -119.4941,
+    "region": "Tioga Road",
+    "accesses": "May Lake, Mount Hoffmann"
+  },
+  {
+    "name": "Cathedral Lakes trailhead",
+    "lat": 37.8764,
+    "lon": -119.3823,
+    "region": "Tuolumne Meadows",
+    "accesses": "Cathedral Lakes, Cathedral Peak, Sunrise, Echo Pass"
+  },
+  {
+    "name": "Lembert Dome / Dog Lake trailhead",
+    "lat": 37.8764,
+    "lon": -119.3527,
+    "region": "Tuolumne Meadows",
+    "accesses": "Lembert Dome, Dog Lake, Young Lakes, Glen Aulin, Soda Springs, Tuolumne Falls"
+  },
+  {
+    "name": "Elizabeth Lake trailhead",
+    "lat": 37.8722,
+    "lon": -119.3467,
+    "region": "Tuolumne Meadows",
+    "accesses": "Elizabeth Lake, Unicorn Peak"
+  },
+  {
+    "name": "Tuolumne Meadows Ranger Station",
+    "lat": 37.8755,
+    "lon": -119.3399,
+    "region": "Tuolumne Meadows",
+    "accesses": "Vogelsang, Rafferty Creek, Tuolumne Pass, Fletcher Lake, John Muir Trail south"
+  },
+  {
+    "name": "Mono Pass trailhead",
+    "lat": 37.8927,
+    "lon": -119.2795,
+    "region": "Tioga Pass",
+    "accesses": "Mono Pass, Spillway Lake, Helen Lake"
+  },
+  {
+    "name": "Dana Meadows trailhead",
+    "lat": 37.9097,
+    "lon": -119.2588,
+    "region": "Tioga Pass",
+    "accesses": "Mount Dana, Dana Lake, Gaylor Lakes"
+  },
+  {
+    "name": "Ten Lakes trailhead",
+    "lat": 37.8509,
+    "lon": -119.5209,
+    "region": "Tioga Road",
+    "accesses": "Ten Lakes, Grant Lakes, Ten Lakes Pass"
+  }
+]

@@ -23,25 +23,26 @@ class ParsedTripSpec(BaseModel):
         description="Target daily mileage. If the user gives a total, divide by days."
     )
     start: str = Field(
-        description="Starting feature name, chosen from the provided list of valid feature names."
+        description="Starting trailhead name (where the hiker parks the car), "
+        "chosen from the provided list of trailheads."
     )
     end: str | None = Field(
         default=None,
-        description="Ending feature name, or null for a loop back to start. "
+        description="Ending trailhead name, or null for a loop back to start. "
         "Loops are the default unless the user asks for a point-to-point or thru-hike.",
     )
     preferred_categories: list[str] = Field(
         default_factory=list,
         description=(
-            "Feature categories the hiker prefers. Valid values: "
+            "Feature categories the hiker wants to visit en-route. Valid values: "
             "peak, lake, waterfall, meadow, pass, viewpoint."
         ),
     )
     named_must_visit: list[str] = Field(
         default_factory=list,
         description=(
-            "Specific feature names the user mentioned by name. "
-            "Must come from the provided valid names list."
+            "Specific feature (destination) names the user mentioned by name. "
+            "Must come from the valid feature names list."
         ),
     )
     rationale: str = Field(
@@ -49,52 +50,73 @@ class ParsedTripSpec(BaseModel):
     )
 
 
-def _build_system_prompt(valid_names: list[str]) -> str:
+def _build_system_prompt(
+    trailheads: list[dict], feature_names: list[str]
+) -> str:
+    trailhead_lines = "\n".join(
+        f"  · {th['name']} ({th['region']}) — accesses: {th['accesses']}"
+        for th in trailheads
+    )
+    trailhead_names = [th["name"] for th in trailheads]
+
     return (
         "You turn natural-language hiking trip requests into structured trip "
-        "parameters for a route planner that operates within Yosemite National Park.\n"
-        "Always return a valid, plannable spec — never refuse because the prompt is "
-        "short or vague. Fill in sensible defaults for anything missing.\n\n"
+        "parameters for a route planner operating inside Yosemite National Park.\n"
+        "Always return a valid, plannable spec — never refuse because the prompt "
+        "is short or vague. Fill in sensible defaults for anything missing.\n\n"
+        "KEY CONCEPT: A trip begins and ends at a TRAILHEAD (a parking lot, "
+        "not a destination). The user might name a destination they want to "
+        "visit (e.g., 'hike to Half Dome') — in that case pick the trailhead "
+        "that actually accesses it (Happy Isles for Half Dome) and put the "
+        "destination in `named_must_visit`.\n\n"
         "Interpretation rules:\n"
-        "1. `days` is the total trip length in days. "
-        "'day hike', 'short', 'quick' → 1. "
-        "'overnight', '2 night / 3 day' → 3. "
-        "'weekend' → 2. "
-        "Missing → 2.\n"
-        "2. `miles_per_day` is the target daily mileage. "
-        "'easy', 'gentle', 'relaxed' → 5. "
-        "'moderate' → 8. "
-        "'hard', 'challenging', 'long' → 12. "
-        "If the user gives a total trip mileage, divide by days. "
-        "Missing → 7.\n"
-        "3. `start` MUST be an exact name from the valid feature names list below. "
-        "For a specific region name, pick the list feature inside that region. "
-        "For 'easy' / 'waterfalls' / no region given, prefer `Glacier Point` "
-        "(iconic, accessible, central). For 'Tuolumne' or 'high country', prefer "
-        "`Tuolumne Pass` or `Lembert Dome`. For 'peaks' / 'summits', prefer "
-        "`Tuolumne Pass` (richer surrounding peak network than Glacier Point).\n"
-        "4. Default to a loop (`end` = null) unless the user explicitly asks for "
-        "point-to-point or thru-hike.\n"
-        "5. `preferred_categories` values must be from: "
+        "1. `days` = trip length in days. 'day hike'/'short'/'quick' → 1. "
+        "'overnight'/'2 night 3 day' → 3. 'weekend' → 2. Missing → 2.\n"
+        "2. `miles_per_day` target daily mileage. 'easy'/'gentle' → 5. "
+        "'moderate' → 8. 'hard'/'challenging'/'long' → 12. If user gives total, "
+        "divide by days. Missing → 7.\n"
+        "3. `start` MUST be exactly one trailhead name from the list below. "
+        "Defaults when the region is vague:\n"
+        "   · 'easy', 'scenic', no region given → Glacier Point (iconic, "
+        "short day-hike access, good viewpoints)\n"
+        "   · 'Tuolumne', 'high country' → Lembert Dome / Dog Lake trailhead\n"
+        "   · 'waterfalls', 'valley' → Happy Isles (Mist Trail) or Yosemite "
+        "Falls trailhead\n"
+        "   · 'peaks', 'summits' → Tuolumne Meadows Ranger Station or "
+        "Cathedral Lakes trailhead\n"
+        "   · 'Wawona area' → Chilnualna Falls trailhead\n"
+        "   · 'Tioga / Mount Dana / Mono Pass' → Mono Pass trailhead\n"
+        "4. Default to a loop (`end` = null). Only set `end` when the user "
+        "explicitly asks for point-to-point.\n"
+        "5. `preferred_categories` from: "
         f"{', '.join(VALID_CATEGORIES)}. "
-        "Infer from descriptors: 'waterfall'/'falls' → waterfall; "
-        "'lake'/'tarn'/'camp at lakes' → lake; 'peak'/'summit'/'dome' → peak; "
-        "'pass' → pass; 'scenic'/'view'/'overlook' → viewpoint; "
-        "'meadow' → meadow.\n"
-        "6. `named_must_visit` must only contain exact names from the valid "
-        "names list, and only when the user names a specific place.\n"
-        "7. `rationale` briefly explains the choices you made, especially the "
-        "defaults you filled in when the prompt was vague.\n\n"
-        "Valid feature names (pick `start`, `end`, and any `named_must_visit` from this list):\n"
-        + ", ".join(valid_names)
+        "'waterfall'/'falls' → waterfall; 'lake'/'camp at lakes' → lake; "
+        "'peak'/'summit'/'dome' → peak; 'pass' → pass; "
+        "'scenic'/'view'/'overlook' → viewpoint; 'meadow' → meadow.\n"
+        "6. `named_must_visit`: only if the user names a specific destination. "
+        "Must come exactly from the feature names list below.\n"
+        "7. `rationale`: briefly say which defaults you filled and why the "
+        "trailhead choice fits the request.\n\n"
+        "TRAILHEADS (the `start` must be an exact name from this list):\n"
+        f"{trailhead_lines}\n\n"
+        "Valid destination feature names for `named_must_visit`:\n"
+        + ", ".join(feature_names)
+        + "\n\nNote: some trailhead names overlap with feature names "
+        f"(like Glacier Point). When this happens, `start` uses the trailhead; "
+        "`named_must_visit` uses the feature."
     )
 
 
-def parse(user_prompt: str, available_features: list[dict]) -> ParsedTripSpec:
-    valid_names = sorted({f["name"] for f in available_features})
-    valid_name_set = set(valid_names)
+def parse(
+    user_prompt: str,
+    available_features: list[dict],
+    trailheads: list[dict],
+) -> ParsedTripSpec:
+    feature_names = sorted({f["name"] for f in available_features})
+    feature_name_set = set(feature_names)
+    trailhead_name_set = {th["name"] for th in trailheads}
 
-    system = _build_system_prompt(valid_names)
+    system = _build_system_prompt(trailheads, feature_names)
 
     resp = client().models.generate_content(
         model=MODEL_ID,
@@ -108,15 +130,16 @@ def parse(user_prompt: str, available_features: list[dict]) -> ParsedTripSpec:
 
     parsed: ParsedTripSpec = resp.parsed
 
-    if parsed.start not in valid_name_set:
+    if parsed.start not in trailhead_name_set:
         raise ValueError(
-            f"Parser chose start='{parsed.start}', which is not a valid feature name."
+            f"Parser chose start='{parsed.start}', which is not a valid "
+            "trailhead name. Valid starts are Yosemite trailheads only."
         )
-    if parsed.end is not None and parsed.end not in valid_name_set:
+    if parsed.end is not None and parsed.end not in trailhead_name_set:
         raise ValueError(
-            f"Parser chose end='{parsed.end}', which is not a valid feature name."
+            f"Parser chose end='{parsed.end}', which is not a valid trailhead name."
         )
-    parsed.named_must_visit = [n for n in parsed.named_must_visit if n in valid_name_set]
+    parsed.named_must_visit = [n for n in parsed.named_must_visit if n in feature_name_set]
     parsed.preferred_categories = [
         c for c in parsed.preferred_categories if c in VALID_CATEGORIES
     ]
