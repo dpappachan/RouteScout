@@ -53,8 +53,10 @@ class ParsedTripSpec(BaseModel):
 def _build_system_prompt(
     trailheads: list[dict], feature_names: list[str]
 ) -> str:
+    # IMPORTANT: format such that the LLM cannot copy the description as part
+    # of the name. Bare name first, then description as a separate clause.
     trailhead_lines = "\n".join(
-        f"  · {th['name']} ({th['region']}) — accesses: {th['accesses']}"
+        f"  · \"{th['name']}\" — region: {th['region']}; accesses: {th['accesses']}"
         for th in trailheads
     )
     trailhead_names = [th["name"] for th in trailheads]
@@ -97,13 +99,31 @@ def _build_system_prompt(
         "Must come exactly from the feature names list below.\n"
         "7. `rationale`: briefly say which defaults you filled and why the "
         "trailhead choice fits the request.\n\n"
-        "TRAILHEADS (the `start` must be an exact name from this list):\n"
+        "TRAILHEADS — `start` and `end` must be the bare name in quotes "
+        "below, with NO parenthetical region or extra text appended:\n"
         f"{trailhead_lines}\n\n"
         "Valid destination feature names for `named_must_visit`:\n"
         + ", ".join(feature_names)
         + "\n\nNote: some trailhead names overlap with feature names "
         f"(like Glacier Point). When this happens, `start` uses the trailhead; "
         "`named_must_visit` uses the feature."
+    )
+
+
+def _resolve_trailhead_name(name: str, valid: set[str]) -> str:
+    """Tolerant lookup. The LLM occasionally appends a parenthetical region
+    or quotes the name; strip those before failing validation."""
+    if name in valid:
+        return name
+    cleaned = name.split("(")[0].strip().strip('"').strip("'").strip()
+    if cleaned in valid:
+        return cleaned
+    cleaned_lower = cleaned.lower()
+    for v in valid:
+        if v.lower() == cleaned_lower:
+            return v
+    raise ValueError(
+        f"Parser chose start/end={name!r}, which is not a valid trailhead name."
     )
 
 
@@ -130,15 +150,9 @@ def parse(
 
     parsed: ParsedTripSpec = resp.parsed
 
-    if parsed.start not in trailhead_name_set:
-        raise ValueError(
-            f"Parser chose start='{parsed.start}', which is not a valid "
-            "trailhead name. Valid starts are Yosemite trailheads only."
-        )
-    if parsed.end is not None and parsed.end not in trailhead_name_set:
-        raise ValueError(
-            f"Parser chose end='{parsed.end}', which is not a valid trailhead name."
-        )
+    parsed.start = _resolve_trailhead_name(parsed.start, trailhead_name_set)
+    if parsed.end is not None:
+        parsed.end = _resolve_trailhead_name(parsed.end, trailhead_name_set)
     parsed.named_must_visit = [n for n in parsed.named_must_visit if n in feature_name_set]
     parsed.preferred_categories = [
         c for c in parsed.preferred_categories if c in VALID_CATEGORIES
