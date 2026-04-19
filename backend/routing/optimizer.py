@@ -40,6 +40,17 @@ MAX_DAY_LENGTH_RATIO = 2.0
 # This is a 10x speedup on a 151-feature search space.
 STRAIGHT_LINE_SAFETY_FACTOR = 1.0
 
+# A real backpacker camps near water, on flat ground — not on summits or
+# clifftop viewpoints. OSM categories with reliable water + camp-able
+# terrain in Yosemite are lakes and meadows.
+CAMP_CATEGORIES = frozenset({"lake", "meadow"})
+
+# Penalty for walking trail segments already used on a previous day. Scaled
+# by overlap fraction (0–1) so the strongest possible penalty per day is
+# this constant. Set high enough to break ties decisively but not so high
+# that the search refuses geographically necessary out-and-back returns.
+EDGE_REUSE_PENALTY = 3.0
+
 
 @dataclass
 class _State:
@@ -49,6 +60,8 @@ class _State:
     total_gain_m: float = 0.0
     score: float = 0.0
     visited_camp_nodes: frozenset[int] = field(default_factory=frozenset)
+    # frozenset of canonicalized (min(u,v), max(u,v)) edge keys we've walked
+    visited_edges: frozenset = field(default_factory=frozenset)
 
 
 def plan(
@@ -84,7 +97,7 @@ def plan(
     if spec.days == 1 and spec.is_loop:
         return _plan_day_hike(graph, features, features_by_name, features_at_node, spec, start_node)
 
-    camps = list(features)  # every feature is a legal overnight stop
+    camps = [f for f in features if f["category"] in CAMP_CATEGORIES]
 
     target_m = spec.target_m_per_day
     beam: list[_State] = [_State(current_node=start_node)]
@@ -280,6 +293,13 @@ def _append_day(state, day, spec, target_m, is_last_day, camp_node) -> _State:
         # bonus for cleanly closing a loop (camp_node == end_node is already
         # enforced in candidate filtering, but emphasize it in score)
         added_score += 2.0
+
+    new_edges = _path_edges(day.path)
+    overlap = new_edges & state.visited_edges
+    if new_edges:
+        overlap_fraction = len(overlap) / len(new_edges)
+        added_score -= overlap_fraction * EDGE_REUSE_PENALTY
+
     return _State(
         current_node=day.camp_node,
         days_done=state.days_done + [day],
@@ -287,6 +307,15 @@ def _append_day(state, day, spec, target_m, is_last_day, camp_node) -> _State:
         total_gain_m=state.total_gain_m + day.gain_m,
         score=state.score + added_score,
         visited_camp_nodes=state.visited_camp_nodes | {camp_node},
+        visited_edges=state.visited_edges | new_edges,
+    )
+
+
+def _path_edges(path: list[int]) -> frozenset:
+    """Canonicalized undirected edge set for a path. Direction-independent so
+    walking A→B then B→A counts as 100% overlap."""
+    return frozenset(
+        (min(u, v), max(u, v)) for u, v in zip(path[:-1], path[1:])
     )
 
 
