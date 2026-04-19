@@ -133,7 +133,21 @@ def plan(
         next_beam.sort(key=lambda s: s.score, reverse=True)
         beam = next_beam[:beam_width]
 
-    return _state_to_itinerary(beam[0])
+    itinerary = _state_to_itinerary(beam[0])
+    _relabel_last_day_camp(itinerary, end_node, spec)
+    return itinerary
+
+
+def _relabel_last_day_camp(itinerary: Itinerary, end_node: int, spec: TripSpec) -> None:
+    """When multiple curated features snap to the same graph node, the optimizer
+    may pick a neighbor's name as the last-day camp. Force the display name to
+    match the spec's declared end (or start, for loops)."""
+    if not itinerary.days:
+        return
+    end_name = spec.end or spec.start
+    last_day = itinerary.days[-1]
+    if last_day.camp_node == end_node and last_day.camp_name != end_name:
+        last_day.camp_name = end_name
 
 
 def _candidate_camps_for_day(
