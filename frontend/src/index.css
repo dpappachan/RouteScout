@@ -1,9 +1,18 @@
 @import "tailwindcss";
 @import "leaflet/dist/leaflet.css";
 
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+  --font-display: "Instrument Serif", ui-serif, Georgia, "Times New Roman", serif;
+  --color-brand: #166534;
+  --color-brand-soft: #dcfce7;
+}
+
 :root {
   color-scheme: light;
-  font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 html, body, #root {
@@ -14,8 +23,61 @@ html, body, #root {
 body {
   background: #fafaf9;
   color: #1c1917;
+  letter-spacing: -0.005em;
+}
+
+.font-display {
+  font-family: var(--font-display);
 }
 
 .leaflet-container {
   font-family: inherit;
+  background: #f5f5f4;
+}
+
+/* Custom marker styling — div-based icons don't inherit Leaflet's default shadow */
+.rs-marker {
+  background: transparent !important;
+  border: none !important;
+}
+.rs-marker-pin {
+  width: 28px;
+  height: 28px;
+  border-radius: 50% 50% 50% 0;
+  transform: rotate(-45deg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.25);
+  border: 2px solid white;
+}
+.rs-marker-pin > span {
+  transform: rotate(45deg);
+  font-weight: 600;
+  font-size: 12px;
+  color: white;
+}
+.rs-marker-start {
+  background: #1c1917;
+}
+.rs-marker-camp {
+  background: #dc2626;
+}
+
+/* Subtle fade-in for result blocks */
+@keyframes rs-fade-in {
+  from { opacity: 0; transform: translateY(4px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+.rs-fade {
+  animation: rs-fade-in 280ms ease-out both;
+}
+
+/* Loader pulse */
+@keyframes rs-pulse {
+  0%, 100% { opacity: 0.5; }
+  50% { opacity: 1; }
+}
+.rs-pulse {
+  animation: rs-pulse 1.2s ease-in-out infinite;
 }

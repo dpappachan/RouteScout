@@ -25,39 +25,53 @@ export function ElevationChart({ response }: Props) {
   const { data, boundaries } = buildSeries(response);
   if (data.length === 0) return null;
 
+  const minElev = Math.min(...data.map((d) => d.elevation_m));
+  const maxElev = Math.max(...data.map((d) => d.elevation_m));
+
   return (
     <div>
-      <div className="flex items-baseline justify-between mb-2">
-        <h3 className="text-sm font-medium text-stone-900">Elevation profile</h3>
-        <span className="text-xs text-stone-500">
-          {response.total_length_miles.toFixed(1)} mi · {response.total_gain_m} m gain
+      <div className="flex items-baseline justify-between mb-3">
+        <h3 className="text-xs font-semibold uppercase tracking-wider text-stone-500">
+          Elevation profile
+        </h3>
+        <span className="text-[11px] text-stone-400 font-mono">
+          {Math.round(minElev)}–{Math.round(maxElev)} m · {response.total_length_miles.toFixed(1)} mi
         </span>
       </div>
-      <ResponsiveContainer width="100%" height={160}>
-        <AreaChart data={data} margin={{ top: 6, right: 6, left: -10, bottom: 0 }}>
+      <ResponsiveContainer width="100%" height={140}>
+        <AreaChart data={data} margin={{ top: 6, right: 10, left: -6, bottom: 8 }}>
           <defs>
             <linearGradient id="elevFill" x1="0" y1="0" x2="0" y2="1">
-              <stop offset="0%" stopColor="#78716c" stopOpacity={0.6} />
-              <stop offset="100%" stopColor="#78716c" stopOpacity={0.05} />
+              <stop offset="0%" stopColor="#166534" stopOpacity={0.25} />
+              <stop offset="100%" stopColor="#166534" stopOpacity={0.02} />
             </linearGradient>
           </defs>
-          <CartesianGrid strokeDasharray="3 3" stroke="#e7e5e4" />
+          <CartesianGrid strokeDasharray="2 4" stroke="#e7e5e4" vertical={false} />
           <XAxis
             dataKey="miles"
             type="number"
             domain={[0, "dataMax"]}
-            tick={{ fontSize: 11, fill: "#78716c" }}
-            tickFormatter={(v: number) => v.toFixed(1)}
-            label={{ value: "miles", position: "insideBottom", offset: -2, fontSize: 11, fill: "#78716c" }}
+            tick={{ fontSize: 10, fill: "#78716c" }}
+            tickFormatter={(v: number) => `${v.toFixed(1)}`}
+            axisLine={{ stroke: "#e7e5e4" }}
+            tickLine={false}
           />
           <YAxis
-            tick={{ fontSize: 11, fill: "#78716c" }}
+            tick={{ fontSize: 10, fill: "#78716c" }}
             domain={["dataMin - 50", "dataMax + 50"]}
             tickFormatter={(v: number) => `${Math.round(v)}`}
-            label={{ value: "m", position: "insideLeft", offset: 14, fontSize: 11, fill: "#78716c" }}
+            axisLine={false}
+            tickLine={false}
+            width={40}
           />
           <Tooltip
-            contentStyle={{ fontSize: 12, borderRadius: 6, border: "1px solid #e7e5e4" }}
+            contentStyle={{
+              fontSize: 12,
+              borderRadius: 8,
+              border: "1px solid #e7e5e4",
+              padding: "6px 10px",
+              boxShadow: "0 2px 4px rgba(0,0,0,0.06)",
+            }}
             formatter={(val, name) => {
               if (name === "elevation_m") return [`${Math.round(Number(val))} m`, "elevation"];
               return [val as string | number, name];
@@ -67,7 +81,7 @@ export function ElevationChart({ response }: Props) {
           <Area
             type="monotone"
             dataKey="elevation_m"
-            stroke="#44403c"
+            stroke="#166534"
             strokeWidth={1.5}
             fill="url(#elevFill)"
             isAnimationActive={false}
@@ -77,11 +91,12 @@ export function ElevationChart({ response }: Props) {
               key={b.miles}
               x={b.miles}
               stroke={DAY_COLORS[(b.dayAfter - 1) % DAY_COLORS.length]}
-              strokeDasharray="4 2"
+              strokeDasharray="3 3"
+              strokeOpacity={0.8}
               label={{
-                value: `day ${b.dayAfter}`,
+                value: `d${b.dayAfter}`,
                 position: "insideTopRight",
-                fontSize: 10,
+                fontSize: 9,
                 fill: DAY_COLORS[(b.dayAfter - 1) % DAY_COLORS.length],
               }}
             />
@@ -100,15 +115,15 @@ function buildSeries(response: PlanResponse): {
   const boundaries: { miles: number; dayAfter: number }[] = [];
   let offset = 0;
   response.days.forEach((day, idx) => {
-    const { path_cumulative_miles: miles, path_elevations_m: elevs } = day;
-    for (let i = 0; i < miles.length; i++) {
+    const series = day.elevation_series;
+    for (const pt of series) {
       data.push({
-        miles: +(offset + miles[i]).toFixed(3),
-        elevation_m: elevs[i],
+        miles: +(offset + pt.miles).toFixed(3),
+        elevation_m: pt.elevation_m,
         day: day.day,
       });
     }
-    const dayEnd = offset + (miles[miles.length - 1] ?? 0);
+    const dayEnd = offset + (series[series.length - 1]?.miles ?? 0);
     if (idx < response.days.length - 1) {
       boundaries.push({ miles: dayEnd, dayAfter: day.day + 1 });
     }

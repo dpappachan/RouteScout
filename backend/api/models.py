@@ -10,7 +10,7 @@ from pydantic import BaseModel, Field
 
 class PlanRequest(BaseModel):
     prompt: str = Field(
-        min_length=5,
+        min_length=1,
         max_length=500,
         description="Natural-language hiking trip request.",
     )
@@ -23,6 +23,11 @@ class FeatureInfo(BaseModel):
     lon: float
 
 
+class ElevationPoint(BaseModel):
+    miles: float
+    elevation_m: float
+
+
 class DayPlan(BaseModel):
     day: int
     length_miles: float
@@ -30,9 +35,11 @@ class DayPlan(BaseModel):
     camp_name: str
     camp_lat: float
     camp_lon: float
-    path_coords: list[tuple[float, float]]        # [(lat, lon), ...] for map
-    path_elevations_m: list[float]                 # elevation at each coord, meters
-    path_cumulative_miles: list[float]             # distance from start, miles, per coord
+    # Detailed polyline that follows every turn of the OSM trail geometry.
+    path_coords: list[tuple[float, float]]   # [(lat, lon), ...]
+    # Elevation samples at node-resolution (sparser than path_coords because
+    # elevation is node-attached, not per-segment).
+    elevation_series: list[ElevationPoint]
     features_passed: list[FeatureInfo]
 
 

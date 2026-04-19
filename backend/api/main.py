@@ -15,6 +15,8 @@ from slowapi import Limiter
 from slowapi.errors import RateLimitExceeded
 from slowapi.util import get_remote_address
 
+from google.genai.errors import ClientError as GenaiClientError
+
 from .config import settings
 from .models import ErrorResponse, HealthResponse, PlanRequest, PlanResponse
 from .service import PlannerError, plan_from_prompt
@@ -71,6 +73,49 @@ async def planner_error_handler(request: Request, exc: PlannerError):
     return JSONResponse(
         status_code=status.HTTP_422_UNPROCESSABLE_ENTITY,
         content=ErrorResponse(error="no_plan", detail=str(exc)).model_dump(),
+    )
+
+
+@app.exception_handler(GenaiClientError)
+async def genai_error_handler(request: Request, exc: GenaiClientError):
+    # 429 from Gemini = daily/RPM quota exhausted; surface clearly, don't
+    # bury it in a generic 500.
+    status_code = getattr(exc, "status_code", 500)
+    if status_code == 429:
+        log.warning("gemini quota exhausted")
+        return JSONResponse(
+            status_code=status.HTTP_503_SERVICE_UNAVAILABLE,
+            content=ErrorResponse(
+                error="llm_quota",
+                detail=(
+                    "The Gemini free-tier quota is exhausted for now. "
+                    "This resets daily. Try again in a minute (per-minute limit) "
+                    "or tomorrow (daily limit)."
+                ),
+            ).model_dump(),
+        )
+    log.exception("gemini error on %s", request.url.path)
+    return JSONResponse(
+        status_code=status.HTTP_502_BAD_GATEWAY,
+        content=ErrorResponse(
+            error="llm_error",
+            detail="The language model request failed. Please try again.",
+        ).model_dump(),
+    )
+
+
+@app.exception_handler(ValueError)
+async def value_error_handler(request: Request, exc: ValueError):
+    # Parser validation failure (e.g., LLM returned a feature name not in our list)
+    log.warning("parser validation error on %s: %s", request.url.path, exc)
+    return JSONResponse(
+        status_code=status.HTTP_422_UNPROCESSABLE_ENTITY,
+        content=ErrorResponse(
+            error="parse_failed",
+            detail="I couldn't make sense of that prompt. Try something more "
+                   "specific — e.g., 'weekend loop at Tuolumne Pass' or "
+                   "'day hike to a waterfall'.",
+        ).model_dump(),
     )
 
 

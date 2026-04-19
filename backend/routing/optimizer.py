@@ -74,6 +74,12 @@ def plan(
     for f in features:
         features_at_node[f["node_id"]].append(f)
 
+    # Day-hike loops (days=1 + end=start) can't be planned by the usual
+    # multi-day beam search — a zero-length "segment from X to X" has no
+    # midpoint. Route them as out-and-back to a scenic destination instead.
+    if spec.days == 1 and spec.is_loop:
+        return _plan_day_hike(graph, features, features_by_name, features_at_node, spec, start_node)
+
     camps = list(features)  # every feature is a legal overnight stop
 
     target_m = spec.target_m_per_day
@@ -136,6 +142,71 @@ def plan(
     itinerary = _state_to_itinerary(beam[0])
     _relabel_last_day_camp(itinerary, end_node, spec)
     return itinerary
+
+
+def _plan_day_hike(
+    graph, features, features_by_name, features_at_node, spec, start_node,
+) -> Itinerary | None:
+    """Pick a scenic destination at roughly half the target distance from
+    start, route there and back, return as a single-day itinerary.
+
+    We score each candidate destination on (a) how close the round-trip is to
+    the target mileage, (b) how many preferred-category features the path
+    passes, with a bonus for the destination itself matching a preference.
+    """
+    target_m = spec.target_m_per_day
+    best: tuple[float, DaySegment] | None = None
+
+    for destination in features:
+        dest_node = destination["node_id"]
+        if dest_node == start_node:
+            continue
+        straight = haversine_m(graph, start_node, dest_node)
+        # straight-line from start to destination should be <= half of max
+        # round-trip; prune aggressively to keep this fast
+        if straight > MAX_DAY_LENGTH_RATIO * target_m / 2:
+            continue
+        try:
+            out_path = shortest_path(graph, start_node, dest_node)
+            back_path = shortest_path(graph, dest_node, start_node)
+        except nx.NetworkXNoPath:
+            continue
+
+        full_path = out_path + back_path[1:]
+        length_m = path_length_m(graph, full_path)
+        if length_m < MIN_DAY_LENGTH_RATIO * target_m:
+            continue
+        if length_m > MAX_DAY_LENGTH_RATIO * target_m:
+            continue
+
+        gain_m = path_elevation_gain_m(graph, full_path)
+        features_passed = _features_on_path(full_path, features_at_node)
+
+        day = DaySegment(
+            day_index=0,
+            path=full_path,
+            length_m=length_m,
+            gain_m=gain_m,
+            camp_node=start_node,
+            camp_name=spec.start,
+            features_passed=features_passed,
+        )
+        score = _score_day(day, spec, target_m)
+        if destination["category"] in spec.preferred_categories:
+            score += 1.5  # turnaround point matters more than a drive-by feature
+        if best is None or score > best[0]:
+            best = (score, day)
+
+    if best is None:
+        return None
+
+    _, day = best
+    return Itinerary(
+        days=[day],
+        total_length_m=day.length_m,
+        total_gain_m=day.gain_m,
+        score=best[0],
+    )
 
 
 def _relabel_last_day_camp(itinerary: Itinerary, end_node: int, spec: TripSpec) -> None:

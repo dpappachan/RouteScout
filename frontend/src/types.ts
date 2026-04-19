@@ -15,6 +15,11 @@ export interface FeatureInfo {
   lon: number;
 }
 
+export interface ElevationPoint {
+  miles: number;
+  elevation_m: number;
+}
+
 export interface DayPlan {
   day: number;
   length_miles: number;
@@ -22,9 +27,8 @@ export interface DayPlan {
   camp_name: string;
   camp_lat: number;
   camp_lon: number;
-  path_coords: [number, number][]; // [lat, lon]
-  path_elevations_m: number[];
-  path_cumulative_miles: number[];
+  path_coords: [number, number][]; // detailed [lat, lon] polyline
+  elevation_series: ElevationPoint[];
   features_passed: FeatureInfo[];
 }
 

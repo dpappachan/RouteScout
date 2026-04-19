@@ -1,7 +1,10 @@
 import { useCallback, useRef, useState } from "react";
 import { PlanError, postPlan } from "./api";
 import { ElevationChart } from "./components/ElevationChart";
+import { ErrorBanner } from "./components/ErrorBanner";
+import { Header } from "./components/Header";
 import { ItineraryPanel } from "./components/ItineraryPanel";
+import { LoadingState } from "./components/LoadingState";
 import { MapView } from "./components/MapView";
 import { NarrativeBlock } from "./components/NarrativeBlock";
 import { PromptBar } from "./components/PromptBar";
@@ -25,6 +28,7 @@ export default function App() {
     try {
       const result = await postPlan(text.trim(), controller.signal);
       setResponse(result);
+      setPrompt(text);
     } catch (err) {
       if (controller.signal.aborted) return;
       if (err instanceof PlanError) {
@@ -39,61 +43,61 @@ export default function App() {
     }
   }, [loading]);
 
-  const handleSample = useCallback((sample: string) => {
-    setPrompt(sample);
-    submit(sample);
-  }, [submit]);
+  const handleSample = useCallback(
+    (sample: string) => {
+      setPrompt(sample);
+      submit(sample);
+    },
+    [submit],
+  );
+
+  const hasResult = response !== null;
 
   return (
     <div className="min-h-screen flex flex-col">
-      <header className="border-b border-stone-200 bg-white">
-        <div className="max-w-7xl mx-auto px-6 py-5 flex items-center justify-between gap-4">
-          <div>
-            <div className="flex items-baseline gap-3">
-              <h1 className="text-2xl font-semibold tracking-tight text-stone-900">RouteScout</h1>
-              <span className="text-sm text-stone-500">
-                AI hiking route planner for Yosemite
-              </span>
-            </div>
+      <Header />
+
+      <main className="flex-1 max-w-7xl mx-auto w-full px-4 md:px-6 py-6">
+        {!hasResult && !loading && <WelcomePanel onSample={handleSample} />}
+
+        {loading && !hasResult && <LoadingState />}
+
+        {(hasResult || loading) && (
+          <div className="mb-6 rs-fade">
+            <PromptBar
+              prompt={prompt}
+              onChange={setPrompt}
+              onSubmit={submit}
+              loading={loading}
+              compact
+            />
           </div>
-          <a
-            href="https://github.com/dpappachan/RouteScout"
-            target="_blank"
-            rel="noreferrer"
-            className="text-sm text-stone-500 hover:text-stone-900 transition"
-          >
-            source →
-          </a>
-        </div>
-      </header>
+        )}
 
-      <div className="border-b border-stone-200 bg-white">
-        <div className="max-w-7xl mx-auto px-6 py-4">
-          <PromptBar
-            prompt={prompt}
-            onChange={setPrompt}
-            onSubmit={submit}
-            onSample={handleSample}
-            loading={loading}
-          />
-          {error && (
-            <div className="mt-3 rounded-md border border-red-200 bg-red-50 px-3 py-2 text-sm text-red-800">
-              {error}
-            </div>
-          )}
-        </div>
-      </div>
+        {!hasResult && (
+          <div className="max-w-3xl mx-auto mt-6">
+            <PromptBar
+              prompt={prompt}
+              onChange={setPrompt}
+              onSubmit={submit}
+              loading={loading}
+            />
+          </div>
+        )}
 
-      <main className="flex-1 max-w-7xl mx-auto w-full px-6 py-6">
-        {!response && !loading && <WelcomePanel onSample={handleSample} />}
+        {error && (
+          <div className="max-w-3xl mx-auto mt-3">
+            <ErrorBanner message={error} onDismiss={() => setError(null)} />
+          </div>
+        )}
 
-        {response && (
-          <div className="grid grid-cols-1 lg:grid-cols-5 gap-6">
+        {hasResult && response && (
+          <div className="grid grid-cols-1 lg:grid-cols-5 gap-5 rs-fade">
             <div className="lg:col-span-3 flex flex-col gap-4">
-              <div className="bg-white border border-stone-200 rounded-lg overflow-hidden h-[460px]">
+              <div className="bg-white border border-stone-200 rounded-xl overflow-hidden h-[500px] shadow-sm">
                 <MapView response={response} />
               </div>
-              <div className="bg-white border border-stone-200 rounded-lg p-4">
+              <div className="bg-white border border-stone-200 rounded-xl p-5 shadow-sm">
                 <ElevationChart response={response} />
               </div>
             </div>
@@ -103,19 +107,14 @@ export default function App() {
             </div>
           </div>
         )}
-
-        {loading && !response && (
-          <div className="text-center py-20">
-            <div className="inline-block h-8 w-8 animate-spin rounded-full border-2 border-stone-300 border-t-stone-900" />
-            <div className="mt-3 text-sm text-stone-500">Planning your trip…</div>
-          </div>
-        )}
       </main>
 
-      <footer className="border-t border-stone-200 bg-white">
-        <div className="max-w-7xl mx-auto px-6 py-3 text-xs text-stone-500 flex justify-between">
-          <span>Trail data: OpenStreetMap · Elevation: SRTM via Open-Elevation</span>
-          <span>Routing: A* + beam search · NL: Gemini 2.5 Flash</span>
+      <footer className="border-t border-stone-200/80 bg-white">
+        <div className="max-w-7xl mx-auto px-6 py-4 text-xs text-stone-500 flex flex-wrap gap-2 justify-between">
+          <span>
+            Trail data · OpenStreetMap · Elevation · SRTM / Open-Elevation
+          </span>
+          <span>Routing · A* + beam search · Language · Gemini 2.5 Flash</span>
         </div>
       </footer>
     </div>

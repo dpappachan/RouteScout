@@ -9,7 +9,7 @@ from pathlib import Path
 from dotenv import load_dotenv
 from google import genai
 
-MODEL_ID = "gemini-2.5-flash"
+MODEL_ID = os.environ.get("GEMINI_MODEL", "gemini-2.5-flash-lite").strip()
 
 
 @lru_cache(maxsize=1)
