@@ -62,6 +62,15 @@ def plan_from_prompt(prompt: str, *, beam_width: int) -> PlanResponse:
     return _build_response(prompt, parsed_spec, spec, itinerary, narrative, timings)
 
 
+def _cumulative_miles(graph, path: list[int]) -> list[float]:
+    miles = [0.0]
+    for u, v in zip(path[:-1], path[1:]):
+        edges = graph.get_edge_data(u, v)
+        length_m = min(d.get("length", 0.0) for d in edges.values()) if edges else 0.0
+        miles.append(round(miles[-1] + length_m / 1609.344, 3))
+    return miles
+
+
 def _to_trip_spec(parsed: ParsedTripSpec) -> TripSpec:
     return TripSpec(
         days=parsed.days,
@@ -81,7 +90,6 @@ def _build_response(
     narrative: str,
     timings: dict[str, float],
 ) -> PlanResponse:
-    features_by_node = {f["node_id"]: f for f in STATE.features}
     day_plans: list[DayPlan] = []
     for day in itinerary.days:
         camp = STATE.graph.nodes[day.camp_node]
@@ -89,6 +97,10 @@ def _build_response(
             (STATE.graph.nodes[n]["y"], STATE.graph.nodes[n]["x"])
             for n in day.path
         ]
+        elevations = [
+            float(STATE.graph.nodes[n].get("elevation") or 0.0) for n in day.path
+        ]
+        cumulative_miles = _cumulative_miles(STATE.graph, day.path)
         day_plans.append(
             DayPlan(
                 day=day.day_index + 1,
@@ -98,6 +110,8 @@ def _build_response(
                 camp_lat=camp["y"],
                 camp_lon=camp["x"],
                 path_coords=coords,
+                path_elevations_m=elevations,
+                path_cumulative_miles=cumulative_miles,
                 features_passed=[
                     FeatureInfo(name=f["name"], category=f["category"],
                                 lat=f["lat"], lon=f["lon"])

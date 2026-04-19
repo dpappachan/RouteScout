@@ -30,7 +30,9 @@ class DayPlan(BaseModel):
     camp_name: str
     camp_lat: float
     camp_lon: float
-    path_coords: list[tuple[float, float]]  # [(lat, lon), ...] for front-end map
+    path_coords: list[tuple[float, float]]        # [(lat, lon), ...] for map
+    path_elevations_m: list[float]                 # elevation at each coord, meters
+    path_cumulative_miles: list[float]             # distance from start, miles, per coord
     features_passed: list[FeatureInfo]
 
 
