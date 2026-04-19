@@ -56,3 +56,6 @@ build/
 
 # --- Personal planning notes (not for public repo) ---
 CONTEXT.md
+
+# --- Claude Code scratchpad ---
+.claude/
