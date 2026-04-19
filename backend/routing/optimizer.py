@@ -68,6 +68,7 @@ def plan(
     graph: nx.MultiDiGraph,
     features: list[dict],
     trailheads: list[dict],
+    camps: list[dict],
     spec: TripSpec,
     beam_width: int = 8,
 ) -> Itinerary | None:
@@ -97,7 +98,8 @@ def plan(
     if spec.days == 1 and spec.is_loop:
         return _plan_day_hike(graph, features, features_by_name, features_at_node, spec, start_node)
 
-    camps = [f for f in features if f["category"] in CAMP_CATEGORIES]
+    # `camps` is the precomputed terrain-based candidate list; nothing more
+    # to filter here.
 
     target_m = spec.target_m_per_day
     beam: list[_State] = [_State(current_node=start_node)]

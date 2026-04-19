@@ -12,6 +12,7 @@ import time
 from pathlib import Path
 
 from backend.graph.build import DATA_DIR, build
+from backend.graph.camps import build_camps
 from backend.graph.features import FEATURES_PATH
 from backend.graph.trailheads import build_trailheads
 
@@ -75,9 +76,10 @@ def run(preset: str, output_png: Path) -> Itinerary | None:
     graph = build()
     features = json.loads(FEATURES_PATH.read_text())
     trailheads = build_trailheads()
+    camps = build_camps()
 
     t0 = time.perf_counter()
-    it = plan(graph, features, trailheads, spec, beam_width=12)
+    it = plan(graph, features, trailheads, camps, spec, beam_width=12)
     elapsed = time.perf_counter() - t0
 
     if it is None:

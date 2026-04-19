@@ -14,6 +14,7 @@ import time
 from pathlib import Path
 
 from backend.graph.build import DATA_DIR, build
+from backend.graph.camps import build_camps
 from backend.graph.features import FEATURES_PATH
 from backend.graph.trailheads import build_trailheads
 from backend.llm.narrator import narrate
@@ -30,6 +31,7 @@ def _slug(text: str) -> str:
 def run(prompt: str, output_png: Path | None = None) -> None:
     features = json.loads(FEATURES_PATH.read_text())
     trailheads = build_trailheads()
+    camps = build_camps()
 
     print("---")
     print(f"Prompt: {prompt}")
@@ -56,7 +58,7 @@ def run(prompt: str, output_png: Path | None = None) -> None:
     print("\nLoading graph & planning...")
     graph = build()
     t0 = time.perf_counter()
-    itinerary = plan(graph, features, trailheads, spec, beam_width=12)
+    itinerary = plan(graph, features, trailheads, camps, spec, beam_width=12)
     print(f"  planned in {time.perf_counter() - t0:.2f}s")
 
     if itinerary is None:

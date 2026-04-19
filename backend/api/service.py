@@ -40,7 +40,10 @@ def plan_from_prompt(prompt: str, *, beam_width: int) -> PlanResponse:
     spec = _to_trip_spec(parsed_spec)
 
     t0 = time.perf_counter()
-    itinerary = plan(STATE.graph, STATE.features, STATE.trailheads, spec, beam_width=beam_width)
+    itinerary = plan(
+        STATE.graph, STATE.features, STATE.trailheads, STATE.camps, spec,
+        beam_width=beam_width,
+    )
     timings["plan"] = round(time.perf_counter() - t0, 3)
 
     if itinerary is None:
