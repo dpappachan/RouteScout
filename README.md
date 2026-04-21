@@ -2,8 +2,6 @@
 
 A natural-language hiking trip planner for the Sierra Nevada. You type something like *"3-day loop from Tuolumne camping at lakes, 9 miles a day"* and get back a routed map, a day-by-day breakdown, an elevation profile, the wilderness regulations you'll actually need, and a written trip plan.
 
-I built this after my first JMT section hike. The slow part of trip planning isn't the gear — it's deciding where to go, fitting it to a permit window, and stitching together the daily mileage. This is an attempt to make that part take 13 seconds.
-
 ![Trail graph](data/sierra_graph.png)
 
 ## How it works
