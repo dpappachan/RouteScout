@@ -1,4 +1,4 @@
-"""Render the Yosemite trail graph to a PNG, colored by node elevation, with
+"""Render the Sierra trail graph to a PNG, colored by node elevation, with
 curated feature nodes overlaid when available.
 
 Run directly:
@@ -12,10 +12,10 @@ from pathlib import Path
 import matplotlib.pyplot as plt
 import osmnx as ox
 
-from .build import DATA_DIR, build
-from .features import FEATURES_PATH
+from .build import DATA_DIR, PLACE, build
+from .features import features_path
 
-OUTPUT_PATH = DATA_DIR / "yosemite_graph.png"
+OUTPUT_PATH = DATA_DIR / "sierra_graph.png"
 
 # marker + color per feature category (matplotlib markers)
 CATEGORY_STYLE = {
@@ -29,9 +29,10 @@ CATEGORY_STYLE = {
 
 
 def _load_features() -> list[dict]:
-    if not FEATURES_PATH.exists():
+    p = features_path()
+    if not p.exists():
         return []
-    return json.loads(FEATURES_PATH.read_text())
+    return json.loads(p.read_text())
 
 
 def render(save_to: Path = OUTPUT_PATH) -> Path:
@@ -73,9 +74,9 @@ def render(save_to: Path = OUTPUT_PATH) -> Path:
             plotted_categories.add(feat["category"])
         ax.legend(loc="lower left", fontsize=8, frameon=True, title="features")
 
-    title = f"Yosemite trail graph — {graph.number_of_nodes():,} nodes, {graph.number_of_edges():,} edges"
+    title = f"{PLACE} — {graph.number_of_nodes():,} trail nodes, {graph.number_of_edges():,} edges"
     if features:
-        title += f"  ·  {len(features)} curated features"
+        title += f"  ·  {len(features)} features"
     ax.set_title(title)
 
     save_to.parent.mkdir(parents=True, exist_ok=True)

@@ -79,7 +79,11 @@ def run(preset: str, output_png: Path) -> Itinerary | None:
     camps = build_camps()
 
     t0 = time.perf_counter()
-    it = plan(graph, features, trailheads, camps, spec, beam_width=12)
+    it = None
+    for bw in (12, 24, 36):
+        it = plan(graph, features, trailheads, camps, spec, beam_width=bw)
+        if it:
+            break
     elapsed = time.perf_counter() - t0
 
     if it is None:

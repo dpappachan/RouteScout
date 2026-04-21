@@ -40,10 +40,18 @@ def plan_from_prompt(prompt: str, *, beam_width: int) -> PlanResponse:
     spec = _to_trip_spec(parsed_spec)
 
     t0 = time.perf_counter()
-    itinerary = plan(
-        STATE.graph, STATE.features, STATE.trailheads, STATE.camps, spec,
-        beam_width=beam_width,
-    )
+    # Adaptive beam: feature-preference scoring can push the top-K beam
+    # toward dead-end branches that fail the penultimate-day lookahead.
+    # Widen the beam progressively before declaring infeasibility.
+    itinerary = None
+    for bw in (beam_width, beam_width * 2, beam_width * 3):
+        itinerary = plan(
+            STATE.graph, STATE.features, STATE.trailheads, STATE.camps, spec,
+            beam_width=bw,
+        )
+        if itinerary is not None:
+            log.info("plan succeeded at beam_width=%d", bw)
+            break
     timings["plan"] = round(time.perf_counter() - t0, 3)
 
     if itinerary is None:

@@ -107,10 +107,9 @@ def plan(
     for day_idx in range(spec.days):
         is_last_day = day_idx == spec.days - 1
         is_penultimate_day = day_idx == spec.days - 2
-        # Real backpackers shorten travel-in/out days. For 3+ day trips we
-        # bias the per-day target so day 1 (drove in) and day N (drive out)
-        # are easier; middle days take the slack to keep total distance
-        # roughly proportional to the user's miles_per_day.
+        # Per-day mileage target: shorter on first/last day for 3+ day trips.
+        # Used ONLY in scoring — the candidate filter bands stay at the
+        # base target so we don't artificially shrink the search space.
         day_target_m = _per_day_target(target_m, day_idx, spec.days)
         next_beam: list[_State] = []
 
@@ -119,7 +118,7 @@ def plan(
                 graph=graph,
                 state=state,
                 camps=camps,
-                target_m=day_target_m,
+                target_m=target_m,
                 is_last_day=is_last_day,
                 is_penultimate_day=is_penultimate_day,
                 end_node=end_node,
@@ -137,9 +136,9 @@ def plan(
                 except nx.NetworkXNoPath:
                     continue
                 length_m = path_length_m(graph, path)
-                if length_m < MIN_DAY_LENGTH_RATIO * day_target_m:
+                if length_m < MIN_DAY_LENGTH_RATIO * target_m:
                     continue
-                if length_m > MAX_DAY_LENGTH_RATIO * day_target_m:
+                if length_m > MAX_DAY_LENGTH_RATIO * target_m:
                     continue
 
                 gain_m = path_elevation_gain_m(graph, path)
