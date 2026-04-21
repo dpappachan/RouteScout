@@ -8,6 +8,7 @@ import { LoadingState } from "./components/LoadingState";
 import { MapView } from "./components/MapView";
 import { NarrativeBlock } from "./components/NarrativeBlock";
 import { PromptBar } from "./components/PromptBar";
+import { RegulationsPanel } from "./components/RegulationsPanel";
 import { WelcomePanel } from "./components/WelcomePanel";
 import type { PlanResponse } from "./types";
 
@@ -16,6 +17,7 @@ export default function App() {
   const [response, setResponse] = useState<PlanResponse | null>(null);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
+  const [selectedDay, setSelectedDay] = useState<number | null>(null);
   const abortRef = useRef<AbortController | null>(null);
 
   const submit = useCallback(async (text: string) => {
@@ -25,6 +27,7 @@ export default function App() {
     abortRef.current = controller;
     setLoading(true);
     setError(null);
+    setSelectedDay(null);
     try {
       const result = await postPlan(text.trim(), controller.signal);
       setResponse(result);
@@ -74,7 +77,7 @@ export default function App() {
           </div>
         )}
 
-        {!hasResult && (
+        {!hasResult && !loading && (
           <div className="max-w-3xl mx-auto mt-6">
             <PromptBar
               prompt={prompt}
@@ -95,7 +98,7 @@ export default function App() {
           <div className="grid grid-cols-1 lg:grid-cols-5 gap-5 rs-fade">
             <div className="lg:col-span-3 flex flex-col gap-4">
               <div className="bg-white border border-stone-200 rounded-xl overflow-hidden h-[500px] shadow-sm">
-                <MapView response={response} />
+                <MapView response={response} selectedDay={selectedDay} />
               </div>
               <div className="bg-white border border-stone-200 rounded-xl p-5 shadow-sm">
                 <ElevationChart response={response} />
@@ -103,7 +106,12 @@ export default function App() {
             </div>
             <div className="lg:col-span-2 flex flex-col gap-4">
               <NarrativeBlock response={response} />
-              <ItineraryPanel response={response} />
+              <ItineraryPanel
+                response={response}
+                selectedDay={selectedDay}
+                onSelectDay={setSelectedDay}
+              />
+              <RegulationsPanel response={response} />
             </div>
           </div>
         )}
@@ -111,10 +119,15 @@ export default function App() {
 
       <footer className="border-t border-stone-200/80 bg-white">
         <div className="max-w-7xl mx-auto px-6 py-4 text-xs text-stone-500 flex flex-wrap gap-2 justify-between">
-          <span>
-            Trail data · OpenStreetMap · Elevation · SRTM / Open-Elevation
-          </span>
-          <span>Routing · A* + beam search · Language · Gemini 2.5 Flash</span>
+          <span>OpenStreetMap · OSMnx · NetworkX · Gemini · FastAPI · React</span>
+          <a
+            href="https://github.com/dpappachan/RouteScout"
+            target="_blank"
+            rel="noreferrer"
+            className="hover:text-stone-900 transition"
+          >
+            github.com/dpappachan/RouteScout
+          </a>
         </div>
       </footer>
     </div>

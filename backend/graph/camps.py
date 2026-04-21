@@ -33,6 +33,20 @@ MAX_WATER_DISTANCE_M = 700
 
 WATER_CATEGORIES = frozenset({"lake"})
 
+# Yosemite Wilderness rules: no camping within 4 trail-miles of these
+# developed areas (we approximate with straight-line buffer in meters).
+# This is a real NPS regulation, not arbitrary — the corridors around
+# Yosemite Valley, Tuolumne Meadows, Wawona, and Crane Flat are designated
+# day-use only for backpackers entering or leaving the wilderness.
+# Source: Yosemite Wilderness Permit and Trip Planner.
+DEVELOPED_AREA_BUFFERS = [
+    # name, lat, lon, buffer in meters (~4 trail-mi straight-line approximation)
+    ("Yosemite Valley", 37.7459, -119.5936, 6500),
+    ("Tuolumne Meadows", 37.8755, -119.3399, 4000),
+    ("Wawona",           37.5379, -119.6533, 3000),
+    ("Crane Flat",       37.7575, -119.7993, 3000),
+]
+
 
 def _haversine_m(lat1: float, lon1: float, lat2: float, lon2: float) -> float:
     R = 6_371_000.0
@@ -58,10 +72,18 @@ def _max_local_grade(graph, node) -> float:
     return max_g
 
 
+def _in_developed_area(lat: float, lon: float) -> str | None:
+    """Returns the name of the developed area containing this point, or None
+    if it's clear of all of them."""
+    for name, ar_lat, ar_lon, buffer_m in DEVELOPED_AREA_BUFFERS:
+        if _haversine_m(lat, lon, ar_lat, ar_lon) < buffer_m:
+            return name
+    return None
+
+
 def compute_camps(graph, features: list[dict]) -> list[dict]:
     """Return all trail-graph nodes that pass the terrain + water proximity
-    test. Each camp is a dict shaped like a feature so the optimizer can
-    treat them interchangeably.
+    test AND aren't inside an NPS developed-area exclusion zone.
     """
     water_features = [f for f in features if f["category"] in WATER_CATEGORIES]
 
@@ -73,6 +95,10 @@ def compute_camps(graph, features: list[dict]) -> list[dict]:
             continue
 
         node_lat, node_lon = data["y"], data["x"]
+
+        # NPS no-camp zones (Yosemite Valley, Tuolumne Meadows, etc.)
+        if _in_developed_area(node_lat, node_lon):
+            continue
 
         # nearest water feature
         best_water: dict | None = None

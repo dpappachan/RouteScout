@@ -42,14 +42,25 @@ export interface ParsedSpec {
   rationale: string;
 }
 
+export interface Regulations {
+  permit_required: boolean;
+  bear_canister_required: boolean;
+  notes: string[];
+}
+
+export type Difficulty = "easy" | "moderate" | "strenuous" | "very strenuous";
+
 export interface PlanResponse {
   prompt: string;
   parsed: ParsedSpec;
   total_length_miles: number;
   total_gain_m: number;
   score: number;
+  difficulty: Difficulty;
+  estimated_hours_per_day: number[];
   days: DayPlan[];
   narrative: string;
+  regulations: Regulations;
   elapsed_seconds: { parse: number; plan: number; narrate: number };
 }
 

@@ -1,21 +1,12 @@
-import { Mountain } from "lucide-react";
-
 export function Header() {
   return (
     <header className="border-b border-stone-200/80 bg-white/70 backdrop-blur-sm sticky top-0 z-[1000]">
       <div className="max-w-7xl mx-auto px-6 py-3.5 flex items-center justify-between gap-4">
-        <a href="/" className="flex items-center gap-2.5 group">
-          <span className="h-8 w-8 rounded-lg bg-brand flex items-center justify-center text-white shadow-sm">
-            <Mountain size={18} strokeWidth={2} />
+        <a href="/" className="flex items-baseline gap-2.5">
+          <span className="font-display text-xl tracking-tight text-stone-900">
+            RouteScout
           </span>
-          <div className="flex flex-col leading-tight">
-            <span className="font-display text-xl tracking-tight text-stone-900">
-              RouteScout
-            </span>
-            <span className="text-[11px] text-stone-500 -mt-0.5">
-              AI hiking planner · Yosemite
-            </span>
-          </div>
+          <span className="text-xs text-stone-500">Yosemite hiking route planner</span>
         </a>
         <a
           href="https://github.com/dpappachan/RouteScout"

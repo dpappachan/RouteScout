@@ -5,9 +5,11 @@ import type { PlanResponse } from "../types";
 
 interface Props {
   response: PlanResponse;
+  selectedDay: number | null;
+  onSelectDay: (day: number | null) => void;
 }
 
-export function ItineraryPanel({ response }: Props) {
+export function ItineraryPanel({ response, selectedDay, onSelectDay }: Props) {
   const [showParser, setShowParser] = useState(false);
   return (
     <section className="bg-white border border-stone-200 rounded-xl p-5 shadow-sm rs-fade">
@@ -19,55 +21,62 @@ export function ItineraryPanel({ response }: Props) {
           <span>{response.days.length}d</span>
           <span>·</span>
           <span>{response.total_length_miles.toFixed(1)}mi</span>
-          <span>·</span>
-          <span>{response.total_gain_m}m</span>
         </div>
       </header>
-      <ol className="flex flex-col gap-3">
+      <ol className="flex flex-col gap-1">
         {response.days.map((day, i) => {
           const color = DAY_COLORS[(day.day - 1) % DAY_COLORS.length];
           const passed = day.features_passed.filter((f) => f.name !== day.camp_name);
           const isLast = i === response.days.length - 1;
+          const isSelected = selectedDay === day.day;
+          const hours = response.estimated_hours_per_day[i];
           return (
-            <li key={day.day} className="flex gap-3">
-              <div className="flex flex-col items-center pt-0.5 shrink-0">
-                <span
-                  className="h-6 w-6 rounded-full text-white text-[10px] font-semibold flex items-center justify-center shadow-sm"
-                  style={{ backgroundColor: color }}
-                >
-                  {day.day}
-                </span>
-                {!isLast && <span className="w-px flex-1 bg-stone-200 mt-1" />}
-              </div>
-              <div className="flex-1 pb-1">
-                <div className="flex items-baseline justify-between gap-2">
-                  <span className="text-sm font-medium text-stone-900">
-                    {day.camp_name}
+            <li key={day.day}>
+              <button
+                onClick={() => onSelectDay(isSelected ? null : day.day)}
+                className={`w-full flex gap-3 text-left rounded-lg p-2 -mx-2 transition ${
+                  isSelected ? "bg-stone-50 ring-1 ring-stone-200" : "hover:bg-stone-50"
+                }`}
+              >
+                <div className="flex flex-col items-center pt-0.5 shrink-0">
+                  <span
+                    className="h-6 w-6 rounded-full text-white text-[10px] font-semibold flex items-center justify-center shadow-sm"
+                    style={{ backgroundColor: color }}
+                  >
+                    {day.day}
                   </span>
-                  <span className="text-[11px] text-stone-500 whitespace-nowrap font-mono">
-                    {day.length_miles.toFixed(1)} mi · {day.gain_m} m
-                  </span>
+                  {!isLast && <span className="w-px flex-1 bg-stone-200 mt-1" />}
                 </div>
-                {passed.length > 0 && (
-                  <p className="text-xs text-stone-500 mt-1.5 leading-relaxed">
-                    {passed.slice(0, 6).map((f, idx) => (
-                      <span key={f.name}>
-                        <span className="text-stone-700">{f.name}</span>
-                        <span className="text-stone-400">
-                          {" "}
-                          · {CATEGORY_LABELS[f.category] ?? f.category}
+                <div className="flex-1 pb-1">
+                  <div className="flex items-baseline justify-between gap-2">
+                    <span className="text-sm font-medium text-stone-900">
+                      {day.camp_name}
+                    </span>
+                    <span className="text-[11px] text-stone-500 whitespace-nowrap font-mono">
+                      {day.length_miles.toFixed(1)} mi · {day.gain_m} m · ~{hours}h
+                    </span>
+                  </div>
+                  {passed.length > 0 && (
+                    <p className="text-xs text-stone-500 mt-1.5 leading-relaxed">
+                      {passed.slice(0, 6).map((f, idx) => (
+                        <span key={f.name}>
+                          <span className="text-stone-700">{f.name}</span>
+                          <span className="text-stone-400">
+                            {" "}
+                            · {CATEGORY_LABELS[f.category] ?? f.category}
+                          </span>
+                          {idx < Math.min(passed.length, 6) - 1 && (
+                            <span className="text-stone-300"> / </span>
+                          )}
                         </span>
-                        {idx < Math.min(passed.length, 6) - 1 && (
-                          <span className="text-stone-300"> / </span>
-                        )}
-                      </span>
-                    ))}
-                    {passed.length > 6 && (
-                      <span className="text-stone-400"> +{passed.length - 6} more</span>
-                    )}
-                  </p>
-                )}
-              </div>
+                      ))}
+                      {passed.length > 6 && (
+                        <span className="text-stone-400"> +{passed.length - 6} more</span>
+                      )}
+                    </p>
+                  )}
+                </div>
+              </button>
             </li>
           );
         })}

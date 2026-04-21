@@ -53,14 +53,23 @@ class ParsedSpec(BaseModel):
     rationale: str
 
 
+class Regulations(BaseModel):
+    permit_required: bool
+    bear_canister_required: bool
+    notes: list[str]
+
+
 class PlanResponse(BaseModel):
     prompt: str
     parsed: ParsedSpec
     total_length_miles: float
     total_gain_m: int
     score: float
+    difficulty: str  # "easy" | "moderate" | "strenuous" | "very strenuous"
+    estimated_hours_per_day: list[float]  # one entry per day
     days: list[DayPlan]
     narrative: str
+    regulations: Regulations
     elapsed_seconds: dict[str, float]  # {"parse": .., "plan": .., "narrate": ..}
 
 

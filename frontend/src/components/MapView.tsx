@@ -6,6 +6,7 @@ import type { PlanResponse } from "../types";
 
 interface Props {
   response: PlanResponse;
+  selectedDay: number | null;
 }
 
 function buildPin(color: string, label: string): L.DivIcon {
@@ -38,7 +39,8 @@ function FitBounds({ response }: { response: PlanResponse }) {
   return null;
 }
 
-export function MapView({ response }: Props) {
+export function MapView({ response, selectedDay }: Props) {
+  const dim = (day: number) => selectedDay !== null && selectedDay !== day;
   const startCoord = response.days[0]?.path_coords[0];
   const center: [number, number] = startCoord ?? [37.8651, -119.5383];
 
@@ -62,16 +64,23 @@ export function MapView({ response }: Props) {
         <Polyline
           key={`halo-${day.day}`}
           positions={day.path_coords}
-          pathOptions={{ color: "white", weight: 7, opacity: 0.7 }}
+          pathOptions={{ color: "white", weight: 7, opacity: dim(day.day) ? 0.25 : 0.7 }}
         />
       ))}
       {response.days.map((day) => {
         const color = DAY_COLORS[(day.day - 1) % DAY_COLORS.length];
+        const dimmed = dim(day.day);
         return (
           <Polyline
             key={`path-${day.day}`}
             positions={day.path_coords}
-            pathOptions={{ color, weight: 4, opacity: 0.95, lineCap: "round", lineJoin: "round" }}
+            pathOptions={{
+              color,
+              weight: dimmed ? 3 : 4,
+              opacity: dimmed ? 0.25 : 0.95,
+              lineCap: "round",
+              lineJoin: "round",
+            }}
           />
         );
       })}

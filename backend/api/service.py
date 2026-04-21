@@ -13,7 +13,7 @@ from backend.llm.parser import ParsedTripSpec, parse
 from backend.routing.optimizer import plan
 from backend.routing.trip_spec import Itinerary, TripSpec
 
-from .models import DayPlan, ElevationPoint, FeatureInfo, ParsedSpec, PlanResponse
+from .models import DayPlan, ElevationPoint, FeatureInfo, ParsedSpec, PlanResponse, Regulations
 from .state import STATE
 
 log = logging.getLogger("routescout.service")
@@ -178,6 +178,10 @@ def _build_response(
             )
         )
 
+    estimated_hours = _estimate_daily_hours(itinerary)
+    difficulty = _difficulty_label(itinerary)
+    regulations = _regulations_for(itinerary, parsed_spec)
+
     return PlanResponse(
         prompt=prompt,
         parsed=ParsedSpec(
@@ -192,7 +196,81 @@ def _build_response(
         total_length_miles=round(itinerary.total_length_miles, 2),
         total_gain_m=int(itinerary.total_gain_m),
         score=round(itinerary.score, 3),
+        difficulty=difficulty,
+        estimated_hours_per_day=estimated_hours,
         days=day_plans,
         narrative=narrative,
+        regulations=regulations,
         elapsed_seconds=timings,
+    )
+
+
+def _estimate_daily_hours(itinerary: Itinerary) -> list[float]:
+    """Naismith's rule (lightly tuned): ~3 km/h on flat trail, plus 30 min
+    per 300 m of cumulative ascent. Standard backpacking pace estimate."""
+    hours_per_day: list[float] = []
+    for day in itinerary.days:
+        flat_hours = (day.length_m / 1000.0) / 3.0
+        ascent_hours = (day.gain_m / 300.0) * 0.5
+        hours_per_day.append(round(flat_hours + ascent_hours, 1))
+    return hours_per_day
+
+
+def _difficulty_label(itinerary: Itinerary) -> str:
+    """Difficulty is a function of daily mileage and daily ascent. Loose bands,
+    aimed at a reasonably-fit backpacker."""
+    if not itinerary.days:
+        return "moderate"
+    avg_mi = itinerary.total_length_miles / len(itinerary.days)
+    avg_gain = itinerary.total_gain_m / len(itinerary.days)
+    if avg_mi < 6 and avg_gain < 350:
+        return "easy"
+    if avg_mi < 10 and avg_gain < 700:
+        return "moderate"
+    if avg_mi < 14 and avg_gain < 1100:
+        return "strenuous"
+    return "very strenuous"
+
+
+# Trailheads on Tioga Road close in winter (Nov-May, snow-dependent).
+TIOGA_ROAD_TRAILHEADS = frozenset({
+    "Tenaya Lake trailhead", "May Lake trailhead", "Cathedral Lakes trailhead",
+    "Lembert Dome / Dog Lake trailhead", "Elizabeth Lake trailhead",
+    "Tuolumne Meadows Ranger Station", "Mono Pass trailhead",
+    "Dana Meadows trailhead", "Ten Lakes trailhead",
+})
+
+
+def _regulations_for(itinerary: Itinerary, parsed_spec) -> Regulations:
+    """Build the regulations / safety notes block for a planned trip.
+    Always include the always-true Yosemite rules (permit + canister); add
+    contextual notes based on the route."""
+    notes: list[str] = [
+        "Wilderness permit required for any overnight trip — reserve in advance via "
+        "yosemite.gov or recreation.gov (advance lottery + day-of walk-up quotas).",
+        "Bear-resistant canister mandatory for all food and scented items.",
+        "Camp at least 100 ft (30 m) from water and 25 ft (8 m) from trails.",
+        "Pack out all trash, including toilet paper. Bury human waste in 6-in cathole.",
+    ]
+    is_overnight = len(itinerary.days) > 1
+
+    # Half Dome is special — permit needed for cables June–October
+    visited_names = {f["name"] for d in itinerary.days for f in d.features_passed}
+    if "Half Dome" in visited_names:
+        notes.append(
+            "Half Dome cables permit required separately (lottery via recreation.gov). "
+            "Cables typically up Memorial Day to mid-October."
+        )
+
+    # Tioga Road seasonal closure
+    if parsed_spec.start in TIOGA_ROAD_TRAILHEADS:
+        notes.append(
+            "Tioga Road (Hwy 120) typically closed November through late May "
+            "due to snow. Confirm road status before driving."
+        )
+
+    return Regulations(
+        permit_required=is_overnight,
+        bear_canister_required=True,
+        notes=notes,
     )
