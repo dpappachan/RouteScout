@@ -36,11 +36,6 @@ Bbox: **37.45°N to 38.35°N, -119.95°W to -118.95°W**.
 
 Trailheads with no nearby trail in the OSM hiking-only graph (Mariposa Grove, etc.) are dropped.
 
-## Example planned trip
-
-![Demo trip — Tuolumne Meadows to Ansel Adams Wilderness](data/demo_lakes.png)
-
-*3-day loop from Tuolumne Meadows Ranger Station: 43.8 mi, camps at Summit Lake (Yosemite high country) and Lower Davis Lake (Ansel Adams Wilderness, JMT corridor). Each day a different colored route; circular topology, no trail re-use.*
 
 ## Architecture
 
