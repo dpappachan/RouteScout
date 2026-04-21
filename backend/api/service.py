@@ -47,14 +47,18 @@ def plan_from_prompt(prompt: str, *, beam_width: int) -> PlanResponse:
     timings["plan"] = round(time.perf_counter() - t0, 3)
 
     if itinerary is None:
+        suggestions = _suggest_alternative_starts(parsed_spec)
+        suggestion_phrase = (
+            f" Try a different start trailhead — {', '.join(suggestions[:3])} "
+            "have richer surrounding trail networks for loops of this size."
+            if suggestions
+            else ""
+        )
         raise PlannerError(
-            f"I couldn't fit a {parsed_spec.days}-day trip at "
+            f"Couldn't fit a {parsed_spec.days}-day trip at "
             f"{parsed_spec.miles_per_day:g} miles/day starting from "
-            f"{parsed_spec.start} — the trail geometry near that start node "
-            "doesn't allow a route of that length to close. Try a shorter "
-            "trip, a different start (Tuolumne Pass and Lembert Dome have "
-            "richer surrounding trail networks than Glacier Point), or fewer "
-            "miles per day."
+            f"{parsed_spec.start}.{suggestion_phrase} Or shorten the trip / "
+            "reduce mileage per day."
         )
 
     log.info(
@@ -386,3 +390,43 @@ def _max_elevation_on_route(itinerary: Itinerary) -> float:
             if elev and elev > max_e:
                 max_e = float(elev)
     return max_e
+
+
+def _suggest_alternative_starts(parsed_spec) -> list[str]:
+    """When the planner fails for the requested trailhead, suggest others
+    that have rich camp networks within the requested daily mileage. Same
+    region preferred."""
+    import math
+
+    target_m = parsed_spec.miles_per_day * 1609.344
+    radius_m = 2.0 * target_m  # match optimizer's max-day straight-line bound
+    failed = next(
+        (t for t in STATE.trailheads if t["name"] == parsed_spec.start), None,
+    )
+    failed_region = (failed or {}).get("region")
+
+    def haversine(lat1, lon1, lat2, lon2):
+        R = 6_371_000.0
+        phi1, phi2 = math.radians(lat1), math.radians(lat2)
+        dphi = math.radians(lat2 - lat1)
+        dlam = math.radians(lon2 - lon1)
+        a = (math.sin(dphi / 2) ** 2 + math.cos(phi1) * math.cos(phi2) *
+             math.sin(dlam / 2) ** 2)
+        return 2 * R * math.asin(math.sqrt(a))
+
+    scored: list[tuple[int, str]] = []
+    for th in STATE.trailheads:
+        if th["name"] == parsed_spec.start:
+            continue
+        camps_in_range = sum(
+            1 for c in STATE.camps
+            if haversine(th["lat"], th["lon"], c["lat"], c["lon"]) < radius_m
+        )
+        if camps_in_range == 0:
+            continue
+        # boost trailheads in the same wilderness/region
+        region_bonus = 100 if th.get("region") == failed_region else 0
+        scored.append((camps_in_range + region_bonus, th["name"]))
+
+    scored.sort(reverse=True)
+    return [name for _, name in scored[:3]]

@@ -107,6 +107,11 @@ def plan(
     for day_idx in range(spec.days):
         is_last_day = day_idx == spec.days - 1
         is_penultimate_day = day_idx == spec.days - 2
+        # Real backpackers shorten travel-in/out days. For 3+ day trips we
+        # bias the per-day target so day 1 (drove in) and day N (drive out)
+        # are easier; middle days take the slack to keep total distance
+        # roughly proportional to the user's miles_per_day.
+        day_target_m = _per_day_target(target_m, day_idx, spec.days)
         next_beam: list[_State] = []
 
         for state in beam:
@@ -114,7 +119,7 @@ def plan(
                 graph=graph,
                 state=state,
                 camps=camps,
-                target_m=target_m,
+                target_m=day_target_m,
                 is_last_day=is_last_day,
                 is_penultimate_day=is_penultimate_day,
                 end_node=end_node,
@@ -132,9 +137,9 @@ def plan(
                 except nx.NetworkXNoPath:
                     continue
                 length_m = path_length_m(graph, path)
-                if length_m < MIN_DAY_LENGTH_RATIO * target_m:
+                if length_m < MIN_DAY_LENGTH_RATIO * day_target_m:
                     continue
-                if length_m > MAX_DAY_LENGTH_RATIO * target_m:
+                if length_m > MAX_DAY_LENGTH_RATIO * day_target_m:
                     continue
 
                 gain_m = path_elevation_gain_m(graph, path)
@@ -150,7 +155,7 @@ def plan(
                     features_passed=features_passed,
                 )
 
-                new_state = _append_day(state, day, spec, target_m, is_last_day, camp_node)
+                new_state = _append_day(state, day, spec, day_target_m, is_last_day, camp_node)
                 next_beam.append(new_state)
 
         if not next_beam:
@@ -311,6 +316,19 @@ def _append_day(state, day, spec, target_m, is_last_day, camp_node) -> _State:
         visited_camp_nodes=state.visited_camp_nodes | {camp_node},
         visited_edges=state.visited_edges | new_edges,
     )
+
+
+def _per_day_target(base_target_m: float, day_idx: int, days_total: int) -> float:
+    """Bias day 1 (drove in) and day N (drive out) shorter, middle days
+    longer. No-op for short trips where adjustment would be excessive."""
+    if days_total < 3:
+        return base_target_m
+    if day_idx == 0:
+        return base_target_m * 0.75
+    if day_idx == days_total - 1:
+        return base_target_m * 0.85
+    # middle-day boost: total mileage stays roughly proportional
+    return base_target_m * 1.10
 
 
 def _path_edges(path: list[int]) -> frozenset:
