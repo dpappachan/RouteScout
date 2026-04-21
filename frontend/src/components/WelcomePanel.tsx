@@ -14,11 +14,11 @@ const EXAMPLES = [
 
 // Personal JMT photos shot on a Fujifilm; one is picked at random per page load.
 const PHOTOS = [
-  { src: "/photos/jmt-1.jpg", caption: "Half Dome from Olmsted Point" },
-  { src: "/photos/jmt-2.jpg", caption: "Half Dome, late afternoon" },
-  { src: "/photos/jmt-3.jpg", caption: "Half Dome, vertical" },
-  { src: "/photos/jmt-4.jpg", caption: "Lyell Canyon" },
-  { src: "/photos/jmt-5.jpg", caption: "The Minarets, Ansel Adams Wilderness" },
+  { src: "/photos/jmt-1.jpeg", caption: "Lyell Canyon" },
+  { src: "/photos/jmt-2.jpeg", caption: "Half Dome from Olmsted Point" },
+  { src: "/photos/jmt-3.jpeg", caption: "Half Dome, late afternoon" },
+  { src: "/photos/jmt-4.jpeg", caption: "Half Dome, vertical" },
+  { src: "/photos/jmt-5.jpeg", caption: "The Minarets, Ansel Adams Wilderness" },
 ];
 
 export function WelcomePanel({ onSample }: Props) {
