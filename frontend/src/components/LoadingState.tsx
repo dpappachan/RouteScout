@@ -11,7 +11,7 @@ export function LoadingState() {
   const [activeIdx, setActiveIdx] = useState(0);
 
   useEffect(() => {
-    setActiveIdx(0);
+    // initial state is 0 — no need to reset on mount; that would cascade renders
     const timers: ReturnType<typeof setTimeout>[] = [];
     let elapsed = 0;
     STAGES.forEach((_stage, i) => {
