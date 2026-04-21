@@ -14,11 +14,11 @@ const EXAMPLES = [
 
 // Personal JMT photos shot on a Fujifilm; one is picked at random per page load.
 const PHOTOS = [
-  { src: "/photos/jmt-1.jpeg", caption: "Lyell Canyon" },
-  { src: "/photos/jmt-2.jpeg", caption: "Half Dome from Olmsted Point" },
-  { src: "/photos/jmt-3.jpeg", caption: "Half Dome, late afternoon" },
-  { src: "/photos/jmt-4.jpeg", caption: "Half Dome, vertical" },
-  { src: "/photos/jmt-5.jpeg", caption: "The Minarets, Ansel Adams Wilderness" },
+  "/photos/jmt-1.jpeg",
+  "/photos/jmt-2.jpeg",
+  "/photos/jmt-3.jpeg",
+  "/photos/jmt-4.jpeg",
+  "/photos/jmt-5.jpeg",
 ];
 
 export function WelcomePanel({ onSample }: Props) {
@@ -28,23 +28,17 @@ export function WelcomePanel({ onSample }: Props) {
 
   return (
     <div className="max-w-3xl mx-auto py-6">
-      <div className="relative w-full h-64 md:h-80 rounded-2xl overflow-hidden mb-8 shadow-sm bg-stone-100">
+      <h1 className="text-2xl md:text-3xl font-medium tracking-tight text-stone-900 mb-5">
+        Plan a hike across the Sierra.
+      </h1>
+      <div className="relative w-full h-56 md:h-72 rounded-2xl overflow-hidden mb-6 shadow-sm bg-stone-100">
         <img
-          src={photo.src}
-          alt={photo.caption}
+          src={photo}
+          alt=""
           className="absolute inset-0 w-full h-full object-cover"
           loading="eager"
           decoding="async"
         />
-        <div className="absolute inset-0 bg-gradient-to-t from-stone-900/70 via-stone-900/10 to-transparent" />
-        <div className="absolute bottom-4 left-5 right-5 flex items-end justify-between gap-4">
-          <h1 className="text-white text-2xl md:text-3xl font-medium tracking-tight drop-shadow">
-            Plan a hike across the Sierra.
-          </h1>
-          <span className="hidden sm:block text-[10px] uppercase tracking-wider text-white/70">
-            {photo.caption}
-          </span>
-        </div>
       </div>
       <p className="text-sm text-stone-600 max-w-xl">
         Type a hiking trip request in plain English — duration, region, distance,
