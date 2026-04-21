@@ -6,7 +6,7 @@ export function Header() {
           <span className="font-display text-xl tracking-tight text-stone-900">
             RouteScout
           </span>
-          <span className="text-xs text-stone-500">Hiking route planner for the Sierra</span>
+          <span className="text-xs text-stone-500">Hiking route planner for the Sierra Nevada</span>
         </a>
         <a
           href="https://github.com/dpappachan/RouteScout"
