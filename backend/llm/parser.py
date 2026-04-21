@@ -63,31 +63,39 @@ def _build_system_prompt(
 
     return (
         "You turn natural-language hiking trip requests into structured trip "
-        "parameters for a route planner operating inside Yosemite National Park.\n"
-        "Always return a valid, plannable spec — never refuse because the prompt "
-        "is short or vague. Fill in sensible defaults for anything missing.\n\n"
+        "parameters for a route planner operating across Yosemite National Park "
+        "and the contiguous Sierra wilderness areas (Ansel Adams, Hoover, "
+        "Emigrant). Always return a valid, plannable spec — never refuse "
+        "because the prompt is short or vague. Fill in sensible defaults.\n\n"
         "KEY CONCEPT: A trip begins and ends at a TRAILHEAD (a parking lot, "
-        "not a destination). The user might name a destination they want to "
-        "visit (e.g., 'hike to Half Dome') — in that case pick the trailhead "
-        "that actually accesses it (Happy Isles for Half Dome) and put the "
-        "destination in `named_must_visit`.\n\n"
+        "not a destination). When the user names a destination (e.g., 'hike to "
+        "Half Dome'), pick the trailhead that actually accesses it (Happy Isles "
+        "for Half Dome) and put the destination in `named_must_visit`.\n\n"
         "Interpretation rules:\n"
         "1. `days` = trip length in days. 'day hike'/'short'/'quick' → 1. "
         "'overnight'/'2 night 3 day' → 3. 'weekend' → 2. Missing → 2.\n"
         "2. `miles_per_day` target daily mileage. 'easy'/'gentle' → 5. "
         "'moderate' → 8. 'hard'/'challenging'/'long' → 12. If user gives total, "
         "divide by days. Missing → 7.\n"
-        "3. `start` MUST be exactly one trailhead name from the list below. "
-        "Defaults when the region is vague:\n"
-        "   · 'easy', 'scenic', no region given → Glacier Point (iconic, "
-        "short day-hike access, good viewpoints)\n"
+        "3. `start` MUST be EXACTLY ONE trailhead name copied verbatim from "
+        "the list below — never a disjunction, never two names joined with "
+        "'or' or '/'. Region defaults (pick the single named trailhead):\n"
+        "   · 'Yosemite Valley', 'falls' → Happy Isles\n"
+        "   · 'Glacier Point', 'south rim' → Glacier Point\n"
         "   · 'Tuolumne', 'high country' → Lembert Dome / Dog Lake trailhead\n"
-        "   · 'waterfalls', 'valley' → Happy Isles (Mist Trail) or Yosemite "
-        "Falls trailhead\n"
-        "   · 'peaks', 'summits' → Tuolumne Meadows Ranger Station or "
-        "Cathedral Lakes trailhead\n"
-        "   · 'Wawona area' → Chilnualna Falls trailhead\n"
-        "   · 'Tioga / Mount Dana / Mono Pass' → Mono Pass trailhead\n"
+        "   · 'Cathedral', 'Sunrise', 'JMT through Yosemite' → Cathedral Lakes trailhead\n"
+        "   · 'Wawona', 'south Yosemite' → Chilnualna Falls trailhead\n"
+        "   · 'Hetch Hetchy', 'Wapama Falls' → Hetch Hetchy trailhead\n"
+        "   · 'Tioga Pass', 'Mount Dana', 'Gaylor Lakes' → Mono Pass trailhead\n"
+        "   · 'Ansel Adams', 'Banner', 'Ritter', 'Thousand Island Lake', 'JMT south', "
+        "'Donohue Pass', 'Garnet Lake' → Rush Creek trailhead (Silver Lake)\n"
+        "   · 'Devils Postpile', 'Reds Meadow', 'Mammoth' → Devils Postpile / Reds Meadow trailhead\n"
+        "   · 'Hoover', 'Twin Lakes (Bridgeport)', 'Matterhorn Peak' → Twin Lakes trailhead\n"
+        "   · 'Virginia Lakes' → Virginia Lakes trailhead\n"
+        "   · 'Green Creek', 'Green Lake' → Green Creek trailhead\n"
+        "   · 'Saddlebag Lake', 'Twenty Lakes' → Saddlebag Lake trailhead\n"
+        "   · 'Emigrant', 'Sonora Pass', 'Kennedy Meadows', 'Relief Reservoir' → Kennedy Meadows trailhead\n"
+        "   · 'easy day from a trailhead', no region → Tenaya Lake trailhead\n"
         "4. Default to a loop (`end` = null). Only set `end` when the user "
         "explicitly asks for point-to-point.\n"
         "5. `preferred_categories` from: "
@@ -111,17 +119,36 @@ def _build_system_prompt(
 
 
 def _resolve_trailhead_name(name: str, valid: set[str]) -> str:
-    """Tolerant lookup. The LLM occasionally appends a parenthetical region
-    or quotes the name; strip those before failing validation."""
-    if name in valid:
-        return name
-    cleaned = name.split("(")[0].strip().strip('"').strip("'").strip()
-    if cleaned in valid:
-        return cleaned
-    cleaned_lower = cleaned.lower()
-    for v in valid:
-        if v.lower() == cleaned_lower:
-            return v
+    """Tolerant lookup. The LLM occasionally appends a parenthetical region,
+    drops the 'trailhead' suffix, or capitalizes inconsistently. Try a
+    sequence of relaxed matches before failing validation."""
+
+    def candidates(s: str) -> list[str]:
+        s = s.strip().strip('"').strip("'").strip()
+        out = [s]
+        # strip parenthetical "(Region)" suffix
+        if "(" in s:
+            out.append(s.split("(")[0].strip())
+        # split on " or " — LLM occasionally returns "X or Y"
+        if " or " in s.lower():
+            for part in s.split(" or "):
+                out.append(part.strip())
+        # add/remove a " trailhead" suffix
+        for c in list(out):
+            if c.lower().endswith(" trailhead"):
+                out.append(c[: -len(" trailhead")].strip())
+            else:
+                out.append(c + " trailhead")
+        return out
+
+    valid_lower = {v.lower(): v for v in valid}
+    for cand in candidates(name):
+        if cand in valid:
+            return cand
+        match = valid_lower.get(cand.lower())
+        if match:
+            return match
+
     raise ValueError(
         f"Parser chose start/end={name!r}, which is not a valid trailhead name."
     )

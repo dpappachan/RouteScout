@@ -28,6 +28,20 @@
     "accesses": "Mirror Lake, Snow Creek Trail, Tenaya Canyon"
   },
   {
+    "name": "Four Mile Trail trailhead",
+    "lat": 37.7267,
+    "lon": -119.6017,
+    "region": "Yosemite Valley",
+    "accesses": "Four Mile Trail, Union Point, Glacier Point from the valley floor"
+  },
+  {
+    "name": "Camp 4",
+    "lat": 37.7424,
+    "lon": -119.6025,
+    "region": "Yosemite Valley",
+    "accesses": "Yosemite Falls trail, El Capitan base, valley loop"
+  },
+  {
     "name": "Glacier Point",
     "lat": 37.7284,
     "lon": -119.5737,
@@ -42,11 +56,32 @@
     "accesses": "Taft Point, Sentinel Dome, Pohono Trail"
   },
   {
+    "name": "Mono Meadow trailhead",
+    "lat": 37.7099,
+    "lon": -119.5731,
+    "region": "South Rim",
+    "accesses": "Mono Meadow, Ottoway Lakes, Merced Pass, Illilouette Creek"
+  },
+  {
+    "name": "Ostrander Lake trailhead",
+    "lat": 37.6731,
+    "lon": -119.6213,
+    "region": "South Rim",
+    "accesses": "Ostrander Lake, Horizon Ridge, Horse Ridge"
+  },
+  {
+    "name": "Bridalveil Creek campground trailhead",
+    "lat": 37.6776,
+    "lon": -119.6227,
+    "region": "South Rim",
+    "accesses": "McGurk Meadow, Dewey Point, Bridalveil Creek"
+  },
+  {
     "name": "Mariposa Grove trailhead",
-    "lat": 37.5032,
-    "lon": -119.6051,
+    "lat": 37.5062,
+    "lon": -119.6054,
     "region": "Wawona",
-    "accesses": "Mariposa Grove, Wawona Point"
+    "accesses": "Mariposa Grove of giant sequoias, Wawona Point, Grizzly Giant"
   },
   {
     "name": "Chilnualna Falls trailhead",
@@ -56,11 +91,67 @@
     "accesses": "Chilnualna Falls, Buena Vista Trail, Royal Arch Lake"
   },
   {
-    "name": "Tenaya Lake trailhead",
-    "lat": 37.8287,
-    "lon": -119.4483,
+    "name": "Wawona / Swinging Bridge trailhead",
+    "lat": 37.5361,
+    "lon": -119.6606,
+    "region": "Wawona",
+    "accesses": "Alder Creek, Wawona Dome, Wawona Meadow Loop"
+  },
+  {
+    "name": "Hetch Hetchy trailhead",
+    "lat": 37.9470,
+    "lon": -119.7869,
+    "region": "Hetch Hetchy",
+    "accesses": "Wapama Falls, Rancheria Falls, Tueeulala Falls, Laurel Lake, Lake Eleanor, Pate Valley via Beehive"
+  },
+  {
+    "name": "Merced Grove trailhead",
+    "lat": 37.7492,
+    "lon": -119.8462,
+    "region": "Big Oak Flat Road",
+    "accesses": "Merced Grove of giant sequoias"
+  },
+  {
+    "name": "Tuolumne Grove trailhead",
+    "lat": 37.7596,
+    "lon": -119.8041,
+    "region": "Big Oak Flat Road",
+    "accesses": "Tuolumne Grove of giant sequoias, Hodgdon Meadow"
+  },
+  {
+    "name": "Tamarack Flat trailhead",
+    "lat": 37.7618,
+    "lon": -119.7520,
+    "region": "Big Oak Flat Road",
+    "accesses": "El Capitan top via Cascade Creek, Tamarack Creek"
+  },
+  {
+    "name": "White Wolf trailhead",
+    "lat": 37.8594,
+    "lon": -119.6446,
     "region": "Tioga Road",
-    "accesses": "Tenaya Lake, Sunrise Lakes, Clouds Rest via Tenaya, Mildred Lake"
+    "accesses": "Harden Lake, Lukens Lake via White Wolf, Pate Valley, Grand Canyon of the Tuolumne"
+  },
+  {
+    "name": "Lukens Lake trailhead",
+    "lat": 37.8592,
+    "lon": -119.5987,
+    "region": "Tioga Road",
+    "accesses": "Lukens Lake"
+  },
+  {
+    "name": "Yosemite Creek trailhead",
+    "lat": 37.8534,
+    "lon": -119.5736,
+    "region": "Tioga Road",
+    "accesses": "Top of Yosemite Falls via Yosemite Creek, Eagle Peak, El Capitan rim"
+  },
+  {
+    "name": "North Dome / Porcupine Creek trailhead",
+    "lat": 37.7996,
+    "lon": -119.5395,
+    "region": "Tioga Road",
+    "accesses": "North Dome, Indian Rock Arch, Basket Dome, Royal Arches"
   },
   {
     "name": "May Lake trailhead",
@@ -68,6 +159,27 @@
     "lon": -119.4941,
     "region": "Tioga Road",
     "accesses": "May Lake, Mount Hoffmann"
+  },
+  {
+    "name": "Ten Lakes trailhead",
+    "lat": 37.8509,
+    "lon": -119.5209,
+    "region": "Tioga Road",
+    "accesses": "Ten Lakes, Grant Lakes, Ten Lakes Pass"
+  },
+  {
+    "name": "Tenaya Lake trailhead",
+    "lat": 37.8287,
+    "lon": -119.4483,
+    "region": "Tioga Road",
+    "accesses": "Tenaya Lake, Sunrise Lakes, Clouds Rest via Tenaya, Mildred Lake"
+  },
+  {
+    "name": "Sunrise Lakes / Clouds Rest trailhead",
+    "lat": 37.8270,
+    "lon": -119.4676,
+    "region": "Tioga Road",
+    "accesses": "Sunrise Lakes, Clouds Rest, Sunrise High Sierra Camp"
   },
   {
     "name": "Cathedral Lakes trailhead",
@@ -98,24 +210,108 @@
     "accesses": "Vogelsang, Rafferty Creek, Tuolumne Pass, Fletcher Lake, John Muir Trail south"
   },
   {
+    "name": "Glen Aulin trailhead",
+    "lat": 37.8749,
+    "lon": -119.3578,
+    "region": "Tuolumne Meadows",
+    "accesses": "Glen Aulin, Waterwheel Falls, California Falls, Le Conte Falls, Grand Canyon of the Tuolumne"
+  },
+  {
     "name": "Mono Pass trailhead",
     "lat": 37.8927,
     "lon": -119.2795,
     "region": "Tioga Pass",
-    "accesses": "Mono Pass, Spillway Lake, Helen Lake"
+    "accesses": "Mono Pass, Spillway Lake, Helen Lake, Parker Pass"
   },
   {
-    "name": "Dana Meadows trailhead",
-    "lat": 37.9097,
-    "lon": -119.2588,
+    "name": "Gaylor Lakes trailhead",
+    "lat": 37.9102,
+    "lon": -119.2585,
     "region": "Tioga Pass",
-    "accesses": "Mount Dana, Dana Lake, Gaylor Lakes"
+    "accesses": "Gaylor Lakes, Granite Lakes, Gaylor Peak"
   },
   {
-    "name": "Ten Lakes trailhead",
-    "lat": 37.8509,
-    "lon": -119.5209,
-    "region": "Tioga Road",
-    "accesses": "Ten Lakes, Grant Lakes, Ten Lakes Pass"
+    "name": "Mount Dana trailhead",
+    "lat": 37.9100,
+    "lon": -119.2576,
+    "region": "Tioga Pass",
+    "accesses": "Mount Dana, Dana Lake, Dana Plateau"
+  },
+  {
+    "name": "Saddlebag Lake trailhead",
+    "lat": 37.9627,
+    "lon": -119.2716,
+    "region": "Hoover Wilderness",
+    "accesses": "Twenty Lakes Basin, Steelhead Lake, Greenstone Lake, Lundy Pass"
+  },
+  {
+    "name": "Virginia Lakes trailhead",
+    "lat": 38.0556,
+    "lon": -119.2570,
+    "region": "Hoover Wilderness",
+    "accesses": "Frog Lakes, Cooney Lake, Summit Lake, Burro Pass"
+  },
+  {
+    "name": "Green Creek trailhead",
+    "lat": 38.1062,
+    "lon": -119.2773,
+    "region": "Hoover Wilderness",
+    "accesses": "Green Lake, East Lake, West Lake, Virginia Pass"
+  },
+  {
+    "name": "Twin Lakes trailhead",
+    "lat": 38.1533,
+    "lon": -119.3614,
+    "region": "Hoover Wilderness",
+    "accesses": "Robinson Creek, Barney Lake, Crown Lake, Peeler Lake, Matterhorn Peak"
+  },
+  {
+    "name": "Devils Postpile / Reds Meadow trailhead",
+    "lat": 37.6243,
+    "lon": -119.0822,
+    "region": "Ansel Adams Wilderness",
+    "accesses": "Devils Postpile, Rainbow Falls, San Joaquin River, JMT south"
+  },
+  {
+    "name": "Agnew Meadows trailhead",
+    "lat": 37.7258,
+    "lon": -119.0829,
+    "region": "Ansel Adams Wilderness",
+    "accesses": "Thousand Island Lake, Garnet Lake, Shadow Lake, Banner Peak, JMT"
+  },
+  {
+    "name": "Rush Creek trailhead (Silver Lake)",
+    "lat": 37.7866,
+    "lon": -119.1339,
+    "region": "Ansel Adams Wilderness",
+    "accesses": "Gem Lake, Waugh Lake, Marie Lakes, Donohue Pass, Mount Lyell"
+  },
+  {
+    "name": "Mammoth Pass / Horseshoe Lake trailhead",
+    "lat": 37.6105,
+    "lon": -119.0317,
+    "region": "Ansel Adams Wilderness",
+    "accesses": "Horseshoe Lake, McLeod Lake, Mammoth Crest, Red Cones"
+  },
+  {
+    "name": "Kennedy Meadows trailhead",
+    "lat": 38.3164,
+    "lon": -119.7388,
+    "region": "Emigrant Wilderness",
+    "accesses": "Relief Reservoir, Kennedy Lake, Lower Relief Valley, PCT north"
+  },
+  {
+    "name": "Crabtree trailhead",
+    "lat": 38.2287,
+    "lon": -119.8694,
+    "region": "Emigrant Wilderness",
+    "accesses": "Camp Lake, Bear Lake, Granite Lake, Crabtree Trail"
+  },
+  {
+    "name": "Gianelli trailhead",
+    "lat": 38.2126,
+    "lon": -119.9021,
+    "region": "Emigrant Wilderness",
+    "accesses": "Burst Rock, Powell Lake, Chewing Gum Lake, Crabtree"
   }
 ]

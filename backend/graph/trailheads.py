@@ -1,10 +1,12 @@
-"""Load hand-curated Yosemite trailheads and snap each to its nearest trail
+"""Load hand-curated Sierra trailheads and snap each to its nearest trail
 graph node.
 
 Trailheads are distinct from features: features are *destinations* (peaks,
 lakes, waterfalls), trailheads are *where you park your car*. Every hike has
 to start and end at a trailhead — having the planner start at a summit would
 produce plans that are physically impossible to begin.
+
+Coverage spans Yosemite NP plus Ansel Adams, Hoover, and Emigrant Wildernesses.
 """
 from __future__ import annotations
 
@@ -17,8 +19,11 @@ import osmnx as ox
 
 from .build import DATA_DIR, build
 
+# Source JSON name kept as `yosemite_trailheads.json` for git history continuity;
+# the contents now span the wider Sierra coverage area.
 TRAILHEADS_SOURCE = DATA_DIR / "yosemite_trailheads.json"
-TRAILHEADS_SNAPPED = DATA_DIR / "yosemite_trailheads_snapped.json"
+TRAILHEADS_SNAPPED = DATA_DIR / "sierra_trailheads_snapped.json"
+LEGACY_TRAILHEADS_SNAPPED = DATA_DIR / "yosemite_trailheads_snapped.json"
 
 MAX_SNAP_DISTANCE_M = 1500  # trailheads sit by the road — allow more tolerance
 
@@ -38,6 +43,8 @@ def build_trailheads(force: bool = False) -> list[dict]:
     start."""
     if TRAILHEADS_SNAPPED.exists() and not force:
         return json.loads(TRAILHEADS_SNAPPED.read_text())
+    if LEGACY_TRAILHEADS_SNAPPED.exists() and not force:
+        return json.loads(LEGACY_TRAILHEADS_SNAPPED.read_text())
 
     graph = build()
     raw = json.loads(TRAILHEADS_SOURCE.read_text())

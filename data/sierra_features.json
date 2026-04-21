@@ -1,0 +1,3089 @@
+[
+  {
+    "name": "Agnew Lake",
+    "category": "lake",
+    "lat": 37.755137,
+    "lon": -119.134912,
+    "node_id": 11573470708,
+    "snap_distance_m": 348.5,
+    "node_elevation_m": 2589.0
+  },
+  {
+    "name": "Alger Lakes",
+    "category": "lake",
+    "lat": 37.791586,
+    "lon": -119.174297,
+    "node_id": 1744861097,
+    "snap_distance_m": 256.4,
+    "node_elevation_m": 3230.0
+  },
+  {
+    "name": "Altha Lake",
+    "category": "lake",
+    "lat": 37.712571,
+    "lon": -119.145176,
+    "node_id": 6700838768,
+    "snap_distance_m": 171.7,
+    "node_elevation_m": 2987.0
+  },
+  {
+    "name": "Anne Lake",
+    "category": "lake",
+    "lat": 37.599893,
+    "lon": -119.366448,
+    "node_id": 1755686346,
+    "snap_distance_m": 106.5,
+    "node_elevation_m": 2901.0
+  },
+  {
+    "name": "Anona Lake",
+    "category": "lake",
+    "lat": 37.60907,
+    "lon": -119.148847,
+    "node_id": 859493195,
+    "snap_distance_m": 193.7,
+    "node_elevation_m": 2799.0
+  },
+  {
+    "name": "Arrowhead Lake",
+    "category": "lake",
+    "lat": 37.583264,
+    "lon": -118.978617,
+    "node_id": 9949763474,
+    "snap_distance_m": 175.9,
+    "node_elevation_m": 2961.0
+  },
+  {
+    "name": "Ashley Lake",
+    "category": "lake",
+    "lat": 37.616876,
+    "lon": -119.156303,
+    "node_id": 7914942654,
+    "snap_distance_m": 246.7,
+    "node_elevation_m": 2916.0
+  },
+  {
+    "name": "Babcock Lake",
+    "category": "lake",
+    "lat": 37.757141,
+    "lon": -119.396524,
+    "node_id": 7987642615,
+    "snap_distance_m": 110.1,
+    "node_elevation_m": 2744.0
+  },
+  {
+    "name": "Baby Lake",
+    "category": "lake",
+    "lat": 37.472787,
+    "lon": -119.038584,
+    "node_id": 2130764801,
+    "snap_distance_m": 401.5,
+    "node_elevation_m": 3016.0
+  },
+  {
+    "name": "Badger Lakes",
+    "category": "lake",
+    "lat": 37.727206,
+    "lon": -119.149215,
+    "node_id": 966588137,
+    "snap_distance_m": 307.9,
+    "node_elevation_m": 2938.0
+  },
+  {
+    "name": "Banner Lake",
+    "category": "lake",
+    "lat": 37.712927,
+    "lon": -119.192337,
+    "node_id": 7965816442,
+    "snap_distance_m": 420.5,
+    "node_elevation_m": 2998.0
+  },
+  {
+    "name": "Barney Lake",
+    "category": "lake",
+    "lat": 37.564821,
+    "lon": -118.969086,
+    "node_id": 595484567,
+    "snap_distance_m": 162.6,
+    "node_elevation_m": 3104.0
+  },
+  {
+    "name": "Bear Lake",
+    "category": "lake",
+    "lat": 38.175099,
+    "lon": -119.86416,
+    "node_id": 8037446024,
+    "snap_distance_m": 299.3,
+    "node_elevation_m": 2359.0
+  },
+  {
+    "name": "Beartrap Lake",
+    "category": "lake",
+    "lat": 38.190578,
+    "lon": -119.514095,
+    "node_id": 7898281096,
+    "snap_distance_m": 107.1,
+    "node_elevation_m": 3015.0
+  },
+  {
+    "name": "Beetlebug Lake",
+    "category": "lake",
+    "lat": 37.4724,
+    "lon": -119.004842,
+    "node_id": 2129529240,
+    "snap_distance_m": 247.3,
+    "node_elevation_m": 2941.0
+  },
+  {
+    "name": "Bernice Lake",
+    "category": "lake",
+    "lat": 37.766323,
+    "lon": -119.332581,
+    "node_id": 10061606960,
+    "snap_distance_m": 167.8,
+    "node_elevation_m": 3115.0
+  },
+  {
+    "name": "Big Virginia Lake",
+    "category": "lake",
+    "lat": 38.046929,
+    "lon": -119.264931,
+    "node_id": 8569451790,
+    "snap_distance_m": 241.9,
+    "node_elevation_m": 3000.0
+  },
+  {
+    "name": "Bigelow Lake",
+    "category": "lake",
+    "lat": 38.154981,
+    "lon": -119.637844,
+    "node_id": 1745104517,
+    "snap_distance_m": 292.1,
+    "node_elevation_m": 2931.0
+  },
+  {
+    "name": "Billy Lake",
+    "category": "lake",
+    "lat": 37.753997,
+    "lon": -119.162355,
+    "node_id": 539327748,
+    "snap_distance_m": 235.3,
+    "node_elevation_m": 2809.0
+  },
+  {
+    "name": "Birch Lake",
+    "category": "lake",
+    "lat": 37.879379,
+    "lon": -119.85598,
+    "node_id": 4228815466,
+    "snap_distance_m": 105.1,
+    "node_elevation_m": 1391.0
+  },
+  {
+    "name": "Black Bear Lake",
+    "category": "lake",
+    "lat": 38.151609,
+    "lon": -119.650314,
+    "node_id": 1745104253,
+    "snap_distance_m": 172.0,
+    "node_elevation_m": 2843.0
+  },
+  {
+    "name": "Black's Pond",
+    "category": "lake",
+    "lat": 37.771483,
+    "lon": -119.122691,
+    "node_id": 12813101726,
+    "snap_distance_m": 323.1,
+    "node_elevation_m": 2211.0
+  },
+  {
+    "name": "Blackbird Lake",
+    "category": "lake",
+    "lat": 38.17677,
+    "lon": -119.672991,
+    "node_id": 2351810315,
+    "snap_distance_m": 246.8,
+    "node_elevation_m": 2759.0
+  },
+  {
+    "name": "Bloomer Lake",
+    "category": "lake",
+    "lat": 38.266363,
+    "lon": -119.862858,
+    "node_id": 95118428,
+    "snap_distance_m": 266.2,
+    "node_elevation_m": 2584.0
+  },
+  {
+    "name": "Blue Lake",
+    "category": "lake",
+    "lat": 38.051322,
+    "lon": -119.270436,
+    "node_id": 1836157566,
+    "snap_distance_m": 328.4,
+    "node_elevation_m": 3081.0
+  },
+  {
+    "name": "Boothe Lake",
+    "category": "lake",
+    "lat": 37.799857,
+    "lon": -119.347828,
+    "node_id": 1744864756,
+    "snap_distance_m": 75.8,
+    "node_elevation_m": 3021.0
+  },
+  {
+    "name": "Boundary Lake",
+    "category": "lake",
+    "lat": 38.088651,
+    "lon": -119.78977,
+    "node_id": 1745088373,
+    "snap_distance_m": 354.1,
+    "node_elevation_m": 2307.0
+  },
+  {
+    "name": "Breeze Lake",
+    "category": "lake",
+    "lat": 37.576162,
+    "lon": -119.392134,
+    "node_id": 13310378218,
+    "snap_distance_m": 188.9,
+    "node_elevation_m": 2938.0
+  },
+  {
+    "name": "Buck Lake",
+    "category": "lake",
+    "lat": 38.165698,
+    "lon": -119.738885,
+    "node_id": 9112688646,
+    "snap_distance_m": 269.0,
+    "node_elevation_m": 2594.0
+  },
+  {
+    "name": "Cabin Lake",
+    "category": "lake",
+    "lat": 37.684362,
+    "lon": -119.152262,
+    "node_id": 7914942878,
+    "snap_distance_m": 151.5,
+    "node_elevation_m": 2916.0
+  },
+  {
+    "name": "Camp Lake",
+    "category": "lake",
+    "lat": 38.165883,
+    "lon": -119.879949,
+    "node_id": 919326555,
+    "snap_distance_m": 266.9,
+    "node_elevation_m": 2334.0
+  },
+  {
+    "name": "Carson Lake",
+    "category": "lake",
+    "lat": 37.780501,
+    "lon": -119.129389,
+    "node_id": 574972467,
+    "snap_distance_m": 116.0,
+    "node_elevation_m": 2208.0
+  },
+  {
+    "name": "Castle Lake",
+    "category": "lake",
+    "lat": 37.669603,
+    "lon": -119.120286,
+    "node_id": 7914942718,
+    "snap_distance_m": 381.1,
+    "node_elevation_m": 2991.0
+  },
+  {
+    "name": "Chiquito Lake",
+    "category": "lake",
+    "lat": 37.536381,
+    "lon": -119.437533,
+    "node_id": 8511589017,
+    "snap_distance_m": 248.4,
+    "node_elevation_m": 2440.0
+  },
+  {
+    "name": "Chittenden Lake",
+    "category": "lake",
+    "lat": 37.55379,
+    "lon": -119.375169,
+    "node_id": 3838519400,
+    "snap_distance_m": 227.6,
+    "node_elevation_m": 2810.0
+  },
+  {
+    "name": "Clark Lakes",
+    "category": "lake",
+    "lat": 37.736602,
+    "lon": -119.145889,
+    "node_id": 539327582,
+    "snap_distance_m": 114.9,
+    "node_elevation_m": 2994.0
+  },
+  {
+    "name": "Cooney Lake",
+    "category": "lake",
+    "lat": 38.047934,
+    "lon": -119.277031,
+    "node_id": 1836158136,
+    "snap_distance_m": 234.7,
+    "node_elevation_m": 3157.0
+  },
+  {
+    "name": "Cora Lake",
+    "category": "lake",
+    "lat": 38.182277,
+    "lon": -119.567215,
+    "node_id": 8740994892,
+    "snap_distance_m": 267.3,
+    "node_elevation_m": 2846.0
+  },
+  {
+    "name": "Cora Lakes",
+    "category": "lake",
+    "lat": 37.59554,
+    "lon": -119.271549,
+    "node_id": 7891655361,
+    "snap_distance_m": 144.0,
+    "node_elevation_m": 2563.0
+  },
+  {
+    "name": "Crescent Lake",
+    "category": "lake",
+    "lat": 37.564557,
+    "lon": -119.533954,
+    "node_id": 1755673568,
+    "snap_distance_m": 223.0,
+    "node_elevation_m": 2565.0
+  },
+  {
+    "name": "Crystal Lake",
+    "category": "lake",
+    "lat": 37.593877,
+    "lon": -119.018488,
+    "node_id": 7917501975,
+    "snap_distance_m": 207.0,
+    "node_elevation_m": 2932.0
+  },
+  {
+    "name": "Deer Lake",
+    "category": "lake",
+    "lat": 38.164624,
+    "lon": -119.762864,
+    "node_id": 1931618690,
+    "snap_distance_m": 324.3,
+    "node_elevation_m": 2599.0
+  },
+  {
+    "name": "Dog Lake",
+    "category": "lake",
+    "lat": 37.891185,
+    "lon": -119.340315,
+    "node_id": 582003186,
+    "snap_distance_m": 308.1,
+    "node_elevation_m": 2802.0
+  },
+  {
+    "name": "Dorothy Lake",
+    "category": "lake",
+    "lat": 38.175697,
+    "lon": -119.591744,
+    "node_id": 8748782057,
+    "snap_distance_m": 130.7,
+    "node_elevation_m": 2867.0
+  },
+  {
+    "name": "Ediza Lake",
+    "category": "lake",
+    "lat": 37.685264,
+    "lon": -119.166666,
+    "node_id": 4284066583,
+    "snap_distance_m": 245.6,
+    "node_elevation_m": 2830.0
+  },
+  {
+    "name": "Elizabeth Lake",
+    "category": "lake",
+    "lat": 37.844982,
+    "lon": -119.370695,
+    "node_id": 1967217376,
+    "snap_distance_m": 341.3,
+    "node_elevation_m": 2904.0
+  },
+  {
+    "name": "Emerald Lake",
+    "category": "lake",
+    "lat": 37.725563,
+    "lon": -119.165386,
+    "node_id": 10819836106,
+    "snap_distance_m": 130.9,
+    "node_elevation_m": 3020.0
+  },
+  {
+    "name": "Emerald Pool",
+    "category": "lake",
+    "lat": 37.727607,
+    "lon": -119.542352,
+    "node_id": 485155373,
+    "snap_distance_m": 56.3,
+    "node_elevation_m": 1560.0
+  },
+  {
+    "name": "Emeric Lake",
+    "category": "lake",
+    "lat": 37.777041,
+    "lon": -119.385382,
+    "node_id": 480625272,
+    "snap_distance_m": 343.0,
+    "node_elevation_m": 2862.0
+  },
+  {
+    "name": "Emigrant Meadow Lake",
+    "category": "lake",
+    "lat": 38.202001,
+    "lon": -119.647951,
+    "node_id": 1931829555,
+    "snap_distance_m": 366.2,
+    "node_elevation_m": 2869.0
+  },
+  {
+    "name": "Emily Lake",
+    "category": "lake",
+    "lat": 37.672109,
+    "lon": -119.121778,
+    "node_id": 7914942718,
+    "snap_distance_m": 152.3,
+    "node_elevation_m": 2991.0
+  },
+  {
+    "name": "Fern Lake",
+    "category": "lake",
+    "lat": 37.456125,
+    "lon": -119.042188,
+    "node_id": 2130760314,
+    "snap_distance_m": 83.9,
+    "node_elevation_m": 3059.0
+  },
+  {
+    "name": "Flat Lake",
+    "category": "lake",
+    "lat": 37.57474,
+    "lon": -119.361517,
+    "node_id": 10303891270,
+    "snap_distance_m": 79.5,
+    "node_elevation_m": 2746.0
+  },
+  {
+    "name": "Fletcher Lake",
+    "category": "lake",
+    "lat": 37.796826,
+    "lon": -119.340695,
+    "node_id": 7982166899,
+    "snap_distance_m": 160.1,
+    "node_elevation_m": 3113.0
+  },
+  {
+    "name": "Fremont Lake",
+    "category": "lake",
+    "lat": 38.254986,
+    "lon": -119.548454,
+    "node_id": 539452432,
+    "snap_distance_m": 262.6,
+    "node_elevation_m": 2526.0
+  },
+  {
+    "name": "Garnet Lake",
+    "category": "lake",
+    "lat": 37.708945,
+    "lon": -119.159929,
+    "node_id": 10086395552,
+    "snap_distance_m": 409.1,
+    "node_elevation_m": 2956.0
+  },
+  {
+    "name": "Gem Lake",
+    "category": "lake",
+    "lat": 37.751688,
+    "lon": -119.15369,
+    "node_id": 468437510,
+    "snap_distance_m": 423.0,
+    "node_elevation_m": 2799.0
+  },
+  {
+    "name": "Gravel Pit Lake",
+    "category": "lake",
+    "lat": 37.964853,
+    "lon": -119.828975,
+    "node_id": 1744996603,
+    "snap_distance_m": 168.2,
+    "node_elevation_m": 1551.0
+  },
+  {
+    "name": "Green Lake",
+    "category": "lake",
+    "lat": 38.084937,
+    "lon": -119.309167,
+    "node_id": 13021150717,
+    "snap_distance_m": 192.4,
+    "node_elevation_m": 2739.0
+  },
+  {
+    "name": "Harden Lake",
+    "category": "lake",
+    "lat": 37.89561,
+    "lon": -119.675778,
+    "node_id": 1744957510,
+    "snap_distance_m": 227.1,
+    "node_elevation_m": 2297.0
+  },
+  {
+    "name": "Herring Creek Reservoir",
+    "category": "lake",
+    "lat": 38.252607,
+    "lon": -119.926182,
+    "node_id": 94615563,
+    "snap_distance_m": 322.9,
+    "node_elevation_m": 2292.0
+  },
+  {
+    "name": "Hidden Lake",
+    "category": "lake",
+    "lat": 38.261238,
+    "lon": -119.536381,
+    "node_id": 539453292,
+    "snap_distance_m": 92.4,
+    "node_elevation_m": 2428.0
+  },
+  {
+    "name": "Holcomb Lake",
+    "category": "lake",
+    "lat": 37.628255,
+    "lon": -119.154047,
+    "node_id": 7978942374,
+    "snap_distance_m": 170.7,
+    "node_elevation_m": 2895.0
+  },
+  {
+    "name": "Horseshoe Lake",
+    "category": "lake",
+    "lat": 37.609034,
+    "lon": -119.019008,
+    "node_id": 3718060852,
+    "snap_distance_m": 335.0,
+    "node_elevation_m": 2761.0
+  },
+  {
+    "name": "Ice Lake",
+    "category": "lake",
+    "lat": 38.114308,
+    "lon": -119.423708,
+    "node_id": 9213041171,
+    "snap_distance_m": 181.3,
+    "node_elevation_m": 3089.0
+  },
+  {
+    "name": "Iceberg Lake",
+    "category": "lake",
+    "lat": 37.670654,
+    "lon": -119.168883,
+    "node_id": 4353271938,
+    "snap_distance_m": 270.4,
+    "node_elevation_m": 2985.0
+  },
+  {
+    "name": "Ireland Lake",
+    "category": "lake",
+    "lat": 37.788669,
+    "lon": -119.304657,
+    "node_id": 7982166927,
+    "snap_distance_m": 382.3,
+    "node_elevation_m": 3311.0
+  },
+  {
+    "name": "Iron Lake",
+    "category": "lake",
+    "lat": 37.61218,
+    "lon": -119.169253,
+    "node_id": 859496339,
+    "snap_distance_m": 364.9,
+    "node_elevation_m": 3119.0
+  },
+  {
+    "name": "Joe Crane Lake",
+    "category": "lake",
+    "lat": 37.625581,
+    "lon": -119.314501,
+    "node_id": 1755688674,
+    "snap_distance_m": 187.7,
+    "node_elevation_m": 2945.0
+  },
+  {
+    "name": "Johnson Lake",
+    "category": "lake",
+    "lat": 37.567929,
+    "lon": -119.517155,
+    "node_id": 1755673697,
+    "snap_distance_m": 141.7,
+    "node_elevation_m": 2536.0
+  },
+  {
+    "name": "Johnston Lake",
+    "category": "lake",
+    "lat": 37.645332,
+    "lon": -119.099718,
+    "node_id": 842916492,
+    "snap_distance_m": 185.2,
+    "node_elevation_m": 2497.0
+  },
+  {
+    "name": "Karls Lake",
+    "category": "lake",
+    "lat": 38.145843,
+    "lon": -119.763114,
+    "node_id": 919336929,
+    "snap_distance_m": 117.3,
+    "node_elevation_m": 2540.0
+  },
+  {
+    "name": "Kennedy Lake",
+    "category": "lake",
+    "lat": 38.260407,
+    "lon": -119.652343,
+    "node_id": 1931830583,
+    "snap_distance_m": 207.2,
+    "node_elevation_m": 2377.0
+  },
+  {
+    "name": "Koenig Lake",
+    "category": "lake",
+    "lat": 38.281593,
+    "lon": -119.628352,
+    "node_id": 7800005812,
+    "snap_distance_m": 139.2,
+    "node_elevation_m": 2925.0
+  },
+  {
+    "name": "Lady Lake",
+    "category": "lake",
+    "lat": 37.542574,
+    "lon": -119.362005,
+    "node_id": 13312267410,
+    "snap_distance_m": 69.3,
+    "node_elevation_m": 2735.0
+  },
+  {
+    "name": "Lake Barrett",
+    "category": "lake",
+    "lat": 37.595722,
+    "lon": -119.006746,
+    "node_id": 7917533049,
+    "snap_distance_m": 98.5,
+    "node_elevation_m": 2846.0
+  },
+  {
+    "name": "Lake George",
+    "category": "lake",
+    "lat": 37.600373,
+    "lon": -119.012008,
+    "node_id": 12202475324,
+    "snap_distance_m": 360.0,
+    "node_elevation_m": 2759.0
+  },
+  {
+    "name": "Lake Harriet",
+    "category": "lake",
+    "lat": 38.186225,
+    "lon": -119.569262,
+    "node_id": 8740994892,
+    "snap_distance_m": 263.4,
+    "node_elevation_m": 2846.0
+  },
+  {
+    "name": "Lake Mamie",
+    "category": "lake",
+    "lat": 37.608282,
+    "lon": -119.010715,
+    "node_id": 9949763322,
+    "snap_distance_m": 271.8,
+    "node_elevation_m": 2732.0
+  },
+  {
+    "name": "Lake Mary",
+    "category": "lake",
+    "lat": 37.603249,
+    "lon": -119.003456,
+    "node_id": 89828586,
+    "snap_distance_m": 362.5,
+    "node_elevation_m": 2731.0
+  },
+  {
+    "name": "Lane Lake",
+    "category": "lake",
+    "lat": 38.292371,
+    "lon": -119.541242,
+    "node_id": 9041715884,
+    "snap_distance_m": 174.3,
+    "node_elevation_m": 2238.0
+  },
+  {
+    "name": "Latopie Lake",
+    "category": "lake",
+    "lat": 38.288466,
+    "lon": -119.637791,
+    "node_id": 8738309155,
+    "snap_distance_m": 125.1,
+    "node_elevation_m": 3177.0
+  },
+  {
+    "name": "Laura Lake",
+    "category": "lake",
+    "lat": 37.705585,
+    "lon": -119.138072,
+    "node_id": 12804457246,
+    "snap_distance_m": 104.0,
+    "node_elevation_m": 2950.0
+  },
+  {
+    "name": "Leavitt Lake",
+    "category": "lake",
+    "lat": 38.273677,
+    "lon": -119.618554,
+    "node_id": 8738412987,
+    "snap_distance_m": 267.3,
+    "node_elevation_m": 2942.0
+  },
+  {
+    "name": "Lertora Lake",
+    "category": "lake",
+    "lat": 38.13876,
+    "lon": -119.721594,
+    "node_id": 1745102672,
+    "snap_distance_m": 389.7,
+    "node_elevation_m": 2560.0
+  },
+  {
+    "name": "Lillian Lake",
+    "category": "lake",
+    "lat": 37.562711,
+    "lon": -119.364468,
+    "node_id": 3819156339,
+    "snap_distance_m": 255.8,
+    "node_elevation_m": 2729.0
+  },
+  {
+    "name": "Little Virginia Lake",
+    "category": "lake",
+    "lat": 38.047058,
+    "lon": -119.258994,
+    "node_id": 8569451810,
+    "snap_distance_m": 236.7,
+    "node_elevation_m": 2974.0
+  },
+  {
+    "name": "Long Lake",
+    "category": "lake",
+    "lat": 38.175607,
+    "lon": -119.752563,
+    "node_id": 10539919529,
+    "snap_distance_m": 352.2,
+    "node_elevation_m": 2659.0
+  },
+  {
+    "name": "Lower Beck Lake",
+    "category": "lake",
+    "lat": 37.637609,
+    "lon": -119.157271,
+    "node_id": 859494631,
+    "snap_distance_m": 367.0,
+    "node_elevation_m": 2999.0
+  },
+  {
+    "name": "Lower Cathedral Lake",
+    "category": "lake",
+    "lat": 37.844977,
+    "lon": -119.424172,
+    "node_id": 332594747,
+    "snap_distance_m": 185.4,
+    "node_elevation_m": 2847.0
+  },
+  {
+    "name": "Lower Davis Lake",
+    "category": "lake",
+    "lat": 37.730143,
+    "lon": -119.215746,
+    "node_id": 9362859252,
+    "snap_distance_m": 192.7,
+    "node_elevation_m": 3050.0
+  },
+  {
+    "name": "Lower Deer Lake",
+    "category": "lake",
+    "lat": 37.560131,
+    "lon": -118.992249,
+    "node_id": 7917533295,
+    "snap_distance_m": 383.5,
+    "node_elevation_m": 3261.0
+  },
+  {
+    "name": "Lower Frog Lake",
+    "category": "lake",
+    "lat": 38.04924,
+    "lon": -119.280276,
+    "node_id": 1836158136,
+    "snap_distance_m": 90.1,
+    "node_elevation_m": 3157.0
+  },
+  {
+    "name": "Lower Gaylor Lake",
+    "category": "lake",
+    "lat": 37.909065,
+    "lon": -119.28587,
+    "node_id": 1744965811,
+    "snap_distance_m": 146.5,
+    "node_elevation_m": 3063.0
+  },
+  {
+    "name": "Lower Grant Lake",
+    "category": "lake",
+    "lat": 37.886696,
+    "lon": -119.539174,
+    "node_id": 1744955126,
+    "snap_distance_m": 54.0,
+    "node_elevation_m": 2823.0
+  },
+  {
+    "name": "Lower Jackass Lake",
+    "category": "lake",
+    "lat": 37.527162,
+    "lon": -119.349259,
+    "node_id": 7891655587,
+    "snap_distance_m": 372.8,
+    "node_elevation_m": 2653.0
+  },
+  {
+    "name": "Lower Long Lake",
+    "category": "lake",
+    "lat": 38.225635,
+    "lon": -119.569496,
+    "node_id": 539450162,
+    "snap_distance_m": 386.3,
+    "node_elevation_m": 2630.0
+  },
+  {
+    "name": "Lower Lost Keys Lake",
+    "category": "lake",
+    "lat": 37.515483,
+    "lon": -119.011745,
+    "node_id": 2129529861,
+    "snap_distance_m": 139.1,
+    "node_elevation_m": 2860.0
+  },
+  {
+    "name": "Lower Marie Lake",
+    "category": "lake",
+    "lat": 37.738969,
+    "lon": -119.241708,
+    "node_id": 7891656166,
+    "snap_distance_m": 465.4,
+    "node_elevation_m": 3324.0
+  },
+  {
+    "name": "Lower Merced Pass Lake",
+    "category": "lake",
+    "lat": 37.626273,
+    "lon": -119.449272,
+    "node_id": 480625829,
+    "snap_distance_m": 469.0,
+    "node_elevation_m": 2726.0
+  },
+  {
+    "name": "Lower Nydiver Lake",
+    "category": "lake",
+    "lat": 37.692508,
+    "lon": -119.166876,
+    "node_id": 7914942926,
+    "snap_distance_m": 434.2,
+    "node_elevation_m": 2945.0
+  },
+  {
+    "name": "Lower Sunrise Lake",
+    "category": "lake",
+    "lat": 37.804147,
+    "lon": -119.452065,
+    "node_id": 8505468831,
+    "snap_distance_m": 115.3,
+    "node_elevation_m": 2814.0
+  },
+  {
+    "name": "Maltby Lake",
+    "category": "lake",
+    "lat": 38.119175,
+    "lon": -119.424302,
+    "node_id": 9213041171,
+    "snap_distance_m": 401.4,
+    "node_elevation_m": 3089.0
+  },
+  {
+    "name": "Marsh Lake",
+    "category": "lake",
+    "lat": 37.506579,
+    "lon": -118.980102,
+    "node_id": 2129529597,
+    "snap_distance_m": 401.2,
+    "node_elevation_m": 2748.0
+  },
+  {
+    "name": "May Lake",
+    "category": "lake",
+    "lat": 37.847378,
+    "lon": -119.493266,
+    "node_id": 8586917705,
+    "snap_distance_m": 265.3,
+    "node_elevation_m": 2850.0
+  },
+  {
+    "name": "McCabe Lake",
+    "category": "lake",
+    "lat": 37.993241,
+    "lon": -119.348099,
+    "node_id": 7989583046,
+    "snap_distance_m": 338.5,
+    "node_elevation_m": 3007.0
+  },
+  {
+    "name": "McClure Lake",
+    "category": "lake",
+    "lat": 37.641529,
+    "lon": -119.314794,
+    "node_id": 1755690751,
+    "snap_distance_m": 248.0,
+    "node_elevation_m": 2916.0
+  },
+  {
+    "name": "McLeod Lake",
+    "category": "lake",
+    "lat": 37.608041,
+    "lon": -119.030849,
+    "node_id": 8432936755,
+    "snap_distance_m": 150.4,
+    "node_elevation_m": 2836.0
+  },
+  {
+    "name": "Middle Deer Lake",
+    "category": "lake",
+    "lat": 37.563177,
+    "lon": -118.987202,
+    "node_id": 7917533295,
+    "snap_distance_m": 338.6,
+    "node_elevation_m": 3261.0
+  },
+  {
+    "name": "Middle Frog Lake",
+    "category": "lake",
+    "lat": 38.049917,
+    "lon": -119.281224,
+    "node_id": 8569451903,
+    "snap_distance_m": 188.3,
+    "node_elevation_m": 3171.0
+  },
+  {
+    "name": "Middle Jackass Lake",
+    "category": "lake",
+    "lat": 37.527,
+    "lon": -119.35487,
+    "node_id": 7891655587,
+    "snap_distance_m": 497.7,
+    "node_elevation_m": 2653.0
+  },
+  {
+    "name": "Middle Lost Keys Lake",
+    "category": "lake",
+    "lat": 37.514776,
+    "lon": -119.006662,
+    "node_id": 2129529903,
+    "snap_distance_m": 202.5,
+    "node_elevation_m": 2872.0
+  },
+  {
+    "name": "Minaret Lake",
+    "category": "lake",
+    "lat": 37.660679,
+    "lon": -119.15527,
+    "node_id": 7978966602,
+    "snap_distance_m": 181.3,
+    "node_elevation_m": 3011.0
+  },
+  {
+    "name": "Mirror Lake",
+    "category": "lake",
+    "lat": 37.748394,
+    "lon": -119.549252,
+    "node_id": 7978231823,
+    "snap_distance_m": 43.3,
+    "node_elevation_m": 1249.0
+  },
+  {
+    "name": "Moat Lake",
+    "category": "lake",
+    "lat": 38.05643,
+    "lon": -119.278987,
+    "node_id": 8569451849,
+    "snap_distance_m": 163.8,
+    "node_elevation_m": 3231.0
+  },
+  {
+    "name": "Monument Lake",
+    "category": "lake",
+    "lat": 37.579024,
+    "lon": -119.361399,
+    "node_id": 1755678010,
+    "snap_distance_m": 498.1,
+    "node_elevation_m": 2840.0
+  },
+  {
+    "name": "Mud Lake",
+    "category": "lake",
+    "lat": 38.337651,
+    "lon": -119.522761,
+    "node_id": 13205110740,
+    "snap_distance_m": 266.1,
+    "node_elevation_m": 2147.0
+  },
+  {
+    "name": "Neall Lake",
+    "category": "lake",
+    "lat": 37.987202,
+    "lon": -119.504611,
+    "node_id": 1745028775,
+    "snap_distance_m": 141.7,
+    "node_elevation_m": 2813.0
+  },
+  {
+    "name": "Nelson Lake",
+    "category": "lake",
+    "lat": 37.809665,
+    "lon": -119.377018,
+    "node_id": 7855439619,
+    "snap_distance_m": 232.6,
+    "node_elevation_m": 2945.0
+  },
+  {
+    "name": "Noname Lake",
+    "category": "lake",
+    "lat": 37.627145,
+    "lon": -119.148007,
+    "node_id": 7978942374,
+    "snap_distance_m": 382.9,
+    "node_elevation_m": 2895.0
+  },
+  {
+    "name": "Olaine Lake",
+    "category": "lake",
+    "lat": 37.694418,
+    "lon": -119.113877,
+    "node_id": 3859534566,
+    "snap_distance_m": 412.3,
+    "node_elevation_m": 2480.0
+  },
+  {
+    "name": "Olive Lake",
+    "category": "lake",
+    "lat": 37.472906,
+    "lon": -118.987209,
+    "node_id": 8322678782,
+    "snap_distance_m": 368.9,
+    "node_elevation_m": 2970.0
+  },
+  {
+    "name": "Ostrander Lake",
+    "category": "lake",
+    "lat": 37.624538,
+    "lon": -119.550318,
+    "node_id": 13288528723,
+    "snap_distance_m": 185.7,
+    "node_elevation_m": 2605.0
+  },
+  {
+    "name": "Parker Lake",
+    "category": "lake",
+    "lat": 37.834172,
+    "lon": -119.158702,
+    "node_id": 7782960094,
+    "snap_distance_m": 181.1,
+    "node_elevation_m": 2531.0
+  },
+  {
+    "name": "Peeler Lake",
+    "category": "lake",
+    "lat": 38.12021,
+    "lon": -119.467923,
+    "node_id": 8538685246,
+    "snap_distance_m": 259.0,
+    "node_elevation_m": 2899.0
+  },
+  {
+    "name": "Pika Lake",
+    "category": "lake",
+    "lat": 37.550973,
+    "lon": -118.952674,
+    "node_id": 901962879,
+    "snap_distance_m": 212.0,
+    "node_elevation_m": 3235.0
+  },
+  {
+    "name": "Pingree Lake",
+    "category": "lake",
+    "lat": 38.134369,
+    "lon": -119.798789,
+    "node_id": 927089993,
+    "snap_distance_m": 227.4,
+    "node_elevation_m": 2475.0
+  },
+  {
+    "name": "Piute Lake",
+    "category": "lake",
+    "lat": 38.16203,
+    "lon": -119.811125,
+    "node_id": 1931828410,
+    "snap_distance_m": 114.0,
+    "node_elevation_m": 2430.0
+  },
+  {
+    "name": "Polly Dome Lakes",
+    "category": "lake",
+    "lat": 37.861399,
+    "lon": -119.455849,
+    "node_id": 7711045224,
+    "snap_distance_m": 140.7,
+    "node_elevation_m": 2663.0
+  },
+  {
+    "name": "Poore Lake",
+    "category": "lake",
+    "lat": 38.309765,
+    "lon": -119.525278,
+    "node_id": 89668277,
+    "snap_distance_m": 431.9,
+    "node_elevation_m": 2208.0
+  },
+  {
+    "name": "Powell Lake",
+    "category": "lake",
+    "lat": 38.204104,
+    "lon": -119.857733,
+    "node_id": 7891641630,
+    "snap_distance_m": 135.1,
+    "node_elevation_m": 2698.0
+  },
+  {
+    "name": "Rainbow Lake",
+    "category": "lake",
+    "lat": 37.469621,
+    "lon": -119.035083,
+    "node_id": 2130764756,
+    "snap_distance_m": 217.3,
+    "node_elevation_m": 3016.0
+  },
+  {
+    "name": "Rattlesnake Lake",
+    "category": "lake",
+    "lat": 37.477568,
+    "lon": -119.189919,
+    "node_id": 3839729264,
+    "snap_distance_m": 86.8,
+    "node_elevation_m": 1722.0
+  },
+  {
+    "name": "Red Lake",
+    "category": "lake",
+    "lat": 37.567368,
+    "lon": -118.9687,
+    "node_id": 9949763542,
+    "snap_distance_m": 111.1,
+    "node_elevation_m": 3102.0
+  },
+  {
+    "name": "Red Top Lake",
+    "category": "lake",
+    "lat": 38.262412,
+    "lon": -119.540287,
+    "node_id": 539453292,
+    "snap_distance_m": 449.9,
+    "node_elevation_m": 2428.0
+  },
+  {
+    "name": "Relief Reservoir",
+    "category": "lake",
+    "lat": 38.27045,
+    "lon": -119.737873,
+    "node_id": 8740948282,
+    "snap_distance_m": 149.2,
+    "node_elevation_m": 2198.0
+  },
+  {
+    "name": "Rosasco Lake",
+    "category": "lake",
+    "lat": 38.141134,
+    "lon": -119.818648,
+    "node_id": 10539919687,
+    "snap_distance_m": 451.8,
+    "node_elevation_m": 2345.0
+  },
+  {
+    "name": "Ruth Lake",
+    "category": "lake",
+    "lat": 37.576271,
+    "lon": -119.371622,
+    "node_id": 1755678010,
+    "snap_distance_m": 472.2,
+    "node_elevation_m": 2840.0
+  },
+  {
+    "name": "Rutherford Lake",
+    "category": "lake",
+    "lat": 37.597745,
+    "lon": -119.371702,
+    "node_id": 1755684270,
+    "snap_distance_m": 288.6,
+    "node_elevation_m": 2978.0
+  },
+  {
+    "name": "Sadler Lake",
+    "category": "lake",
+    "lat": 37.642643,
+    "lon": -119.303861,
+    "node_id": 7891655324,
+    "snap_distance_m": 284.3,
+    "node_elevation_m": 2866.0
+  },
+  {
+    "name": "Secret Lake",
+    "category": "lake",
+    "lat": 38.307217,
+    "lon": -119.538737,
+    "node_id": 13574830847,
+    "snap_distance_m": 148.4,
+    "node_elevation_m": 2313.0
+  },
+  {
+    "name": "Shadow Lake",
+    "category": "lake",
+    "lat": 37.693914,
+    "lon": -119.132116,
+    "node_id": 7111024734,
+    "snap_distance_m": 406.1,
+    "node_elevation_m": 2691.0
+  },
+  {
+    "name": "Silver Lake",
+    "category": "lake",
+    "lat": 37.777135,
+    "lon": -119.125648,
+    "node_id": 13118698593,
+    "snap_distance_m": 403.1,
+    "node_elevation_m": 2249.0
+  },
+  {
+    "name": "Skelton Lake",
+    "category": "lake",
+    "lat": 37.576742,
+    "lon": -118.975605,
+    "node_id": 12804425296,
+    "snap_distance_m": 59.5,
+    "node_elevation_m": 3009.0
+  },
+  {
+    "name": "Slab Lakes",
+    "category": "lake",
+    "lat": 37.617095,
+    "lon": -119.35866,
+    "node_id": 10303891281,
+    "snap_distance_m": 139.9,
+    "node_elevation_m": 2991.0
+  },
+  {
+    "name": "Snow Lake",
+    "category": "lake",
+    "lat": 38.171459,
+    "lon": -119.62712,
+    "node_id": 1745106003,
+    "snap_distance_m": 331.9,
+    "node_elevation_m": 2853.0
+  },
+  {
+    "name": "Spillway Lake",
+    "category": "lake",
+    "lat": 37.842196,
+    "lon": -119.23236,
+    "node_id": 1744902192,
+    "snap_distance_m": 125.4,
+    "node_elevation_m": 3188.0
+  },
+  {
+    "name": "Staniford Lakes",
+    "category": "lake",
+    "lat": 37.555529,
+    "lon": -119.359097,
+    "node_id": 13312267592,
+    "snap_distance_m": 164.4,
+    "node_elevation_m": 2680.0
+  },
+  {
+    "name": "Starvation Lake",
+    "category": "lake",
+    "lat": 38.185891,
+    "lon": -119.761749,
+    "node_id": 1931619391,
+    "snap_distance_m": 346.0,
+    "node_elevation_m": 2706.0
+  },
+  {
+    "name": "Summit Lake",
+    "category": "lake",
+    "lat": 37.85519,
+    "lon": -119.215042,
+    "node_id": 1744922694,
+    "snap_distance_m": 288.5,
+    "node_elevation_m": 3231.0
+  },
+  {
+    "name": "T J Lake",
+    "category": "lake",
+    "lat": 37.591688,
+    "lon": -119.00771,
+    "node_id": 7917532929,
+    "snap_distance_m": 354.2,
+    "node_elevation_m": 2846.0
+  },
+  {
+    "name": "Tamarack Lake",
+    "category": "lake",
+    "lat": 38.125603,
+    "lon": -119.316451,
+    "node_id": 8033603799,
+    "snap_distance_m": 252.2,
+    "node_elevation_m": 2941.0
+  },
+  {
+    "name": "Ten Lakes",
+    "category": "lake",
+    "lat": 37.904676,
+    "lon": -119.525307,
+    "node_id": 1444820439,
+    "snap_distance_m": 227.7,
+    "node_elevation_m": 2745.0
+  },
+  {
+    "name": "Tenaya Lake",
+    "category": "lake",
+    "lat": 37.831025,
+    "lon": -119.461466,
+    "node_id": 9068930430,
+    "snap_distance_m": 319.2,
+    "node_elevation_m": 2490.0
+  },
+  {
+    "name": "Thousand Island Lake",
+    "category": "lake",
+    "lat": 37.719863,
+    "lon": -119.186712,
+    "node_id": 7965816423,
+    "snap_distance_m": 483.1,
+    "node_elevation_m": 3008.0
+  },
+  {
+    "name": "Toejam Lake",
+    "category": "lake",
+    "lat": 38.189356,
+    "lon": -119.800851,
+    "node_id": 1931540097,
+    "snap_distance_m": 179.3,
+    "node_elevation_m": 2681.0
+  },
+  {
+    "name": "Trumbull Lake",
+    "category": "lake",
+    "lat": 38.053572,
+    "lon": -119.257823,
+    "node_id": 8569451811,
+    "snap_distance_m": 481.4,
+    "node_elevation_m": 2974.0
+  },
+  {
+    "name": "Twin Lakes",
+    "category": "lake",
+    "lat": 38.13626,
+    "lon": -119.657004,
+    "node_id": 1745101644,
+    "snap_distance_m": 347.3,
+    "node_elevation_m": 2742.0
+  },
+  {
+    "name": "Upper Cathedral Lake",
+    "category": "lake",
+    "lat": 37.839489,
+    "lon": -119.415538,
+    "node_id": 8151017162,
+    "snap_distance_m": 98.8,
+    "node_elevation_m": 2929.0
+  },
+  {
+    "name": "Upper Chain Lake",
+    "category": "lake",
+    "lat": 37.567012,
+    "lon": -119.396298,
+    "node_id": 1755673778,
+    "snap_distance_m": 224.5,
+    "node_elevation_m": 2838.0
+  },
+  {
+    "name": "Upper Frog Lake",
+    "category": "lake",
+    "lat": 38.047959,
+    "lon": -119.28191,
+    "node_id": 1836158136,
+    "snap_distance_m": 264.6,
+    "node_elevation_m": 3157.0
+  },
+  {
+    "name": "Upper Jackass Lake",
+    "category": "lake",
+    "lat": 37.529589,
+    "lon": -119.360032,
+    "node_id": 12795197200,
+    "snap_distance_m": 94.2,
+    "node_elevation_m": 2802.0
+  },
+  {
+    "name": "Upper Long Lake",
+    "category": "lake",
+    "lat": 38.22373,
+    "lon": -119.57098,
+    "node_id": 539450162,
+    "snap_distance_m": 289.2,
+    "node_elevation_m": 2630.0
+  },
+  {
+    "name": "Upper Lost Keys Lake",
+    "category": "lake",
+    "lat": 37.513017,
+    "lon": -119.001512,
+    "node_id": 2129529793,
+    "snap_distance_m": 108.4,
+    "node_elevation_m": 2904.0
+  },
+  {
+    "name": "Upper Merced Pass Lake",
+    "category": "lake",
+    "lat": 37.624491,
+    "lon": -119.441879,
+    "node_id": 480625829,
+    "snap_distance_m": 262.8,
+    "node_elevation_m": 2726.0
+  },
+  {
+    "name": "Useless Lake",
+    "category": "lake",
+    "lat": 37.473168,
+    "lon": -119.029502,
+    "node_id": 2130764756,
+    "snap_distance_m": 427.5,
+    "node_elevation_m": 3016.0
+  },
+  {
+    "name": "Vanderburgh Lake",
+    "category": "lake",
+    "lat": 37.548941,
+    "lon": -119.352776,
+    "node_id": 3831299770,
+    "snap_distance_m": 393.4,
+    "node_elevation_m": 2699.0
+  },
+  {
+    "name": "Walker Lake",
+    "category": "lake",
+    "lat": 37.874572,
+    "lon": -119.165211,
+    "node_id": 8214757185,
+    "snap_distance_m": 233.3,
+    "node_elevation_m": 2456.0
+  },
+  {
+    "name": "Weber Lake",
+    "category": "lake",
+    "lat": 37.741767,
+    "lon": -119.174991,
+    "node_id": 8298081979,
+    "snap_distance_m": 195.0,
+    "node_elevation_m": 3036.0
+  },
+  {
+    "name": "West Lake",
+    "category": "lake",
+    "lat": 38.09125,
+    "lon": -119.322553,
+    "node_id": 7989787482,
+    "snap_distance_m": 329.4,
+    "node_elevation_m": 3021.0
+  },
+  {
+    "name": "Wilbur May Lake",
+    "category": "lake",
+    "lat": 37.466113,
+    "lon": -118.955239,
+    "node_id": 2130151523,
+    "snap_distance_m": 226.0,
+    "node_elevation_m": 2980.0
+  },
+  {
+    "name": "Wire Lakes",
+    "category": "lake",
+    "lat": 38.180524,
+    "lon": -119.771308,
+    "node_id": 1931829356,
+    "snap_distance_m": 303.4,
+    "node_elevation_m": 2706.0
+  },
+  {
+    "name": "Wood Lake",
+    "category": "lake",
+    "lat": 38.151247,
+    "lon": -119.75069,
+    "node_id": 919337005,
+    "snap_distance_m": 93.6,
+    "node_elevation_m": 2531.0
+  },
+  {
+    "name": "Woods Lakes",
+    "category": "lake",
+    "lat": 37.569071,
+    "lon": -118.965105,
+    "node_id": 12804438604,
+    "snap_distance_m": 64.0,
+    "node_elevation_m": 3104.0
+  },
+  {
+    "name": "Y Meadows Reservoir",
+    "category": "lake",
+    "lat": 38.193404,
+    "lon": -119.828161,
+    "node_id": 5910985167,
+    "snap_distance_m": 371.3,
+    "node_elevation_m": 2627.0
+  },
+  {
+    "name": "Agnew Meadows",
+    "category": "meadow",
+    "lat": 37.681749,
+    "lon": -119.087877,
+    "node_id": 8214854920,
+    "snap_distance_m": 111.3,
+    "node_elevation_m": 2547.0
+  },
+  {
+    "name": "Clover Meadow",
+    "category": "meadow",
+    "lat": 37.527956,
+    "lon": -119.277482,
+    "node_id": 88820158,
+    "snap_distance_m": 481.1,
+    "node_elevation_m": 2149.0
+  },
+  {
+    "name": "Cook's Meadow",
+    "category": "meadow",
+    "lat": 37.745037,
+    "lon": -119.590577,
+    "node_id": 1742216306,
+    "snap_distance_m": 228.3,
+    "node_elevation_m": 1220.0
+  },
+  {
+    "name": "Cooper Meadow",
+    "category": "meadow",
+    "lat": 38.232915,
+    "lon": -119.826574,
+    "node_id": 919326769,
+    "snap_distance_m": 247.2,
+    "node_elevation_m": 2560.0
+  },
+  {
+    "name": "Detachment Meadow",
+    "category": "meadow",
+    "lat": 37.602441,
+    "lon": -119.267995,
+    "node_id": 2928868973,
+    "snap_distance_m": 474.8,
+    "node_elevation_m": 2614.0
+  },
+  {
+    "name": "Earthquake Meadow",
+    "category": "meadow",
+    "lat": 37.582503,
+    "lon": -119.202928,
+    "node_id": 7891654838,
+    "snap_distance_m": 58.8,
+    "node_elevation_m": 2491.0
+  },
+  {
+    "name": "Groundhog Meadow",
+    "category": "meadow",
+    "lat": 38.154559,
+    "lon": -119.83501,
+    "node_id": 919325989,
+    "snap_distance_m": 73.7,
+    "node_elevation_m": 2294.0
+  },
+  {
+    "name": "Hodgdon Meadow",
+    "category": "meadow",
+    "lat": 37.794644,
+    "lon": -119.861682,
+    "node_id": 94833673,
+    "snap_distance_m": 400.9,
+    "node_elevation_m": 1422.0
+  },
+  {
+    "name": "Kennedy Meadow",
+    "category": "meadow",
+    "lat": 38.303622,
+    "lon": -119.742182,
+    "node_id": 4925409417,
+    "snap_distance_m": 192.6,
+    "node_elevation_m": 1933.0
+  },
+  {
+    "name": "Leavitt Meadow",
+    "category": "meadow",
+    "lat": 38.316419,
+    "lon": -119.550613,
+    "node_id": 12255303363,
+    "snap_distance_m": 485.5,
+    "node_elevation_m": 2181.0
+  },
+  {
+    "name": "McCreary Meadow",
+    "category": "meadow",
+    "lat": 37.491347,
+    "lon": -119.271773,
+    "node_id": 88799562,
+    "snap_distance_m": 106.8,
+    "node_elevation_m": 2048.0
+  },
+  {
+    "name": "Monroe Meadows",
+    "category": "meadow",
+    "lat": 37.65778,
+    "lon": -119.660934,
+    "node_id": 5792956619,
+    "snap_distance_m": 92.5,
+    "node_elevation_m": 2320.0
+  },
+  {
+    "name": "Piute Meadow",
+    "category": "meadow",
+    "lat": 38.161242,
+    "lon": -119.835282,
+    "node_id": 919325520,
+    "snap_distance_m": 215.6,
+    "node_elevation_m": 2314.0
+  },
+  {
+    "name": "Rube Meadow",
+    "category": "meadow",
+    "lat": 37.488044,
+    "lon": -119.130328,
+    "node_id": 2130767290,
+    "snap_distance_m": 379.5,
+    "node_elevation_m": 2466.0
+  },
+  {
+    "name": "Salt Lick Meadow",
+    "category": "meadow",
+    "lat": 38.200022,
+    "lon": -119.785575,
+    "node_id": 1931540220,
+    "snap_distance_m": 410.2,
+    "node_elevation_m": 2610.0
+  },
+  {
+    "name": "Snake Meadow",
+    "category": "meadow",
+    "lat": 37.557787,
+    "lon": -119.188549,
+    "node_id": 7891654725,
+    "snap_distance_m": 354.5,
+    "node_elevation_m": 2192.0
+  },
+  {
+    "name": "Summit Meadow",
+    "category": "meadow",
+    "lat": 38.177726,
+    "lon": -119.617142,
+    "node_id": 7993350210,
+    "snap_distance_m": 98.9,
+    "node_elevation_m": 2864.0
+  },
+  {
+    "name": "Whitesides Meadow",
+    "category": "meadow",
+    "lat": 38.209108,
+    "lon": -119.8107,
+    "node_id": 1387909567,
+    "snap_distance_m": 448.6,
+    "node_elevation_m": 2687.0
+  },
+  {
+    "name": "Agnew Pass",
+    "category": "pass",
+    "lat": 37.733895,
+    "lon": -119.143936,
+    "node_id": 903840631,
+    "snap_distance_m": 208.4,
+    "node_elevation_m": 3008.0
+  },
+  {
+    "name": "Badger Pass",
+    "category": "pass",
+    "lat": 37.666089,
+    "lon": -119.654078,
+    "node_id": 10782033456,
+    "snap_distance_m": 32.5,
+    "node_elevation_m": 2312.0
+  },
+  {
+    "name": "Bond Pass",
+    "category": "pass",
+    "lat": 38.173818,
+    "lon": -119.610631,
+    "node_id": 1745106750,
+    "snap_distance_m": 89.8,
+    "node_elevation_m": 2960.0
+  },
+  {
+    "name": "Cathedral Pass",
+    "category": "pass",
+    "lat": 37.834629,
+    "lon": -119.415516,
+    "node_id": 8151017175,
+    "snap_distance_m": 329.6,
+    "node_elevation_m": 2957.0
+  },
+  {
+    "name": "Chiquito Pass",
+    "category": "pass",
+    "lat": 37.538754,
+    "lon": -119.441439,
+    "node_id": 2428406536,
+    "snap_distance_m": 12.0,
+    "node_elevation_m": 2457.0
+  },
+  {
+    "name": "Deer Pass",
+    "category": "pass",
+    "lat": 37.558614,
+    "lon": -118.975502,
+    "node_id": 3679680854,
+    "snap_distance_m": 389.5,
+    "node_elevation_m": 3370.0
+  },
+  {
+    "name": "Duck Pass",
+    "category": "pass",
+    "lat": 37.558738,
+    "lon": -118.962636,
+    "node_id": 762008589,
+    "snap_distance_m": 69.5,
+    "node_elevation_m": 3237.0
+  },
+  {
+    "name": "Echo Pass",
+    "category": "pass",
+    "lat": 37.834104,
+    "lon": -119.400774,
+    "node_id": 5868916779,
+    "snap_distance_m": 69.4,
+    "node_elevation_m": 3298.0
+  },
+  {
+    "name": "Emigrant Pass",
+    "category": "pass",
+    "lat": 38.198835,
+    "lon": -119.629722,
+    "node_id": 539448577,
+    "snap_distance_m": 339.3,
+    "node_elevation_m": 2950.0
+  },
+  {
+    "name": "Gem Pass",
+    "category": "pass",
+    "lat": 37.774949,
+    "lon": -119.159397,
+    "node_id": 539328236,
+    "snap_distance_m": 98.8,
+    "node_elevation_m": 3172.0
+  },
+  {
+    "name": "Koip Peak Pass",
+    "category": "pass",
+    "lat": 37.814514,
+    "lon": -119.192621,
+    "node_id": 6010349548,
+    "snap_distance_m": 116.2,
+    "node_elevation_m": 3736.0
+  },
+  {
+    "name": "Mammoth Pass",
+    "category": "pass",
+    "lat": 37.608554,
+    "lon": -119.033796,
+    "node_id": 8432936766,
+    "snap_distance_m": 109.6,
+    "node_elevation_m": 2867.0
+  },
+  {
+    "name": "Mono Pass",
+    "category": "pass",
+    "lat": 37.855592,
+    "lon": -119.21664,
+    "node_id": 1744922694,
+    "snap_distance_m": 142.0,
+    "node_elevation_m": 3231.0
+  },
+  {
+    "name": "Piute Pass",
+    "category": "pass",
+    "lat": 38.241033,
+    "lon": -119.510441,
+    "node_id": 9870554102,
+    "snap_distance_m": 410.6,
+    "node_elevation_m": 2916.0
+  },
+  {
+    "name": "Sonora Pass",
+    "category": "pass",
+    "lat": 38.327927,
+    "lon": -119.637181,
+    "node_id": 539454530,
+    "snap_distance_m": 16.4,
+    "node_elevation_m": 2938.0
+  },
+  {
+    "name": "Ten Lakes Pass",
+    "category": "pass",
+    "lat": 37.902409,
+    "lon": -119.537045,
+    "node_id": 1444820830,
+    "snap_distance_m": 248.0,
+    "node_elevation_m": 2934.0
+  },
+  {
+    "name": "Tower Pass",
+    "category": "pass",
+    "lat": 38.154182,
+    "lon": -119.554223,
+    "node_id": 8917611577,
+    "snap_distance_m": 0.0,
+    "node_elevation_m": 3110.0
+  },
+  {
+    "name": "Tuolumne Pass",
+    "category": "pass",
+    "lat": 37.80431,
+    "lon": -119.340875,
+    "node_id": 1744867540,
+    "snap_distance_m": 4.5,
+    "node_elevation_m": 3051.0
+  },
+  {
+    "name": "Virginia Lakes Pass",
+    "category": "pass",
+    "lat": 38.041733,
+    "lon": -119.295338,
+    "node_id": 12214001038,
+    "snap_distance_m": 154.9,
+    "node_elevation_m": 3370.0
+  },
+  {
+    "name": "Vogelsang Pass",
+    "category": "pass",
+    "lat": 37.779629,
+    "lon": -119.340892,
+    "node_id": 1744856111,
+    "snap_distance_m": 136.9,
+    "node_elevation_m": 3252.0
+  },
+  {
+    "name": "Wilts Col",
+    "category": "pass",
+    "lat": 37.834041,
+    "lon": -119.399316,
+    "node_id": 5868916779,
+    "snap_distance_m": 147.9,
+    "node_elevation_m": 3298.0
+  },
+  {
+    "name": "Arrowhead Spire",
+    "category": "peak",
+    "lat": 37.757458,
+    "lon": -119.588306,
+    "node_id": 12219905806,
+    "snap_distance_m": 425.1,
+    "node_elevation_m": 2014.0
+  },
+  {
+    "name": "Castle Rock",
+    "category": "peak",
+    "lat": 38.247827,
+    "lon": -119.838117,
+    "node_id": 10119182547,
+    "snap_distance_m": 467.0,
+    "node_elevation_m": 2818.0
+  },
+  {
+    "name": "Cathedral Peak",
+    "category": "peak",
+    "lat": 37.847828,
+    "lon": -119.405529,
+    "node_id": 4386126122,
+    "snap_distance_m": 3.4,
+    "node_elevation_m": 3171.0
+  },
+  {
+    "name": "Cattle Mountain",
+    "category": "peak",
+    "lat": 37.518504,
+    "lon": -119.232299,
+    "node_id": 8059901650,
+    "snap_distance_m": 82.4,
+    "node_elevation_m": 2411.0
+  },
+  {
+    "name": "Church Tower",
+    "category": "peak",
+    "lat": 37.715016,
+    "lon": -119.629677,
+    "node_id": 5665667336,
+    "snap_distance_m": 386.4,
+    "node_elevation_m": 1354.0
+  },
+  {
+    "name": "Clouds Rest",
+    "category": "peak",
+    "lat": 37.767845,
+    "lon": -119.489251,
+    "node_id": 9750868409,
+    "snap_distance_m": 275.0,
+    "node_elevation_m": 2963.0
+  },
+  {
+    "name": "Crystal Crag",
+    "category": "peak",
+    "lat": 37.591048,
+    "lon": -119.013742,
+    "node_id": 3781733092,
+    "snap_distance_m": 207.2,
+    "node_elevation_m": 3010.0
+  },
+  {
+    "name": "Dewey Point",
+    "category": "peak",
+    "lat": 37.704553,
+    "lon": -119.650151,
+    "node_id": 3825965863,
+    "snap_distance_m": 10.8,
+    "node_elevation_m": 2175.0
+  },
+  {
+    "name": "Dog Dome",
+    "category": "peak",
+    "lat": 37.884494,
+    "lon": -119.345302,
+    "node_id": 332597680,
+    "snap_distance_m": 315.0,
+    "node_elevation_m": 2843.0
+  },
+  {
+    "name": "Dozier Dome",
+    "category": "peak",
+    "lat": 37.848019,
+    "lon": -119.429012,
+    "node_id": 4332049902,
+    "snap_distance_m": 222.6,
+    "node_elevation_m": 2788.0
+  },
+  {
+    "name": "Drug Dome",
+    "category": "peak",
+    "lat": 37.864324,
+    "lon": -119.421952,
+    "node_id": 5912939011,
+    "snap_distance_m": 243.2,
+    "node_elevation_m": 3034.0
+  },
+  {
+    "name": "Eagle Peak",
+    "category": "peak",
+    "lat": 38.274358,
+    "lon": -119.848235,
+    "node_id": 10119181872,
+    "snap_distance_m": 49.5,
+    "node_elevation_m": 2805.0
+  },
+  {
+    "name": "Echo Peak #0",
+    "category": "peak",
+    "lat": 37.83369,
+    "lon": -119.40253,
+    "node_id": 5868916779,
+    "snap_distance_m": 193.7,
+    "node_elevation_m": 3298.0
+  },
+  {
+    "name": "Echo Peak #1",
+    "category": "peak",
+    "lat": 37.83374,
+    "lon": -119.40288,
+    "node_id": 5868916779,
+    "snap_distance_m": 216.3,
+    "node_elevation_m": 3298.0
+  },
+  {
+    "name": "Echo Peak #2",
+    "category": "peak",
+    "lat": 37.83323,
+    "lon": -119.403,
+    "node_id": 5868916779,
+    "snap_distance_m": 257.8,
+    "node_elevation_m": 3298.0
+  },
+  {
+    "name": "Echo Peak #2.5",
+    "category": "peak",
+    "lat": 37.83279,
+    "lon": -119.40317,
+    "node_id": 5868916779,
+    "snap_distance_m": 302.1,
+    "node_elevation_m": 3298.0
+  },
+  {
+    "name": "Echo Peak #3",
+    "category": "peak",
+    "lat": 37.83264,
+    "lon": -119.40338,
+    "node_id": 5868916779,
+    "snap_distance_m": 326.9,
+    "node_elevation_m": 3298.0
+  },
+  {
+    "name": "Echo Peak #4",
+    "category": "peak",
+    "lat": 37.83157,
+    "lon": -119.40371,
+    "node_id": 5868916779,
+    "snap_distance_m": 436.4,
+    "node_elevation_m": 3298.0
+  },
+  {
+    "name": "Echo Peak #5",
+    "category": "peak",
+    "lat": 37.8339,
+    "lon": -119.40207,
+    "node_id": 5868916779,
+    "snap_distance_m": 147.4,
+    "node_elevation_m": 3298.0
+  },
+  {
+    "name": "Echo Peak #6",
+    "category": "peak",
+    "lat": 37.83306,
+    "lon": -119.402022,
+    "node_id": 5868916779,
+    "snap_distance_m": 216.1,
+    "node_elevation_m": 3298.0
+  },
+  {
+    "name": "Echo Peak #7",
+    "category": "peak",
+    "lat": 37.83368,
+    "lon": -119.401351,
+    "node_id": 5868916779,
+    "snap_distance_m": 127.6,
+    "node_elevation_m": 3298.0
+  },
+  {
+    "name": "Echo Peak #8",
+    "category": "peak",
+    "lat": 37.83367,
+    "lon": -119.400112,
+    "node_id": 5868916779,
+    "snap_distance_m": 130.7,
+    "node_elevation_m": 3298.0
+  },
+  {
+    "name": "Echo Peak #9",
+    "category": "peak",
+    "lat": 37.833367,
+    "lon": -119.40029,
+    "node_id": 5868916779,
+    "snap_distance_m": 156.9,
+    "node_elevation_m": 3298.0
+  },
+  {
+    "name": "Eichorn Pinnacle",
+    "category": "peak",
+    "lat": 37.847697,
+    "lon": -119.40708,
+    "node_id": 4386126122,
+    "snap_distance_m": 134.1,
+    "node_elevation_m": 3171.0
+  },
+  {
+    "name": "El Capitan",
+    "category": "peak",
+    "lat": 37.734219,
+    "lon": -119.637614,
+    "node_id": 1742208770,
+    "snap_distance_m": 36.5,
+    "node_elevation_m": 2165.0
+  },
+  {
+    "name": "Fairview Dome",
+    "category": "peak",
+    "lat": 37.87143,
+    "lon": -119.404004,
+    "node_id": 8860444546,
+    "snap_distance_m": 253.6,
+    "node_elevation_m": 2605.0
+  },
+  {
+    "name": "Grizzly Peak",
+    "category": "peak",
+    "lat": 38.19202,
+    "lon": -119.62167,
+    "node_id": 1745108911,
+    "snap_distance_m": 480.8,
+    "node_elevation_m": 2955.0
+  },
+  {
+    "name": "Half Dome",
+    "category": "peak",
+    "lat": 37.746001,
+    "lon": -119.533253,
+    "node_id": 11770524253,
+    "snap_distance_m": 62.2,
+    "node_elevation_m": 2358.0
+  },
+  {
+    "name": "Harlequin Dome",
+    "category": "peak",
+    "lat": 37.839395,
+    "lon": -119.454266,
+    "node_id": 13076700495,
+    "snap_distance_m": 232.5,
+    "node_elevation_m": 2496.0
+  },
+  {
+    "name": "Higher Cathedral Rock",
+    "category": "peak",
+    "lat": 37.714536,
+    "lon": -119.636555,
+    "node_id": 4230929440,
+    "snap_distance_m": 221.1,
+    "node_elevation_m": 1891.0
+  },
+  {
+    "name": "Higher Cathedral Spire",
+    "category": "peak",
+    "lat": 37.713585,
+    "lon": -119.63255,
+    "node_id": 4230929440,
+    "snap_distance_m": 192.6,
+    "node_elevation_m": 1891.0
+  },
+  {
+    "name": "Indian Rock",
+    "category": "peak",
+    "lat": 37.782424,
+    "lon": -119.551275,
+    "node_id": 6896969584,
+    "snap_distance_m": 63.4,
+    "node_elevation_m": 2589.0
+  },
+  {
+    "name": "K-P Pinnacle",
+    "category": "peak",
+    "lat": 37.737007,
+    "lon": -119.64,
+    "node_id": 1742209460,
+    "snap_distance_m": 295.9,
+    "node_elevation_m": 2303.0
+  },
+  {
+    "name": "Koip Peak",
+    "category": "peak",
+    "lat": 37.81354,
+    "lon": -119.201814,
+    "node_id": 358798424,
+    "snap_distance_m": 0.0,
+    "node_elevation_m": 3931.0
+  },
+  {
+    "name": "Lamb Dome",
+    "category": "peak",
+    "lat": 37.869768,
+    "lon": -119.424048,
+    "node_id": 7965915010,
+    "snap_distance_m": 367.6,
+    "node_elevation_m": 2614.0
+  },
+  {
+    "name": "Leavitt Peak",
+    "category": "peak",
+    "lat": 38.286189,
+    "lon": -119.651295,
+    "node_id": 8538804617,
+    "snap_distance_m": 0.0,
+    "node_elevation_m": 3517.0
+  },
+  {
+    "name": "Lembert Dome",
+    "category": "peak",
+    "lat": 37.881986,
+    "lon": -119.346972,
+    "node_id": 332597680,
+    "snap_distance_m": 0.0,
+    "node_elevation_m": 2843.0
+  },
+  {
+    "name": "Liberty Cap",
+    "category": "peak",
+    "lat": 37.728535,
+    "lon": -119.532555,
+    "node_id": 843481246,
+    "snap_distance_m": 328.1,
+    "node_elevation_m": 1830.0
+  },
+  {
+    "name": "Lion Point",
+    "category": "peak",
+    "lat": 37.564757,
+    "lon": -119.124987,
+    "node_id": 7978941593,
+    "snap_distance_m": 5.6,
+    "node_elevation_m": 2695.0
+  },
+  {
+    "name": "Lost Arrow Spire",
+    "category": "peak",
+    "lat": 37.756485,
+    "lon": -119.595203,
+    "node_id": 4776041623,
+    "snap_distance_m": 159.7,
+    "node_elevation_m": 1983.0
+  },
+  {
+    "name": "Lower Cathedral Rock",
+    "category": "peak",
+    "lat": 37.718548,
+    "lon": -119.643334,
+    "node_id": 8008764461,
+    "snap_distance_m": 232.1,
+    "node_elevation_m": 1614.0
+  },
+  {
+    "name": "Lower Cathedral Spire",
+    "category": "peak",
+    "lat": 37.71433,
+    "lon": -119.63142,
+    "node_id": 4230929440,
+    "snap_distance_m": 313.3,
+    "node_elevation_m": 1891.0
+  },
+  {
+    "name": "Mariuolumne Dome",
+    "category": "peak",
+    "lat": 37.861497,
+    "lon": -119.421909,
+    "node_id": 5912939011,
+    "snap_distance_m": 81.6,
+    "node_elevation_m": 3034.0
+  },
+  {
+    "name": "Middle Brother",
+    "category": "peak",
+    "lat": 37.74187,
+    "lon": -119.614055,
+    "node_id": 1742216292,
+    "snap_distance_m": 465.4,
+    "node_elevation_m": 2346.0
+  },
+  {
+    "name": "Middle Cathedral Rock",
+    "category": "peak",
+    "lat": 37.715752,
+    "lon": -119.637599,
+    "node_id": 4230929440,
+    "snap_distance_m": 381.8,
+    "node_elevation_m": 1891.0
+  },
+  {
+    "name": "Moran Point",
+    "category": "peak",
+    "lat": 37.735439,
+    "lon": -119.584367,
+    "node_id": 2397977498,
+    "snap_distance_m": 279.8,
+    "node_elevation_m": 1949.0
+  },
+  {
+    "name": "Mount Conness",
+    "category": "peak",
+    "lat": 37.966968,
+    "lon": -119.321275,
+    "node_id": 358796081,
+    "snap_distance_m": 0.0,
+    "node_elevation_m": 3766.0
+  },
+  {
+    "name": "Mount Hoffmann",
+    "category": "peak",
+    "lat": 37.846709,
+    "lon": -119.510616,
+    "node_id": 332603994,
+    "snap_distance_m": 51.9,
+    "node_elevation_m": 3247.0
+  },
+  {
+    "name": "Mount Watkins",
+    "category": "peak",
+    "lat": 37.782702,
+    "lon": -119.517662,
+    "node_id": 358796328,
+    "snap_distance_m": 0.0,
+    "node_elevation_m": 2583.0
+  },
+  {
+    "name": "North Dome",
+    "category": "peak",
+    "lat": 37.756869,
+    "lon": -119.559886,
+    "node_id": 6792138928,
+    "snap_distance_m": 308.2,
+    "node_elevation_m": 2023.0
+  },
+  {
+    "name": "North Mountain",
+    "category": "peak",
+    "lat": 37.902423,
+    "lon": -119.896569,
+    "node_id": 1744961341,
+    "snap_distance_m": 72.5,
+    "node_elevation_m": 1754.0
+  },
+  {
+    "name": "Olmsted Point",
+    "category": "peak",
+    "lat": 37.809284,
+    "lon": -119.484435,
+    "node_id": 3529568998,
+    "snap_distance_m": 58.7,
+    "node_elevation_m": 2567.0
+  },
+  {
+    "name": "Pinecrest Peak",
+    "category": "peak",
+    "lat": 38.224638,
+    "lon": -119.927404,
+    "node_id": 94719041,
+    "snap_distance_m": 368.8,
+    "node_elevation_m": 2564.0
+  },
+  {
+    "name": "Pothole Dome",
+    "category": "peak",
+    "lat": 37.880579,
+    "lon": -119.393882,
+    "node_id": 94834866,
+    "snap_distance_m": 251.1,
+    "node_elevation_m": 2644.0
+  },
+  {
+    "name": "Puppy Dome",
+    "category": "peak",
+    "lat": 37.875298,
+    "lon": -119.345621,
+    "node_id": 4386825214,
+    "snap_distance_m": 108.6,
+    "node_elevation_m": 2642.0
+  },
+  {
+    "name": "Pywiack Dome",
+    "category": "peak",
+    "lat": 37.846538,
+    "lon": -119.442571,
+    "node_id": 4359854072,
+    "snap_distance_m": 55.3,
+    "node_elevation_m": 2627.0
+  },
+  {
+    "name": "Sentinel Dome",
+    "category": "peak",
+    "lat": 37.722982,
+    "lon": -119.58433,
+    "node_id": 4408989890,
+    "snap_distance_m": 11.7,
+    "node_elevation_m": 2435.0
+  },
+  {
+    "name": "Smith Peak",
+    "category": "peak",
+    "lat": 37.926802,
+    "lon": -119.735068,
+    "node_id": 1744983558,
+    "snap_distance_m": 97.7,
+    "node_elevation_m": 2309.0
+  },
+  {
+    "name": "Sonora Crag",
+    "category": "peak",
+    "lat": 38.343621,
+    "lon": -119.618615,
+    "node_id": 7935225679,
+    "snap_distance_m": 5.1,
+    "node_elevation_m": 3175.0
+  },
+  {
+    "name": "Stanford Point",
+    "category": "peak",
+    "lat": 37.706114,
+    "lon": -119.666492,
+    "node_id": 358803115,
+    "snap_distance_m": 0.0,
+    "node_elevation_m": 2061.0
+  },
+  {
+    "name": "Stately Pleasure Dome",
+    "category": "peak",
+    "lat": 37.838592,
+    "lon": -119.457609,
+    "node_id": 13076700455,
+    "snap_distance_m": 380.1,
+    "node_elevation_m": 2492.0
+  },
+  {
+    "name": "Subdome",
+    "category": "peak",
+    "lat": 37.746692,
+    "lon": -119.529904,
+    "node_id": 11770524253,
+    "snap_distance_m": 303.2,
+    "node_elevation_m": 2358.0
+  },
+  {
+    "name": "Taft Point",
+    "category": "peak",
+    "lat": 37.71311,
+    "lon": -119.604606,
+    "node_id": 331511840,
+    "snap_distance_m": 0.8,
+    "node_elevation_m": 2226.0
+  },
+  {
+    "name": "Tenaya Peak",
+    "category": "peak",
+    "lat": 37.828536,
+    "lon": -119.443215,
+    "node_id": 3736959935,
+    "snap_distance_m": 81.8,
+    "node_elevation_m": 3116.0
+  },
+  {
+    "name": "The Outpost",
+    "category": "peak",
+    "lat": 38.114314,
+    "lon": -119.417799,
+    "node_id": 9213041171,
+    "snap_distance_m": 465.2,
+    "node_elevation_m": 3089.0
+  },
+  {
+    "name": "The Pinnacles",
+    "category": "peak",
+    "lat": 37.762279,
+    "lon": -119.494563,
+    "node_id": 1742222904,
+    "snap_distance_m": 439.9,
+    "node_elevation_m": 2838.0
+  },
+  {
+    "name": "Trumbull Peak",
+    "category": "peak",
+    "lat": 37.687828,
+    "lon": -119.86144,
+    "node_id": 89151960,
+    "snap_distance_m": 445.4,
+    "node_elevation_m": 1363.0
+  },
+  {
+    "name": "Union Point",
+    "category": "peak",
+    "lat": 37.734847,
+    "lon": -119.587703,
+    "node_id": 2397977491,
+    "snap_distance_m": 5.1,
+    "node_elevation_m": 1859.0
+  },
+  {
+    "name": "Vogelsang Peak",
+    "category": "peak",
+    "lat": 37.777419,
+    "lon": -119.349533,
+    "node_id": 6010361261,
+    "snap_distance_m": 18.6,
+    "node_elevation_m": 3433.0
+  },
+  {
+    "name": "Volunteer Peak",
+    "category": "peak",
+    "lat": 38.006032,
+    "lon": -119.488222,
+    "node_id": 1999039834,
+    "snap_distance_m": 428.0,
+    "node_elevation_m": 2891.0
+  },
+  {
+    "name": "Washington Column",
+    "category": "peak",
+    "lat": 37.748525,
+    "lon": -119.560046,
+    "node_id": 4428620308,
+    "snap_distance_m": 307.0,
+    "node_elevation_m": 1382.0
+  },
+  {
+    "name": "Yosemite Point",
+    "category": "peak",
+    "lat": 37.756468,
+    "lon": -119.592901,
+    "node_id": 4539009060,
+    "snap_distance_m": 32.5,
+    "node_elevation_m": 2014.0
+  },
+  {
+    "name": "(View from the Bridge)",
+    "category": "viewpoint",
+    "lat": 37.549019,
+    "lon": -119.632522,
+    "node_id": 8949658075,
+    "snap_distance_m": 113.9,
+    "node_elevation_m": 1290.0
+  },
+  {
+    "name": "Artist Point",
+    "category": "viewpoint",
+    "lat": 37.712727,
+    "lon": -119.675351,
+    "node_id": 11189356503,
+    "snap_distance_m": 264.8,
+    "node_elevation_m": 1329.0
+  },
+  {
+    "name": "Bridalveil Fall Viewpoint",
+    "category": "viewpoint",
+    "lat": 37.7176,
+    "lon": -119.648281,
+    "node_id": 3580851998,
+    "snap_distance_m": 0.0,
+    "node_elevation_m": 1228.0
+  },
+  {
+    "name": "Chilnualna Creek Cascades viewpoint",
+    "category": "viewpoint",
+    "lat": 37.564599,
+    "lon": -119.615531,
+    "node_id": 1247872620,
+    "snap_distance_m": 68.4,
+    "node_elevation_m": 1970.0
+  },
+  {
+    "name": "Chilnualna Fall viewpoint",
+    "category": "viewpoint",
+    "lat": 37.56487,
+    "lon": -119.618395,
+    "node_id": 1247872620,
+    "snap_distance_m": 270.7,
+    "node_elevation_m": 1970.0
+  },
+  {
+    "name": "Clark Point",
+    "category": "viewpoint",
+    "lat": 37.725016,
+    "lon": -119.545012,
+    "node_id": 842918525,
+    "snap_distance_m": 9.6,
+    "node_elevation_m": 1629.0
+  },
+  {
+    "name": "Columbia Rock",
+    "category": "viewpoint",
+    "lat": 37.746555,
+    "lon": -119.602783,
+    "node_id": 4409172771,
+    "snap_distance_m": 254.3,
+    "node_elevation_m": 1247.0
+  },
+  {
+    "name": "Falls View",
+    "category": "viewpoint",
+    "lat": 37.747201,
+    "lon": -119.593914,
+    "node_id": 1742216557,
+    "snap_distance_m": 4.7,
+    "node_elevation_m": 1241.0
+  },
+  {
+    "name": "Gargoyles",
+    "category": "viewpoint",
+    "lat": 38.245259,
+    "lon": -119.94838,
+    "node_id": 10119183280,
+    "snap_distance_m": 222.4,
+    "node_elevation_m": 2290.0
+  },
+  {
+    "name": "Glacier Point",
+    "category": "viewpoint",
+    "lat": 37.73067,
+    "lon": -119.573666,
+    "node_id": 7938993277,
+    "snap_distance_m": 16.0,
+    "node_elevation_m": 2217.0
+  },
+  {
+    "name": "Half Dome View",
+    "category": "viewpoint",
+    "lat": 37.713672,
+    "lon": -119.727266,
+    "node_id": 2138394698,
+    "snap_distance_m": 450.3,
+    "node_elevation_m": 1464.0
+  },
+  {
+    "name": "Horsetail Fall viewing position",
+    "category": "viewpoint",
+    "lat": 37.728844,
+    "lon": -119.613193,
+    "node_id": 2922659008,
+    "snap_distance_m": 438.1,
+    "node_elevation_m": 1224.0
+  },
+  {
+    "name": "Inspiration Point",
+    "category": "viewpoint",
+    "lat": 37.714077,
+    "lon": -119.687879,
+    "node_id": 1667696439,
+    "snap_distance_m": 0.0,
+    "node_elevation_m": 1655.0
+  },
+  {
+    "name": "Lookout Point",
+    "category": "viewpoint",
+    "lat": 37.89998,
+    "lon": -119.82915,
+    "node_id": 1744958948,
+    "snap_distance_m": 3.6,
+    "node_elevation_m": 1589.0
+  },
+  {
+    "name": "Lower Chilnualna Fall viewpoint",
+    "category": "viewpoint",
+    "lat": 37.550858,
+    "lon": -119.631608,
+    "node_id": 8949658075,
+    "snap_distance_m": 106.1,
+    "node_elevation_m": 1290.0
+  },
+  {
+    "name": "Lower Yosemite Fall View",
+    "category": "viewpoint",
+    "lat": 37.745798,
+    "lon": -119.596251,
+    "node_id": 2951583562,
+    "snap_distance_m": 3.2,
+    "node_elevation_m": 1228.0
+  },
+  {
+    "name": "Oh My Gosh Point",
+    "category": "viewpoint",
+    "lat": 37.750578,
+    "lon": -119.598287,
+    "node_id": 5172391166,
+    "snap_distance_m": 82.2,
+    "node_elevation_m": 1402.0
+  },
+  {
+    "name": "Panorama Point",
+    "category": "viewpoint",
+    "lat": 37.716988,
+    "lon": -119.557799,
+    "node_id": 7969336242,
+    "snap_distance_m": 4.8,
+    "node_elevation_m": 1884.0
+  },
+  {
+    "name": "Ribbon Falls Viewpoint",
+    "category": "viewpoint",
+    "lat": 37.734509,
+    "lon": -119.648365,
+    "node_id": 12861549046,
+    "snap_distance_m": 10.7,
+    "node_elevation_m": 1852.0
+  },
+  {
+    "name": "Roosevelt Point",
+    "category": "viewpoint",
+    "lat": 37.722875,
+    "lon": -119.593361,
+    "node_id": 331511313,
+    "snap_distance_m": 83.4,
+    "node_elevation_m": 2268.0
+  },
+  {
+    "name": "Sierra Point",
+    "category": "viewpoint",
+    "lat": 37.727148,
+    "lon": -119.555439,
+    "node_id": 1742207205,
+    "snap_distance_m": 373.3,
+    "node_elevation_m": 1267.0
+  },
+  {
+    "name": "Trail of the Gargoyles",
+    "category": "viewpoint",
+    "lat": 38.249195,
+    "lon": -119.943501,
+    "node_id": 4925421286,
+    "snap_distance_m": 27.3,
+    "node_elevation_m": 2268.0
+  },
+  {
+    "name": "Trumbull Peak Fire Lookout Tower",
+    "category": "viewpoint",
+    "lat": 37.681279,
+    "lon": -119.863315,
+    "node_id": 2410195136,
+    "snap_distance_m": 0.0,
+    "node_elevation_m": 1406.0
+  },
+  {
+    "name": "Tunnel View",
+    "category": "viewpoint",
+    "lat": 37.715573,
+    "lon": -119.676892,
+    "node_id": 11189356492,
+    "snap_distance_m": 18.6,
+    "node_elevation_m": 1329.0
+  },
+  {
+    "name": "Twin Falls",
+    "category": "viewpoint",
+    "lat": 37.61074,
+    "lon": -119.009987,
+    "node_id": 8498339184,
+    "snap_distance_m": 47.8,
+    "node_elevation_m": 2710.0
+  },
+  {
+    "name": "Twin Falls view",
+    "category": "viewpoint",
+    "lat": 37.615508,
+    "lon": -119.008398,
+    "node_id": 13076445328,
+    "snap_distance_m": 229.8,
+    "node_elevation_m": 2648.0
+  },
+  {
+    "name": "Twin Lakes Scenic Viewpoint",
+    "category": "viewpoint",
+    "lat": 37.626111,
+    "lon": -119.031419,
+    "node_id": 3713112287,
+    "snap_distance_m": 228.0,
+    "node_elevation_m": 3335.0
+  },
+  {
+    "name": "Valley View",
+    "category": "viewpoint",
+    "lat": 37.717278,
+    "lon": -119.661871,
+    "node_id": 4496530178,
+    "snap_distance_m": 375.7,
+    "node_elevation_m": 1205.0
+  },
+  {
+    "name": "View on Silver Lake",
+    "category": "viewpoint",
+    "lat": 37.77908,
+    "lon": -119.129295,
+    "node_id": 13118698593,
+    "snap_distance_m": 17.9,
+    "node_elevation_m": 2249.0
+  },
+  {
+    "name": "View on Tenaya Lake",
+    "category": "viewpoint",
+    "lat": 37.813339,
+    "lon": -119.48268,
+    "node_id": 11189397596,
+    "snap_distance_m": 300.2,
+    "node_elevation_m": 2572.0
+  },
+  {
+    "name": "Viewpoint for Giant Sequoias",
+    "category": "viewpoint",
+    "lat": 37.768714,
+    "lon": -119.806938,
+    "node_id": 3537102486,
+    "snap_distance_m": 4.9,
+    "node_elevation_m": 1782.0
+  },
+  {
+    "name": "Washburn Point",
+    "category": "viewpoint",
+    "lat": 37.720625,
+    "lon": -119.572861,
+    "node_id": 3428127129,
+    "snap_distance_m": 457.0,
+    "node_elevation_m": 2308.0
+  },
+  {
+    "name": "Yosemite Falls Overlook",
+    "category": "viewpoint",
+    "lat": 37.757018,
+    "lon": -119.59689,
+    "node_id": 4776041623,
+    "snap_distance_m": 0.0,
+    "node_elevation_m": 1983.0
+  },
+  {
+    "name": "Bridalveil Fall",
+    "category": "waterfall",
+    "lat": 37.716805,
+    "lon": -119.646773,
+    "node_id": 3580851998,
+    "snap_distance_m": 159.4,
+    "node_elevation_m": 1228.0
+  },
+  {
+    "name": "Chilnualna Creek Cascades",
+    "category": "waterfall",
+    "lat": 37.565049,
+    "lon": -119.612561,
+    "node_id": 1247872620,
+    "snap_distance_m": 246.5,
+    "node_elevation_m": 1970.0
+  },
+  {
+    "name": "Chilnualna Fall",
+    "category": "waterfall",
+    "lat": 37.563358,
+    "lon": -119.617083,
+    "node_id": 1247872620,
+    "snap_distance_m": 255.1,
+    "node_elevation_m": 1970.0
+  },
+  {
+    "name": "Horsetail Fall",
+    "category": "waterfall",
+    "lat": 37.731296,
+    "lon": -119.628191,
+    "node_id": 9371360103,
+    "snap_distance_m": 481.0,
+    "node_elevation_m": 1213.0
+  },
+  {
+    "name": "Horsetail Falls",
+    "category": "waterfall",
+    "lat": 37.761894,
+    "lon": -119.127953,
+    "node_id": 468437304,
+    "snap_distance_m": 369.6,
+    "node_elevation_m": 2583.0
+  },
+  {
+    "name": "Illilouette Fall",
+    "category": "waterfall",
+    "lat": 37.713926,
+    "lon": -119.561448,
+    "node_id": 9517573616,
+    "snap_distance_m": 42.6,
+    "node_elevation_m": 1783.0
+  },
+  {
+    "name": "Lower Chilnualna Falls",
+    "category": "waterfall",
+    "lat": 37.550802,
+    "lon": -119.631362,
+    "node_id": 8949658075,
+    "snap_distance_m": 111.4,
+    "node_elevation_m": 1290.0
+  },
+  {
+    "name": "Lower Rainbow Falls",
+    "category": "waterfall",
+    "lat": 37.595092,
+    "lon": -119.089165,
+    "node_id": 855157257,
+    "snap_distance_m": 30.4,
+    "node_elevation_m": 2212.0
+  },
+  {
+    "name": "Lower Yosemite Fall",
+    "category": "waterfall",
+    "lat": 37.751444,
+    "lon": -119.597141,
+    "node_id": 3726606780,
+    "snap_distance_m": 29.5,
+    "node_elevation_m": 1402.0
+  },
+  {
+    "name": "Middle Cascades",
+    "category": "waterfall",
+    "lat": 37.754291,
+    "lon": -119.597269,
+    "node_id": 3726606780,
+    "snap_distance_m": 289.6,
+    "node_elevation_m": 1402.0
+  },
+  {
+    "name": "Minarets Falls",
+    "category": "waterfall",
+    "lat": 37.639776,
+    "lon": -119.089276,
+    "node_id": 842916512,
+    "snap_distance_m": 408.3,
+    "node_elevation_m": 2482.0
+  },
+  {
+    "name": "Nevada Fall",
+    "category": "waterfall",
+    "lat": 37.724903,
+    "lon": -119.533364,
+    "node_id": 581950511,
+    "snap_distance_m": 25.3,
+    "node_elevation_m": 1705.0
+  },
+  {
+    "name": "Rainbow Falls",
+    "category": "waterfall",
+    "lat": 37.60189,
+    "lon": -119.083972,
+    "node_id": 6765531781,
+    "snap_distance_m": 15.6,
+    "node_elevation_m": 2255.0
+  },
+  {
+    "name": "Rancheria Falls",
+    "category": "waterfall",
+    "lat": 37.955208,
+    "lon": -119.709937,
+    "node_id": 1744988992,
+    "snap_distance_m": 224.0,
+    "node_elevation_m": 1442.0
+  },
+  {
+    "name": "Ribbon Fall",
+    "category": "waterfall",
+    "lat": 37.736013,
+    "lon": -119.647791,
+    "node_id": 12861549046,
+    "snap_distance_m": 183.0,
+    "node_elevation_m": 1852.0
+  },
+  {
+    "name": "Royal Arch Cascade",
+    "category": "waterfall",
+    "lat": 37.749598,
+    "lon": -119.571036,
+    "node_id": 4424647159,
+    "snap_distance_m": 47.4,
+    "node_elevation_m": 1526.0
+  },
+  {
+    "name": "Sentinel Fall",
+    "category": "waterfall",
+    "lat": 37.724915,
+    "lon": -119.596497,
+    "node_id": 331511313,
+    "snap_distance_m": 440.0,
+    "node_elevation_m": 2268.0
+  },
+  {
+    "name": "Silver Apron",
+    "category": "waterfall",
+    "lat": 37.726901,
+    "lon": -119.540893,
+    "node_id": 3830220085,
+    "snap_distance_m": 88.3,
+    "node_elevation_m": 1593.0
+  },
+  {
+    "name": "Silver Strand Falls",
+    "category": "waterfall",
+    "lat": 37.704369,
+    "lon": -119.669239,
+    "node_id": 1742197731,
+    "snap_distance_m": 259.4,
+    "node_elevation_m": 2061.0
+  },
+  {
+    "name": "Tuolumne Falls",
+    "category": "waterfall",
+    "lat": 37.905955,
+    "lon": -119.417841,
+    "node_id": 966584078,
+    "snap_distance_m": 375.1,
+    "node_elevation_m": 2463.0
+  },
+  {
+    "name": "Twin Falls",
+    "category": "waterfall",
+    "lat": 37.611555,
+    "lon": -119.009914,
+    "node_id": 8498339184,
+    "snap_distance_m": 62.2,
+    "node_elevation_m": 2710.0
+  },
+  {
+    "name": "Upper Yosemite Fall",
+    "category": "waterfall",
+    "lat": 37.756971,
+    "lon": -119.596769,
+    "node_id": 4776041623,
+    "snap_distance_m": 11.8,
+    "node_elevation_m": 1983.0
+  },
+  {
+    "name": "Vernal Fall",
+    "category": "waterfall",
+    "lat": 37.727553,
+    "lon": -119.543748,
+    "node_id": 3622812118,
+    "snap_distance_m": 149.2,
+    "node_elevation_m": 1597.0
+  },
+  {
+    "name": "White Cascade",
+    "category": "waterfall",
+    "lat": 37.90851,
+    "lon": -119.419593,
+    "node_id": 9032400189,
+    "snap_distance_m": 105.3,
+    "node_elevation_m": 2406.0
+  }
+]

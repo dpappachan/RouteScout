@@ -180,7 +180,10 @@ def _build_response(
 
     estimated_hours = _estimate_daily_hours(itinerary)
     difficulty = _difficulty_label(itinerary)
-    regulations = _regulations_for(itinerary, parsed_spec)
+    start_trailhead = next(
+        (t for t in STATE.trailheads if t["name"] == parsed_spec.start), None,
+    )
+    regulations = _regulations_for(itinerary, parsed_spec, start_trailhead)
 
     return PlanResponse(
         prompt=prompt,
@@ -232,45 +235,154 @@ def _difficulty_label(itinerary: Itinerary) -> str:
     return "very strenuous"
 
 
-# Trailheads on Tioga Road close in winter (Nov-May, snow-dependent).
+# Trailheads on Tioga Road close roughly Nov–late May (snow-dependent).
 TIOGA_ROAD_TRAILHEADS = frozenset({
     "Tenaya Lake trailhead", "May Lake trailhead", "Cathedral Lakes trailhead",
     "Lembert Dome / Dog Lake trailhead", "Elizabeth Lake trailhead",
     "Tuolumne Meadows Ranger Station", "Mono Pass trailhead",
-    "Dana Meadows trailhead", "Ten Lakes trailhead",
+    "Ten Lakes trailhead", "White Wolf trailhead", "Lukens Lake trailhead",
+    "Yosemite Creek trailhead", "North Dome / Porcupine Creek trailhead",
+    "Sunrise Lakes / Clouds Rest trailhead", "Glen Aulin trailhead",
+    "Gaylor Lakes trailhead", "Mount Dana trailhead", "Tamarack Flat trailhead",
+    "Saddlebag Lake trailhead",
 })
 
+# Glacier Point Road trailheads also seasonally closed but on a different schedule.
+GLACIER_POINT_ROAD_TRAILHEADS = frozenset({
+    "Glacier Point", "Taft Point trailhead", "Mono Meadow trailhead",
+    "Ostrander Lake trailhead", "Bridalveil Creek campground trailhead",
+})
 
-def _regulations_for(itinerary: Itinerary, parsed_spec) -> Regulations:
+# Sonora Pass (Hwy 108) closes in winter, affecting Emigrant trailheads.
+SONORA_PASS_TRAILHEADS = frozenset({
+    "Kennedy Meadows trailhead", "Crabtree trailhead", "Gianelli trailhead",
+})
+
+# Wilderness → permit info. Each managed by a different agency with different
+# rules; getting this right is what separates "real planner" from "toy demo".
+PERMIT_BY_REGION: dict[str, str] = {
+    "Yosemite Valley":         "Yosemite Wilderness permit required for overnight trips (recreation.gov, ~24-week advance lottery + day-of walk-ups at the Wilderness Center).",
+    "South Rim":               "Yosemite Wilderness permit required for overnight trips (recreation.gov).",
+    "Wawona":                  "Yosemite Wilderness permit required for overnight trips (recreation.gov).",
+    "Hetch Hetchy":            "Yosemite Wilderness permit required (recreation.gov). Hetch Hetchy quotas fill quickly in spring/fall.",
+    "Big Oak Flat Road":       "Yosemite Wilderness permit required for overnight trips (recreation.gov).",
+    "Tioga Road":              "Yosemite Wilderness permit required for overnight trips (recreation.gov).",
+    "Tuolumne Meadows":        "Yosemite Wilderness permit required for overnight trips (recreation.gov).",
+    "Tioga Pass":              "Yosemite Wilderness permit required (recreation.gov). Mono Pass / Mount Dana usually accessible through October.",
+    "Ansel Adams Wilderness":  "Ansel Adams Wilderness permit required (Inyo National Forest via recreation.gov). Quotas in effect May 1 – Nov 1.",
+    "Hoover Wilderness":       "Hoover Wilderness permit required (Humboldt-Toiyabe National Forest, recreation.gov). Quotas Jun 15 – Sep 15.",
+    "Emigrant Wilderness":     "Emigrant Wilderness permit required (Stanislaus National Forest, free). Self-issue at trailhead or Pinecrest / Summit ranger stations.",
+}
+
+
+def _regulations_for(itinerary: Itinerary, parsed_spec, trailhead: dict | None) -> Regulations:
     """Build the regulations / safety notes block for a planned trip.
-    Always include the always-true Yosemite rules (permit + canister); add
-    contextual notes based on the route."""
-    notes: list[str] = [
-        "Wilderness permit required for any overnight trip — reserve in advance via "
-        "yosemite.gov or recreation.gov (advance lottery + day-of walk-up quotas).",
-        "Bear-resistant canister mandatory for all food and scented items.",
-        "Camp at least 100 ft (30 m) from water and 25 ft (8 m) from trails.",
-        "Pack out all trash, including toilet paper. Bury human waste in 6-in cathole.",
-    ]
+    Branches on (a) whether it's a day hike vs overnight, (b) the wilderness
+    the start trailhead is in, and (c) features visited along the way."""
+    notes: list[str] = []
     is_overnight = len(itinerary.days) > 1
 
-    # Half Dome is special — permit needed for cables June–October
-    visited_names = {f["name"] for d in itinerary.days for f in d.features_passed}
-    if "Half Dome" in visited_names:
+    # Permit by wilderness — different agencies, different rules
+    region = (trailhead or {}).get("region")
+    if is_overnight:
+        permit_note = PERMIT_BY_REGION.get(
+            region,
+            "Wilderness permit required for any overnight trip in this area. "
+            "Check recreation.gov for the managing agency.",
+        )
+        notes.append(permit_note)
+    else:
+        notes.append("No overnight permit needed for day hikes.")
+
+    # Bear country — true everywhere we operate
+    if is_overnight:
         notes.append(
-            "Half Dome cables permit required separately (lottery via recreation.gov). "
-            "Cables typically up Memorial Day to mid-October."
+            "Bear-resistant canister mandatory for all food and scented items "
+            "(Yosemite, Ansel Adams, Hoover, Emigrant — same rule)."
+        )
+    else:
+        notes.append(
+            "Day hikers: never leave food unattended. Bears actively patrol "
+            "popular trailheads and parking lots."
         )
 
-    # Tioga Road seasonal closure
+    # Leave No Trace basics for overnight
+    if is_overnight:
+        notes.append(
+            "Camp at least 100 ft (30 m) from water and 25 ft (8 m) from trails. "
+            "Pack out all trash including toilet paper. Bury human waste in a 6-in cathole."
+        )
+
+    # Half Dome cables permit
+    visited_names = {f["name"] for d in itinerary.days for f in d.features_passed}
+    visited_names.update(parsed_spec.named_must_visit)
+    if "Half Dome" in visited_names:
+        notes.append(
+            "Half Dome cables permit required separately (recreation.gov daily "
+            "lottery). Cables typically up late May through mid-October."
+        )
+
+    # Cross-jurisdiction notes (JMT through Donohue Pass = Yosemite ↔ Ansel Adams)
+    if any("Donohue" in n or "Lyell" in n for n in visited_names):
+        notes.append(
+            "Donohue Pass crosses the Yosemite ↔ Ansel Adams boundary. Yosemite-issued "
+            "permits cover the through-trip; check that yours specifies "
+            "the trailhead direction."
+        )
+
+    # Road closure warnings (only for overnight or any hike if relevant)
     if parsed_spec.start in TIOGA_ROAD_TRAILHEADS:
         notes.append(
             "Tioga Road (Hwy 120) typically closed November through late May "
-            "due to snow. Confirm road status before driving."
+            "due to snow. Confirm at nps.gov/yose before driving."
+        )
+    if parsed_spec.start in GLACIER_POINT_ROAD_TRAILHEADS:
+        notes.append(
+            "Glacier Point Road typically closed mid-November through late May. "
+            "Confirm at nps.gov/yose before driving."
+        )
+    if parsed_spec.start in SONORA_PASS_TRAILHEADS:
+        notes.append(
+            "Sonora Pass (Hwy 108) typically closed mid-November through late May. "
+            "Confirm at dot.ca.gov before driving."
+        )
+
+    # High-elevation warning
+    max_elev = max(
+        (pt.elevation_m for d in itinerary.days for pt in []),  # placeholder; we recompute below
+        default=0.0,
+    )
+    # The day's path elevations live on the DaySegment.path nodes — use STATE.
+    max_elev = _max_elevation_on_route(itinerary)
+    if max_elev > 3300:
+        notes.append(
+            f"Route reaches {int(max_elev)} m ({int(max_elev * 3.281)} ft). "
+            "Watch for altitude effects; acclimatize if you live near sea level. "
+            "Snow can linger above 10,000 ft well into July."
+        )
+
+    # Stream crossings in spring snowmelt
+    if any(d.gain_m > 800 for d in itinerary.days) and any(
+        f["category"] in ("waterfall", "lake") for d in itinerary.days for f in d.features_passed
+    ):
+        notes.append(
+            "Snowmelt-fed creek crossings (May–July) can be dangerous. "
+            "Look for log crossings or wait for afternoon flow to drop."
         )
 
     return Regulations(
         permit_required=is_overnight,
-        bear_canister_required=True,
+        bear_canister_required=is_overnight,
         notes=notes,
     )
+
+
+def _max_elevation_on_route(itinerary: Itinerary) -> float:
+    """Pull max node elevation across all path nodes from STATE.graph."""
+    max_e = 0.0
+    for day in itinerary.days:
+        for n in day.path:
+            elev = STATE.graph.nodes[n].get("elevation")
+            if elev and elev > max_e:
+                max_e = float(elev)
+    return max_e

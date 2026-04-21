@@ -19,8 +19,10 @@ from functools import lru_cache
 from pathlib import Path
 
 from .build import DATA_DIR, build
+from .features import features_path
 
-CAMPS_CACHE = DATA_DIR / "yosemite_camps.json"
+CAMPS_CACHE = DATA_DIR / "sierra_camps.json"
+LEGACY_CAMPS_CACHE = DATA_DIR / "yosemite_camps.json"
 
 # Local slope threshold for a tent-able node. 10% (rise/run) is about the
 # steepest you'd want to sleep on; above 15% you'll roll downhill in the
@@ -140,8 +142,10 @@ def compute_camps(graph, features: list[dict]) -> list[dict]:
 def build_camps(force: bool = False) -> list[dict]:
     if CAMPS_CACHE.exists() and not force:
         return json.loads(CAMPS_CACHE.read_text())
+    if LEGACY_CAMPS_CACHE.exists() and not force:
+        return json.loads(LEGACY_CAMPS_CACHE.read_text())
     graph = build()
-    features = json.loads((DATA_DIR / "yosemite_features.json").read_text())
+    features = json.loads(features_path().read_text())
     camps = compute_camps(graph, features)
     CAMPS_CACHE.write_text(json.dumps(camps, indent=2))
     return camps

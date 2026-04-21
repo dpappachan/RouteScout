@@ -1,9 +1,16 @@
-"""Build and cache the Yosemite trail graph.
+"""Build and cache the Sierra trail graph.
 
-Downloads hiking trails from OpenStreetMap (paths, footways, tracks, bridleways,
-steps), stitches them into a NetworkX graph via OSMnx, annotates nodes with
-elevation, computes edge grades (rise/run), and saves the result to GraphML so
-subsequent runs load in seconds instead of minutes.
+Coverage region: Yosemite National Park plus the contiguous wilderness
+areas backpackers actually plan trips through —
+  · Ansel Adams Wilderness (south, JMT corridor — Thousand Island Lake,
+    Banner Peak, Mount Ritter)
+  · Hoover Wilderness (east, Twin Lakes / Robinson Creek)
+  · Emigrant Wilderness (north, Sonora Pass area)
+
+Filters to hiking-relevant OSM `highway` tags only (path, footway, track,
+bridleway, steps), keeps the largest weakly-connected trail component,
+annotates every node with SRTM elevation via Open-Elevation, and computes
+per-edge grade (rise/run) used by the difficulty heuristic.
 
 Run directly:
     python -m backend.graph.build            # cached if available
@@ -20,7 +27,8 @@ import osmnx as ox
 from . import elevation
 
 DATA_DIR = Path(__file__).resolve().parents[2] / "data"
-GRAPH_PATH = DATA_DIR / "yosemite_graph.graphml"
+GRAPH_PATH = DATA_DIR / "sierra_graph.graphml"
+LEGACY_GRAPH_PATH = DATA_DIR / "yosemite_graph.graphml"
 
 # Keep OSMnx's Overpass cache inside data/ so the repo root stays tidy.
 ox.settings.cache_folder = str(DATA_DIR / "cache")
@@ -29,24 +37,49 @@ ox.settings.cache_folder = str(DATA_DIR / "cache")
 # thinks you can "walk" Tioga Road isn't useful.
 HIKING_FILTER = '["highway"~"path|footway|track|bridleway|steps"]'
 
-PLACE = "Yosemite National Park, California, USA"
+# Bounding box covering Yosemite + Ansel Adams + Hoover + Emigrant. Chosen
+# to be tight enough that we don't pull in farmland or town footpaths but
+# wide enough to capture full trail networks of all four wildernesses.
+#   north: 38.35  (cuts top of Emigrant near Sonora Pass)
+#   south: 37.45  (cuts bottom of Ansel Adams / Mariposa Grove)
+#   east:  -118.95 (eastern slope of Hoover, just past Lee Vining)
+#   west:  -119.95 (western edge of Stanislaus NF)
+BBOX = {
+    "north": 38.35,
+    "south": 37.45,
+    "east": -118.95,
+    "west": -119.95,
+}
+
+# Used in user-facing messages and the LLM system prompt.
+PLACE = "Yosemite + Ansel Adams + Hoover + Emigrant Wilderness"
 
 
 def build(rebuild: bool = False):
-    """Return the Yosemite trail graph (load from cache unless rebuild=True)."""
+    """Return the Sierra trail graph (load from cache unless rebuild=True)."""
     if GRAPH_PATH.exists() and not rebuild:
         print(f"Loading cached graph: {GRAPH_PATH.name}")
         return ox.load_graphml(GRAPH_PATH)
 
+    # Smooth migration: if a legacy yosemite_graph.graphml exists but no
+    # sierra_graph.graphml, fall back to it so the app keeps working until
+    # the rebuild completes.
+    if LEGACY_GRAPH_PATH.exists() and not rebuild:
+        print(f"Loading legacy cached graph: {LEGACY_GRAPH_PATH.name}")
+        return ox.load_graphml(LEGACY_GRAPH_PATH)
+
     print(f"Downloading OSM trail network for: {PLACE}")
-    graph = ox.graph_from_place(
-        PLACE,
+    print(f"  bbox: N={BBOX['north']} S={BBOX['south']} W={BBOX['west']} E={BBOX['east']}")
+
+    # OSMnx 2.x graph_from_bbox takes bbox as (left, bottom, right, top).
+    graph = ox.graph_from_bbox(
+        bbox=(BBOX["west"], BBOX["south"], BBOX["east"], BBOX["north"]),
         custom_filter=HIKING_FILTER,
         simplify=True,
         retain_all=False,
     )
-    # `retain_all=False` keeps only the largest weakly-connected component — you
-    # can't plan a route across disconnected islands of trail, so we drop them.
+    # `retain_all=False` keeps only the largest weakly-connected component —
+    # you can't plan a route across disconnected islands of trail.
     print(f"  nodes={graph.number_of_nodes():,}  edges={graph.number_of_edges():,}")
 
     print("Annotating nodes with SRTM elevation (Open-Elevation)...")
@@ -74,7 +107,7 @@ def _print_summary(graph) -> None:
 
 
 def main() -> None:
-    parser = argparse.ArgumentParser(description="Build the Yosemite trail graph.")
+    parser = argparse.ArgumentParser(description="Build the Sierra trail graph.")
     parser.add_argument("--rebuild", action="store_true", help="Force re-download and re-elevation.")
     args = parser.parse_args()
     build(rebuild=args.rebuild)

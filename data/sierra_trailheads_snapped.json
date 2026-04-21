@@ -36,6 +36,15 @@
     "snap_distance_m": 459.9
   },
   {
+    "name": "Devils Postpile / Reds Meadow trailhead",
+    "lat": 37.6243,
+    "lon": -119.0822,
+    "region": "Ansel Adams Wilderness",
+    "accesses": "Devils Postpile, Rainbow Falls, San Joaquin River, JMT south",
+    "node_id": 11560285398,
+    "snap_distance_m": 152.2
+  },
+  {
     "name": "Elizabeth Lake trailhead",
     "lat": 37.8722,
     "lon": -119.3467,
@@ -52,6 +61,15 @@
     "accesses": "Four Mile Trail, Union Point, Glacier Point from the valley floor",
     "node_id": 5142337957,
     "snap_distance_m": 371.9
+  },
+  {
+    "name": "Gianelli trailhead",
+    "lat": 38.2126,
+    "lon": -119.9021,
+    "region": "Emigrant Wilderness",
+    "accesses": "Burst Rock, Powell Lake, Chewing Gum Lake, Crabtree",
+    "node_id": 10119183176,
+    "snap_distance_m": 1342.1
   },
   {
     "name": "Glacier Point",
@@ -72,6 +90,15 @@
     "snap_distance_m": 183.4
   },
   {
+    "name": "Green Creek trailhead",
+    "lat": 38.1062,
+    "lon": -119.2773,
+    "region": "Hoover Wilderness",
+    "accesses": "Green Lake, East Lake, West Lake, Virginia Pass",
+    "node_id": 89771893,
+    "snap_distance_m": 224.5
+  },
+  {
     "name": "Happy Isles",
     "lat": 37.7326,
     "lon": -119.5584,
@@ -90,6 +117,15 @@
     "snap_distance_m": 241.2
   },
   {
+    "name": "Kennedy Meadows trailhead",
+    "lat": 38.3164,
+    "lon": -119.7388,
+    "region": "Emigrant Wilderness",
+    "accesses": "Relief Reservoir, Kennedy Lake, Lower Relief Valley, PCT north",
+    "node_id": 94666330,
+    "snap_distance_m": 832.1
+  },
+  {
     "name": "Lembert Dome / Dog Lake trailhead",
     "lat": 37.8764,
     "lon": -119.3527,
@@ -99,6 +135,15 @@
     "snap_distance_m": 98.5
   },
   {
+    "name": "Mammoth Pass / Horseshoe Lake trailhead",
+    "lat": 37.6105,
+    "lon": -119.0317,
+    "region": "Ansel Adams Wilderness",
+    "accesses": "Horseshoe Lake, McLeod Lake, Mammoth Crest, Red Cones",
+    "node_id": 3860523174,
+    "snap_distance_m": 222.0
+  },
+  {
     "name": "May Lake trailhead",
     "lat": 37.8437,
     "lon": -119.4941,
@@ -106,6 +151,15 @@
     "accesses": "May Lake, Mount Hoffmann",
     "node_id": 8586917701,
     "snap_distance_m": 222.8
+  },
+  {
+    "name": "Merced Grove trailhead",
+    "lat": 37.7492,
+    "lon": -119.8462,
+    "region": "Big Oak Flat Road",
+    "accesses": "Merced Grove of giant sequoias",
+    "node_id": 559919418,
+    "snap_distance_m": 578.4
   },
   {
     "name": "Mirror Lake / Tenaya Canyon trailhead",
@@ -151,6 +205,24 @@
     "accesses": "Ostrander Lake, Horizon Ridge, Horse Ridge",
     "node_id": 89203374,
     "snap_distance_m": 1083.0
+  },
+  {
+    "name": "Rush Creek trailhead (Silver Lake)",
+    "lat": 37.7866,
+    "lon": -119.1339,
+    "region": "Ansel Adams Wilderness",
+    "accesses": "Gem Lake, Waugh Lake, Marie Lakes, Donohue Pass, Mount Lyell",
+    "node_id": 89561836,
+    "snap_distance_m": 557.9
+  },
+  {
+    "name": "Saddlebag Lake trailhead",
+    "lat": 37.9627,
+    "lon": -119.2716,
+    "region": "Hoover Wilderness",
+    "accesses": "Twenty Lakes Basin, Steelhead Lake, Greenstone Lake, Lundy Pass",
+    "node_id": 89493645,
+    "snap_distance_m": 381.0
   },
   {
     "name": "Sunrise Lakes / Clouds Rest trailhead",
@@ -205,6 +277,24 @@
     "accesses": "Vogelsang, Rafferty Creek, Tuolumne Pass, Fletcher Lake, John Muir Trail south",
     "node_id": 2443957950,
     "snap_distance_m": 227.5
+  },
+  {
+    "name": "Twin Lakes trailhead",
+    "lat": 38.1533,
+    "lon": -119.3614,
+    "region": "Hoover Wilderness",
+    "accesses": "Robinson Creek, Barney Lake, Crown Lake, Peeler Lake, Matterhorn Peak",
+    "node_id": 89807395,
+    "snap_distance_m": 794.6
+  },
+  {
+    "name": "Virginia Lakes trailhead",
+    "lat": 38.0556,
+    "lon": -119.257,
+    "region": "Hoover Wilderness",
+    "accesses": "Frog Lakes, Cooney Lake, Summit Lake, Burro Pass",
+    "node_id": 8569451811,
+    "snap_distance_m": 717.5
   },
   {
     "name": "Wawona / Swinging Bridge trailhead",

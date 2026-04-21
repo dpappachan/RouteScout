@@ -13,7 +13,7 @@ from datetime import date
 
 from backend.graph.build import build
 from backend.graph.camps import build_camps
-from backend.graph.features import FEATURES_PATH
+from backend.graph.features import features_path
 from backend.graph.trailheads import build_trailheads
 
 
@@ -32,7 +32,7 @@ class PlannerState:
             if self._graph is None:
                 self._graph = build()
             if self._features is None:
-                self._features = json.loads(FEATURES_PATH.read_text())
+                self._features = json.loads(features_path().read_text())
             if self._trailheads is None:
                 self._trailheads = build_trailheads()
             if self._camps is None:

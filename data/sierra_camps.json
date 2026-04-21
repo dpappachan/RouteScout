@@ -1,0 +1,3442 @@
+[
+  {
+    "name": "near Lake Mamie",
+    "node_id": 89691546,
+    "lat": 37.605068,
+    "lon": -119.011372,
+    "category": "lake",
+    "near_water": "Lake Mamie",
+    "water_distance_m": 362.0,
+    "local_grade": 0.0
+  },
+  {
+    "name": "near Lake Mamie",
+    "node_id": 89691572,
+    "lat": 37.605166,
+    "lon": -119.009056,
+    "category": "lake",
+    "near_water": "Lake Mamie",
+    "water_distance_m": 376.0,
+    "local_grade": 0.0
+  },
+  {
+    "name": "near Lake Mamie",
+    "node_id": 89714090,
+    "lat": 37.611109,
+    "lon": -119.011054,
+    "category": "lake",
+    "near_water": "Lake Mamie",
+    "water_distance_m": 315.8,
+    "local_grade": 0.0
+  },
+  {
+    "name": "near Lake Mary",
+    "node_id": 89828586,
+    "lat": 37.602337,
+    "lon": -119.007407,
+    "category": "lake",
+    "near_water": "Lake Mary",
+    "water_distance_m": 362.5,
+    "local_grade": 0.0
+  },
+  {
+    "name": "near Billy Lake",
+    "node_id": 468437606,
+    "lat": 37.758631,
+    "lon": -119.159378,
+    "category": "lake",
+    "near_water": "Billy Lake",
+    "water_distance_m": 577.9,
+    "local_grade": 0.09
+  },
+  {
+    "name": "near Upper Merced Pass Lake",
+    "node_id": 480625829,
+    "lat": 37.626194,
+    "lon": -119.443947,
+    "category": "lake",
+    "near_water": "Upper Merced Pass Lake",
+    "water_distance_m": 262.8,
+    "local_grade": 0.047
+  },
+  {
+    "name": "near Billy Lake",
+    "node_id": 539327748,
+    "lat": 37.751968,
+    "lon": -119.161595,
+    "category": "lake",
+    "near_water": "Billy Lake",
+    "water_distance_m": 235.3,
+    "local_grade": 0.062
+  },
+  {
+    "name": "near Red Lake",
+    "node_id": 595484567,
+    "lat": 37.566253,
+    "lon": -118.968714,
+    "category": "lake",
+    "near_water": "Red Lake",
+    "water_distance_m": 123.9,
+    "local_grade": 0.082
+  },
+  {
+    "name": "near Skelton Lake",
+    "node_id": 595484617,
+    "lat": 37.576001,
+    "lon": -118.977508,
+    "category": "lake",
+    "near_water": "Skelton Lake",
+    "water_distance_m": 186.9,
+    "local_grade": 0.0
+  },
+  {
+    "name": "near Johnston Lake",
+    "node_id": 842916492,
+    "lat": 37.646997,
+    "lon": -119.099757,
+    "category": "lake",
+    "near_water": "Johnston Lake",
+    "water_distance_m": 185.1,
+    "local_grade": 0.093
+  },
+  {
+    "name": "near Anona Lake",
+    "node_id": 859493195,
+    "lat": 37.610186,
+    "lon": -119.147158,
+    "category": "lake",
+    "near_water": "Anona Lake",
+    "water_distance_m": 193.8,
+    "local_grade": 0.054
+  },
+  {
+    "name": "near Lower Beck Lake",
+    "node_id": 859494631,
+    "lat": 37.63713,
+    "lon": -119.153147,
+    "category": "lake",
+    "near_water": "Lower Beck Lake",
+    "water_distance_m": 367.0,
+    "local_grade": 0.084
+  },
+  {
+    "name": "near Pika Lake",
+    "node_id": 901962879,
+    "lat": 37.552386,
+    "lon": -118.95106,
+    "category": "lake",
+    "near_water": "Pika Lake",
+    "water_distance_m": 212.0,
+    "local_grade": 0.059
+  },
+  {
+    "name": "near Pika Lake",
+    "node_id": 902959967,
+    "lat": 37.549892,
+    "lon": -118.95476,
+    "category": "lake",
+    "near_water": "Pika Lake",
+    "water_distance_m": 219.7,
+    "local_grade": 0.007
+  },
+  {
+    "name": "near Clark Lakes",
+    "node_id": 903822454,
+    "lat": 37.738513,
+    "lon": -119.147357,
+    "category": "lake",
+    "near_water": "Clark Lakes",
+    "water_distance_m": 248.6,
+    "local_grade": 0.062
+  },
+  {
+    "name": "near Clark Lakes",
+    "node_id": 914280205,
+    "lat": 37.736635,
+    "lon": -119.143844,
+    "category": "lake",
+    "near_water": "Clark Lakes",
+    "water_distance_m": 179.9,
+    "local_grade": 0.026
+  },
+  {
+    "name": "near Emerald Lake",
+    "node_id": 966585029,
+    "lat": 37.728501,
+    "lon": -119.171295,
+    "category": "lake",
+    "near_water": "Emerald Lake",
+    "water_distance_m": 613.8,
+    "local_grade": 0.032
+  },
+  {
+    "name": "near Badger Lakes",
+    "node_id": 966588135,
+    "lat": 37.730657,
+    "lon": -119.155534,
+    "category": "lake",
+    "near_water": "Badger Lakes",
+    "water_distance_m": 675.3,
+    "local_grade": 0.059
+  },
+  {
+    "name": "near Badger Lakes",
+    "node_id": 966588136,
+    "lat": 37.729905,
+    "lon": -119.15161,
+    "category": "lake",
+    "near_water": "Badger Lakes",
+    "water_distance_m": 366.6,
+    "local_grade": 0.059
+  },
+  {
+    "name": "near Badger Lakes",
+    "node_id": 966588137,
+    "lat": 37.729973,
+    "lon": -119.149082,
+    "category": "lake",
+    "near_water": "Badger Lakes",
+    "water_distance_m": 307.9,
+    "local_grade": 0.041
+  },
+  {
+    "name": "near Upper Chain Lake",
+    "node_id": 1755673778,
+    "lat": 37.568194,
+    "lon": -119.398363,
+    "category": "lake",
+    "near_water": "Upper Chain Lake",
+    "water_distance_m": 224.5,
+    "local_grade": 0.062
+  },
+  {
+    "name": "near Ruth Lake",
+    "node_id": 1755678010,
+    "lat": 37.576798,
+    "lon": -119.366305,
+    "category": "lake",
+    "near_water": "Ruth Lake",
+    "water_distance_m": 472.2,
+    "local_grade": 0.058
+  },
+  {
+    "name": "near Anne Lake",
+    "node_id": 1755686346,
+    "lat": 37.598943,
+    "lon": -119.366601,
+    "category": "lake",
+    "near_water": "Anne Lake",
+    "water_distance_m": 106.5,
+    "local_grade": 0.046
+  },
+  {
+    "name": "near McClure Lake",
+    "node_id": 1755690751,
+    "lat": 37.641087,
+    "lon": -119.312033,
+    "category": "lake",
+    "near_water": "McClure Lake",
+    "water_distance_m": 248.0,
+    "local_grade": 0.038
+  },
+  {
+    "name": "near Beetlebug Lake",
+    "node_id": 2129529240,
+    "lat": 37.47439,
+    "lon": -119.00359,
+    "category": "lake",
+    "near_water": "Beetlebug Lake",
+    "water_distance_m": 247.3,
+    "local_grade": 0.044
+  },
+  {
+    "name": "near Marsh Lake",
+    "node_id": 2129529597,
+    "lat": 37.50779,
+    "lon": -118.984386,
+    "category": "lake",
+    "near_water": "Marsh Lake",
+    "water_distance_m": 401.2,
+    "local_grade": 0.044
+  },
+  {
+    "name": "near Upper Lost Keys Lake",
+    "node_id": 2129529793,
+    "lat": 37.513976,
+    "lon": -119.001731,
+    "category": "lake",
+    "near_water": "Upper Lost Keys Lake",
+    "water_distance_m": 108.4,
+    "local_grade": 0.046
+  },
+  {
+    "name": "near Lower Lost Keys Lake",
+    "node_id": 2129529861,
+    "lat": 37.515776,
+    "lon": -119.010212,
+    "category": "lake",
+    "near_water": "Lower Lost Keys Lake",
+    "water_distance_m": 139.1,
+    "local_grade": 0.041
+  },
+  {
+    "name": "near Wilbur May Lake",
+    "node_id": 2130151523,
+    "lat": 37.468093,
+    "lon": -118.955818,
+    "category": "lake",
+    "near_water": "Wilbur May Lake",
+    "water_distance_m": 226.0,
+    "local_grade": 0.013
+  },
+  {
+    "name": "near Fern Lake",
+    "node_id": 2130760314,
+    "lat": 37.455544,
+    "lon": -119.041581,
+    "category": "lake",
+    "near_water": "Fern Lake",
+    "water_distance_m": 83.9,
+    "local_grade": 0.085
+  },
+  {
+    "name": "near Rainbow Lake",
+    "node_id": 2130764756,
+    "lat": 37.47123,
+    "lon": -119.033685,
+    "category": "lake",
+    "near_water": "Rainbow Lake",
+    "water_distance_m": 217.3,
+    "local_grade": 0.015
+  },
+  {
+    "name": "near Rainbow Lake",
+    "node_id": 2130764801,
+    "lat": 37.471582,
+    "lon": -119.034295,
+    "category": "lake",
+    "near_water": "Rainbow Lake",
+    "water_distance_m": 228.8,
+    "local_grade": 0.094
+  },
+  {
+    "name": "near Baby Lake",
+    "node_id": 2130765037,
+    "lat": 37.472624,
+    "lon": -119.045587,
+    "category": "lake",
+    "near_water": "Baby Lake",
+    "water_distance_m": 618.2,
+    "local_grade": 0.094
+  },
+  {
+    "name": "near Staniford Lakes",
+    "node_id": 2928872146,
+    "lat": 37.554572,
+    "lon": -119.363446,
+    "category": "lake",
+    "near_water": "Staniford Lakes",
+    "water_distance_m": 397.8,
+    "local_grade": 0.084
+  },
+  {
+    "name": "near Staniford Lakes",
+    "node_id": 2928872151,
+    "lat": 37.556175,
+    "lon": -119.361793,
+    "category": "lake",
+    "near_water": "Staniford Lakes",
+    "water_distance_m": 248.3,
+    "local_grade": 0.043
+  },
+  {
+    "name": "near Lillian Lake",
+    "node_id": 2928872626,
+    "lat": 37.563024,
+    "lon": -119.360578,
+    "category": "lake",
+    "near_water": "Lillian Lake",
+    "water_distance_m": 344.6,
+    "local_grade": 0.047
+  },
+  {
+    "name": "near Horseshoe Lake",
+    "node_id": 3429670133,
+    "lat": 37.612978,
+    "lon": -119.017559,
+    "category": "lake",
+    "near_water": "Horseshoe Lake",
+    "water_distance_m": 456.7,
+    "local_grade": 0.023
+  },
+  {
+    "name": "near Lake Mamie",
+    "node_id": 3630217763,
+    "lat": 37.611437,
+    "lon": -119.012704,
+    "category": "lake",
+    "near_water": "Lake Mamie",
+    "water_distance_m": 392.2,
+    "local_grade": 0.048
+  },
+  {
+    "name": "near Lake Mamie",
+    "node_id": 3630217766,
+    "lat": 37.611718,
+    "lon": -119.012465,
+    "category": "lake",
+    "near_water": "Lake Mamie",
+    "water_distance_m": 412.0,
+    "local_grade": 0.048
+  },
+  {
+    "name": "near Horseshoe Lake",
+    "node_id": 3718060852,
+    "lat": 37.606025,
+    "lon": -119.018819,
+    "category": "lake",
+    "near_water": "Horseshoe Lake",
+    "water_distance_m": 335.0,
+    "local_grade": 0.031
+  },
+  {
+    "name": "near Lillian Lake",
+    "node_id": 3819156339,
+    "lat": 37.563383,
+    "lon": -119.367244,
+    "category": "lake",
+    "near_water": "Lillian Lake",
+    "water_distance_m": 255.8,
+    "local_grade": 0.011
+  },
+  {
+    "name": "near Vanderburgh Lake",
+    "node_id": 3831299770,
+    "lat": 37.549573,
+    "lon": -119.357167,
+    "category": "lake",
+    "near_water": "Vanderburgh Lake",
+    "water_distance_m": 393.4,
+    "local_grade": 0.035
+  },
+  {
+    "name": "near Chittenden Lake",
+    "node_id": 3838519400,
+    "lat": 37.555418,
+    "lon": -119.373606,
+    "category": "lake",
+    "near_water": "Chittenden Lake",
+    "water_distance_m": 227.5,
+    "local_grade": 0.084
+  },
+  {
+    "name": "near Rattlesnake Lake",
+    "node_id": 3839729264,
+    "lat": 37.477924,
+    "lon": -119.189043,
+    "category": "lake",
+    "near_water": "Rattlesnake Lake",
+    "water_distance_m": 86.8,
+    "local_grade": 0.002
+  },
+  {
+    "name": "near Olaine Lake",
+    "node_id": 3859534566,
+    "lat": 37.697303,
+    "lon": -119.116821,
+    "category": "lake",
+    "near_water": "Olaine Lake",
+    "water_distance_m": 412.3,
+    "local_grade": 0.074
+  },
+  {
+    "name": "near Pika Lake",
+    "node_id": 3859634591,
+    "lat": 37.552118,
+    "lon": -118.955905,
+    "category": "lake",
+    "near_water": "Pika Lake",
+    "water_distance_m": 312.0,
+    "local_grade": 0.059
+  },
+  {
+    "name": "near McLeod Lake",
+    "node_id": 3859958467,
+    "lat": 37.60944,
+    "lon": -119.028726,
+    "category": "lake",
+    "near_water": "McLeod Lake",
+    "water_distance_m": 243.2,
+    "local_grade": 0.056
+  },
+  {
+    "name": "near McLeod Lake",
+    "node_id": 3859958581,
+    "lat": 37.612914,
+    "lon": -119.033226,
+    "category": "lake",
+    "near_water": "McLeod Lake",
+    "water_distance_m": 580.9,
+    "local_grade": 0.09
+  },
+  {
+    "name": "near Iceberg Lake",
+    "node_id": 4353271938,
+    "lat": 37.672699,
+    "lon": -119.167218,
+    "category": "lake",
+    "near_water": "Iceberg Lake",
+    "water_distance_m": 270.5,
+    "local_grade": 0.011
+  },
+  {
+    "name": "near Lake Mamie",
+    "node_id": 5791302745,
+    "lat": 37.608385,
+    "lon": -119.005108,
+    "category": "lake",
+    "near_water": "Lake Mamie",
+    "water_distance_m": 494.1,
+    "local_grade": 0.004
+  },
+  {
+    "name": "near Lake Mamie",
+    "node_id": 5791302978,
+    "lat": 37.605366,
+    "lon": -119.009154,
+    "category": "lake",
+    "near_water": "Lake Mamie",
+    "water_distance_m": 352.2,
+    "local_grade": 0.004
+  },
+  {
+    "name": "near Lake Mamie",
+    "node_id": 5791302979,
+    "lat": 37.605228,
+    "lon": -119.009157,
+    "category": "lake",
+    "near_water": "Lake Mamie",
+    "water_distance_m": 366.2,
+    "local_grade": 0.0
+  },
+  {
+    "name": "near Ediza Lake",
+    "node_id": 6983755218,
+    "lat": 37.687777,
+    "lon": -119.161737,
+    "category": "lake",
+    "near_water": "Ediza Lake",
+    "water_distance_m": 516.0,
+    "local_grade": 0.094
+  },
+  {
+    "name": "near Shadow Lake",
+    "node_id": 7111024734,
+    "lat": 37.69352,
+    "lon": -119.136705,
+    "category": "lake",
+    "near_water": "Shadow Lake",
+    "water_distance_m": 406.1,
+    "local_grade": 0.074
+  },
+  {
+    "name": "near Emerald Lake",
+    "node_id": 7111028941,
+    "lat": 37.725713,
+    "lon": -119.167742,
+    "category": "lake",
+    "near_water": "Emerald Lake",
+    "water_distance_m": 207.9,
+    "local_grade": 0.006
+  },
+  {
+    "name": "near Emerald Lake",
+    "node_id": 7111028942,
+    "lat": 37.725931,
+    "lon": -119.167939,
+    "category": "lake",
+    "near_water": "Emerald Lake",
+    "water_distance_m": 228.3,
+    "local_grade": 0.0
+  },
+  {
+    "name": "near Sadler Lake",
+    "node_id": 7891655324,
+    "lat": 37.642119,
+    "lon": -119.300701,
+    "category": "lake",
+    "near_water": "Sadler Lake",
+    "water_distance_m": 284.3,
+    "local_grade": 0.076
+  },
+  {
+    "name": "near Cora Lakes",
+    "node_id": 7891655361,
+    "lat": 37.596798,
+    "lon": -119.271162,
+    "category": "lake",
+    "near_water": "Cora Lakes",
+    "water_distance_m": 144.0,
+    "local_grade": 0.026
+  },
+  {
+    "name": "near Cora Lakes",
+    "node_id": 7891655366,
+    "lat": 37.596973,
+    "lon": -119.269692,
+    "category": "lake",
+    "near_water": "Cora Lakes",
+    "water_distance_m": 228.4,
+    "local_grade": 0.059
+  },
+  {
+    "name": "near Ashley Lake",
+    "node_id": 7914942654,
+    "lat": 37.618504,
+    "lon": -119.1544,
+    "category": "lake",
+    "near_water": "Ashley Lake",
+    "water_distance_m": 246.7,
+    "local_grade": 0.061
+  },
+  {
+    "name": "near Emily Lake",
+    "node_id": 7914942718,
+    "lat": 37.673027,
+    "lon": -119.120494,
+    "category": "lake",
+    "near_water": "Emily Lake",
+    "water_distance_m": 152.3,
+    "local_grade": 0.061
+  },
+  {
+    "name": "near Cabin Lake",
+    "node_id": 7914942878,
+    "lat": 37.684917,
+    "lon": -119.153835,
+    "category": "lake",
+    "near_water": "Cabin Lake",
+    "water_distance_m": 151.5,
+    "local_grade": 0.09
+  },
+  {
+    "name": "near Lake Barrett",
+    "node_id": 7917532929,
+    "lat": 37.594872,
+    "lon": -119.007593,
+    "category": "lake",
+    "near_water": "Lake Barrett",
+    "water_distance_m": 120.4,
+    "local_grade": 0.0
+  },
+  {
+    "name": "near Lake Mary",
+    "node_id": 7917532997,
+    "lat": 37.602232,
+    "lon": -119.007524,
+    "category": "lake",
+    "near_water": "Lake Mary",
+    "water_distance_m": 375.8,
+    "local_grade": 0.077
+  },
+  {
+    "name": "near Lake Barrett",
+    "node_id": 7917533049,
+    "lat": 37.594995,
+    "lon": -119.007384,
+    "category": "lake",
+    "near_water": "Lake Barrett",
+    "water_distance_m": 98.5,
+    "local_grade": 0.08
+  },
+  {
+    "name": "near Lake Barrett",
+    "node_id": 7917533058,
+    "lat": 37.594657,
+    "lon": -119.005598,
+    "category": "lake",
+    "near_water": "Lake Barrett",
+    "water_distance_m": 155.8,
+    "local_grade": 0.077
+  },
+  {
+    "name": "near Middle Deer Lake",
+    "node_id": 7917533295,
+    "lat": 37.563442,
+    "lon": -118.991029,
+    "category": "lake",
+    "near_water": "Middle Deer Lake",
+    "water_distance_m": 338.6,
+    "local_grade": 0.084
+  },
+  {
+    "name": "near Thousand Island Lake",
+    "node_id": 7965816422,
+    "lat": 37.725382,
+    "lon": -119.183422,
+    "category": "lake",
+    "near_water": "Thousand Island Lake",
+    "water_distance_m": 678.5,
+    "local_grade": 0.07
+  },
+  {
+    "name": "near Thousand Island Lake",
+    "node_id": 7965816423,
+    "lat": 37.72127,
+    "lon": -119.191909,
+    "category": "lake",
+    "near_water": "Thousand Island Lake",
+    "water_distance_m": 483.1,
+    "local_grade": 0.026
+  },
+  {
+    "name": "near Banner Lake",
+    "node_id": 7965816442,
+    "lat": 37.71666,
+    "lon": -119.193104,
+    "category": "lake",
+    "near_water": "Banner Lake",
+    "water_distance_m": 420.5,
+    "local_grade": 0.0
+  },
+  {
+    "name": "near Holcomb Lake",
+    "node_id": 7978942374,
+    "lat": 37.628287,
+    "lon": -119.152109,
+    "category": "lake",
+    "near_water": "Holcomb Lake",
+    "water_distance_m": 170.7,
+    "local_grade": 0.063
+  },
+  {
+    "name": "near Noname Lake",
+    "node_id": 7978947748,
+    "lat": 37.622766,
+    "lon": -119.142405,
+    "category": "lake",
+    "near_water": "Noname Lake",
+    "water_distance_m": 693.2,
+    "local_grade": 0.093
+  },
+  {
+    "name": "near Minaret Lake",
+    "node_id": 7978966602,
+    "lat": 37.660857,
+    "lon": -119.153223,
+    "category": "lake",
+    "near_water": "Minaret Lake",
+    "water_distance_m": 181.3,
+    "local_grade": 0.081
+  },
+  {
+    "name": "near Emerald Lake",
+    "node_id": 8004569798,
+    "lat": 37.725193,
+    "lon": -119.170281,
+    "category": "lake",
+    "near_water": "Emerald Lake",
+    "water_distance_m": 432.5,
+    "local_grade": 0.059
+  },
+  {
+    "name": "near Garnet Lake",
+    "node_id": 8059965878,
+    "lat": 37.713186,
+    "lon": -119.159745,
+    "category": "lake",
+    "near_water": "Garnet Lake",
+    "water_distance_m": 471.9,
+    "local_grade": 0.007
+  },
+  {
+    "name": "near Weber Lake",
+    "node_id": 8298081979,
+    "lat": 37.743264,
+    "lon": -119.176147,
+    "category": "lake",
+    "near_water": "Weber Lake",
+    "water_distance_m": 195.0,
+    "local_grade": 0.077
+  },
+  {
+    "name": "near Olive Lake",
+    "node_id": 8322678782,
+    "lat": 37.474701,
+    "lon": -118.983693,
+    "category": "lake",
+    "near_water": "Olive Lake",
+    "water_distance_m": 368.9,
+    "local_grade": 0.046
+  },
+  {
+    "name": "near Johnston Lake",
+    "node_id": 8432917585,
+    "lat": 37.643434,
+    "lon": -119.096494,
+    "category": "lake",
+    "near_water": "Johnston Lake",
+    "water_distance_m": 353.7,
+    "local_grade": 0.024
+  },
+  {
+    "name": "near Johnston Lake",
+    "node_id": 8432917605,
+    "lat": 37.641735,
+    "lon": -119.095968,
+    "category": "lake",
+    "near_water": "Johnston Lake",
+    "water_distance_m": 518.7,
+    "local_grade": 0.012
+  },
+  {
+    "name": "near McLeod Lake",
+    "node_id": 8432936504,
+    "lat": 37.607028,
+    "lon": -119.029693,
+    "category": "lake",
+    "near_water": "McLeod Lake",
+    "water_distance_m": 151.8,
+    "local_grade": 0.0
+  },
+  {
+    "name": "near McLeod Lake",
+    "node_id": 8432936755,
+    "lat": 37.606705,
+    "lon": -119.031115,
+    "category": "lake",
+    "near_water": "McLeod Lake",
+    "water_distance_m": 150.3,
+    "local_grade": 0.099
+  },
+  {
+    "name": "near McLeod Lake",
+    "node_id": 8432936766,
+    "lat": 37.608461,
+    "lon": -119.032558,
+    "category": "lake",
+    "near_water": "McLeod Lake",
+    "water_distance_m": 157.6,
+    "local_grade": 0.099
+  },
+  {
+    "name": "near Horseshoe Lake",
+    "node_id": 8500809145,
+    "lat": 37.613089,
+    "lon": -119.019646,
+    "category": "lake",
+    "near_water": "Horseshoe Lake",
+    "water_distance_m": 454.3,
+    "local_grade": 0.0
+  },
+  {
+    "name": "near Breeze Lake",
+    "node_id": 8739592175,
+    "lat": 37.578024,
+    "lon": -119.393004,
+    "category": "lake",
+    "near_water": "Breeze Lake",
+    "water_distance_m": 220.8,
+    "local_grade": 0.038
+  },
+  {
+    "name": "near Breeze Lake",
+    "node_id": 8739629193,
+    "lat": 37.582199,
+    "lon": -119.391901,
+    "category": "lake",
+    "near_water": "Breeze Lake",
+    "water_distance_m": 671.6,
+    "local_grade": 0.063
+  },
+  {
+    "name": "near Lower Davis Lake",
+    "node_id": 9362859252,
+    "lat": 37.731538,
+    "lon": -119.214446,
+    "category": "lake",
+    "near_water": "Lower Davis Lake",
+    "water_distance_m": 192.7,
+    "local_grade": 0.076
+  },
+  {
+    "name": "near Garnet Lake",
+    "node_id": 9362905426,
+    "lat": 37.710499,
+    "lon": -119.153764,
+    "category": "lake",
+    "near_water": "Garnet Lake",
+    "water_distance_m": 569.2,
+    "local_grade": 0.083
+  },
+  {
+    "name": "near Emerald Lake",
+    "node_id": 9362905651,
+    "lat": 37.725734,
+    "lon": -119.167894,
+    "category": "lake",
+    "near_water": "Emerald Lake",
+    "water_distance_m": 221.4,
+    "local_grade": 0.014
+  },
+  {
+    "name": "near Lake Mamie",
+    "node_id": 9949763322,
+    "lat": 37.610679,
+    "lon": -119.01132,
+    "category": "lake",
+    "near_water": "Lake Mamie",
+    "water_distance_m": 271.8,
+    "local_grade": 0.013
+  },
+  {
+    "name": "near Lake Mamie",
+    "node_id": 9949763381,
+    "lat": 37.608754,
+    "lon": -119.014437,
+    "category": "lake",
+    "near_water": "Lake Mamie",
+    "water_distance_m": 332.0,
+    "local_grade": 0.031
+  },
+  {
+    "name": "near Arrowhead Lake",
+    "node_id": 9949763474,
+    "lat": 37.581683,
+    "lon": -118.978683,
+    "category": "lake",
+    "near_water": "Arrowhead Lake",
+    "water_distance_m": 175.9,
+    "local_grade": 0.019
+  },
+  {
+    "name": "near Red Lake",
+    "node_id": 9949763542,
+    "lat": 37.566387,
+    "lon": -118.968941,
+    "category": "lake",
+    "near_water": "Red Lake",
+    "water_distance_m": 111.1,
+    "local_grade": 0.075
+  },
+  {
+    "name": "near Garnet Lake",
+    "node_id": 10086395552,
+    "lat": 37.712015,
+    "lon": -119.162492,
+    "category": "lake",
+    "near_water": "Garnet Lake",
+    "water_distance_m": 409.1,
+    "local_grade": 0.0
+  },
+  {
+    "name": "near Weber Lake",
+    "node_id": 10088844691,
+    "lat": 37.742667,
+    "lon": -119.177984,
+    "category": "lake",
+    "near_water": "Weber Lake",
+    "water_distance_m": 281.6,
+    "local_grade": 0.07
+  },
+  {
+    "name": "near Flat Lake",
+    "node_id": 10303891270,
+    "lat": 37.574477,
+    "lon": -119.360678,
+    "category": "lake",
+    "near_water": "Flat Lake",
+    "water_distance_m": 79.6,
+    "local_grade": 0.037
+  },
+  {
+    "name": "near Slab Lakes",
+    "node_id": 10303891281,
+    "lat": 37.61622,
+    "lon": -119.357518,
+    "category": "lake",
+    "near_water": "Slab Lakes",
+    "water_distance_m": 139.9,
+    "local_grade": 0.074
+  },
+  {
+    "name": "near Minaret Lake",
+    "node_id": 10303893564,
+    "lat": 37.661813,
+    "lon": -119.153091,
+    "category": "lake",
+    "near_water": "Minaret Lake",
+    "water_distance_m": 229.6,
+    "local_grade": 0.0
+  },
+  {
+    "name": "near Emerald Lake",
+    "node_id": 10819836106,
+    "lat": 37.726126,
+    "lon": -119.166692,
+    "category": "lake",
+    "near_water": "Emerald Lake",
+    "water_distance_m": 130.8,
+    "local_grade": 0.0
+  },
+  {
+    "name": "near Lake George",
+    "node_id": 12202475324,
+    "lat": 37.603277,
+    "lon": -119.010203,
+    "category": "lake",
+    "near_water": "Lake George",
+    "water_distance_m": 359.9,
+    "local_grade": 0.08
+  },
+  {
+    "name": "Skelton Lake",
+    "node_id": 12804425296,
+    "lat": 37.57684,
+    "lon": -118.976269,
+    "category": "lake",
+    "near_water": "Skelton Lake",
+    "water_distance_m": 59.5,
+    "local_grade": 0.086
+  },
+  {
+    "name": "near Woods Lakes",
+    "node_id": 12804438604,
+    "lat": 37.569472,
+    "lon": -118.964585,
+    "category": "lake",
+    "near_water": "Woods Lakes",
+    "water_distance_m": 64.0,
+    "local_grade": 0.048
+  },
+  {
+    "name": "near Skelton Lake",
+    "node_id": 12804438677,
+    "lat": 37.575488,
+    "lon": -118.977114,
+    "category": "lake",
+    "near_water": "Skelton Lake",
+    "water_distance_m": 192.6,
+    "local_grade": 0.048
+  },
+  {
+    "name": "near Laura Lake",
+    "node_id": 12804457246,
+    "lat": 37.705129,
+    "lon": -119.13704,
+    "category": "lake",
+    "near_water": "Laura Lake",
+    "water_distance_m": 104.0,
+    "local_grade": 0.018
+  },
+  {
+    "name": "near Lake Mamie",
+    "node_id": 13076445328,
+    "lat": 37.614449,
+    "lon": -119.010638,
+    "category": "lake",
+    "near_water": "Lake Mamie",
+    "water_distance_m": 685.7,
+    "local_grade": 0.052
+  },
+  {
+    "name": "near Breeze Lake",
+    "node_id": 13310378205,
+    "lat": 37.577442,
+    "lon": -119.394519,
+    "category": "lake",
+    "near_water": "Breeze Lake",
+    "water_distance_m": 253.8,
+    "local_grade": 0.006
+  },
+  {
+    "name": "near Breeze Lake",
+    "node_id": 13310378218,
+    "lat": 37.577827,
+    "lon": -119.392561,
+    "category": "lake",
+    "near_water": "Breeze Lake",
+    "water_distance_m": 188.9,
+    "local_grade": 0.0
+  },
+  {
+    "name": "near Chiquito Lake",
+    "node_id": 13312081053,
+    "lat": 37.53891,
+    "lon": -119.441576,
+    "category": "lake",
+    "near_water": "Chiquito Lake",
+    "water_distance_m": 454.0,
+    "local_grade": 0.043
+  },
+  {
+    "name": "near Flat Lake",
+    "node_id": 13312180882,
+    "lat": 37.573335,
+    "lon": -119.355305,
+    "category": "lake",
+    "near_water": "Flat Lake",
+    "water_distance_m": 569.3,
+    "local_grade": 0.058
+  },
+  {
+    "name": "near Lady Lake",
+    "node_id": 13312267410,
+    "lat": 37.54294,
+    "lon": -119.362641,
+    "category": "lake",
+    "near_water": "Lady Lake",
+    "water_distance_m": 69.3,
+    "local_grade": 0.034
+  },
+  {
+    "name": "near Staniford Lakes",
+    "node_id": 13312267592,
+    "lat": 37.55622,
+    "lon": -119.360745,
+    "category": "lake",
+    "near_water": "Staniford Lakes",
+    "water_distance_m": 164.3,
+    "local_grade": 0.0
+  },
+  {
+    "name": "near Carson Lake",
+    "node_id": 89561821,
+    "lat": 37.784144,
+    "lon": -119.127938,
+    "category": "lake",
+    "near_water": "Carson Lake",
+    "water_distance_m": 424.7,
+    "local_grade": 0.0
+  },
+  {
+    "name": "near Carson Lake",
+    "node_id": 89561843,
+    "lat": 37.783132,
+    "lon": -119.127892,
+    "category": "lake",
+    "near_water": "Carson Lake",
+    "water_distance_m": 320.8,
+    "local_grade": 0.0
+  },
+  {
+    "name": "near Parker Lake",
+    "node_id": 89735051,
+    "lat": 37.836838,
+    "lon": -119.153096,
+    "category": "lake",
+    "near_water": "Parker Lake",
+    "water_distance_m": 574.7,
+    "local_grade": 0.069
+  },
+  {
+    "name": "near Lower Cathedral Lake",
+    "node_id": 332594747,
+    "lat": 37.846597,
+    "lon": -119.424668,
+    "category": "lake",
+    "near_water": "Lower Cathedral Lake",
+    "water_distance_m": 185.3,
+    "local_grade": 0.0
+  },
+  {
+    "name": "near Gem Lake",
+    "node_id": 468437493,
+    "lat": 37.753477,
+    "lon": -119.14919,
+    "category": "lake",
+    "near_water": "Gem Lake",
+    "water_distance_m": 442.8,
+    "local_grade": 0.057
+  },
+  {
+    "name": "near Gem Lake",
+    "node_id": 468437510,
+    "lat": 37.75331,
+    "lon": -119.149338,
+    "category": "lake",
+    "near_water": "Gem Lake",
+    "water_distance_m": 423.0,
+    "local_grade": 0.0
+  },
+  {
+    "name": "near Billy Lake",
+    "node_id": 468437609,
+    "lat": 37.758356,
+    "lon": -119.15895,
+    "category": "lake",
+    "near_water": "Billy Lake",
+    "water_distance_m": 569.7,
+    "local_grade": 0.0
+  },
+  {
+    "name": "near Black's Pond",
+    "node_id": 468441963,
+    "lat": 37.77335,
+    "lon": -119.126434,
+    "category": "lake",
+    "near_water": "Black's Pond",
+    "water_distance_m": 389.0,
+    "local_grade": 0.055
+  },
+  {
+    "name": "near Black's Pond",
+    "node_id": 468441977,
+    "lat": 37.772738,
+    "lon": -119.126064,
+    "category": "lake",
+    "near_water": "Black's Pond",
+    "water_distance_m": 327.7,
+    "local_grade": 0.055
+  },
+  {
+    "name": "near Black's Pond",
+    "node_id": 468441979,
+    "lat": 37.772837,
+    "lon": -119.126202,
+    "category": "lake",
+    "near_water": "Black's Pond",
+    "water_distance_m": 343.4,
+    "local_grade": 0.0
+  },
+  {
+    "name": "near Carson Lake",
+    "node_id": 468444248,
+    "lat": 37.783348,
+    "lon": -119.127933,
+    "category": "lake",
+    "near_water": "Carson Lake",
+    "water_distance_m": 341.5,
+    "local_grade": 0.0
+  },
+  {
+    "name": "near Carson Lake",
+    "node_id": 468444252,
+    "lat": 37.783618,
+    "lon": -119.128743,
+    "category": "lake",
+    "near_water": "Carson Lake",
+    "water_distance_m": 351.2,
+    "local_grade": 0.011
+  },
+  {
+    "name": "near Lower Sunrise Lake",
+    "node_id": 477214315,
+    "lat": 37.80075,
+    "lon": -119.458541,
+    "category": "lake",
+    "near_water": "Lower Sunrise Lake",
+    "water_distance_m": 682.9,
+    "local_grade": 0.088
+  },
+  {
+    "name": "near Emeric Lake",
+    "node_id": 480625272,
+    "lat": 37.778167,
+    "lon": -119.381749,
+    "category": "lake",
+    "near_water": "Emeric Lake",
+    "water_distance_m": 343.0,
+    "local_grade": 0.038
+  },
+  {
+    "name": "near Elizabeth Lake",
+    "node_id": 1366302583,
+    "lat": 37.845683,
+    "lon": -119.365967,
+    "category": "lake",
+    "near_water": "Elizabeth Lake",
+    "water_distance_m": 422.4,
+    "local_grade": 0.077
+  },
+  {
+    "name": "near Boothe Lake",
+    "node_id": 1744864756,
+    "lat": 37.799419,
+    "lon": -119.347167,
+    "category": "lake",
+    "near_water": "Boothe Lake",
+    "water_distance_m": 75.8,
+    "local_grade": 0.056
+  },
+  {
+    "name": "near Boothe Lake",
+    "node_id": 1744866016,
+    "lat": 37.801045,
+    "lon": -119.343096,
+    "category": "lake",
+    "near_water": "Boothe Lake",
+    "water_distance_m": 436.3,
+    "local_grade": 0.056
+  },
+  {
+    "name": "near Spillway Lake",
+    "node_id": 1744902192,
+    "lat": 37.843001,
+    "lon": -119.231362,
+    "category": "lake",
+    "near_water": "Spillway Lake",
+    "water_distance_m": 125.3,
+    "local_grade": 0.047
+  },
+  {
+    "name": "near Lower Gaylor Lake",
+    "node_id": 1744965811,
+    "lat": 37.907752,
+    "lon": -119.285726,
+    "category": "lake",
+    "near_water": "Lower Gaylor Lake",
+    "water_distance_m": 146.6,
+    "local_grade": 0.068
+  },
+  {
+    "name": "near Green Lake",
+    "node_id": 1745086735,
+    "lat": 38.086295,
+    "lon": -119.305703,
+    "category": "lake",
+    "near_water": "Green Lake",
+    "water_distance_m": 338.7,
+    "local_grade": 0.059
+  },
+  {
+    "name": "near Green Lake",
+    "node_id": 1745087659,
+    "lat": 38.089264,
+    "lon": -119.304791,
+    "category": "lake",
+    "near_water": "Green Lake",
+    "water_distance_m": 614.9,
+    "local_grade": 0.076
+  },
+  {
+    "name": "near Big Virginia Lake",
+    "node_id": 1836157610,
+    "lat": 38.049692,
+    "lon": -119.264692,
+    "category": "lake",
+    "near_water": "Big Virginia Lake",
+    "water_distance_m": 308.0,
+    "local_grade": 0.088
+  },
+  {
+    "name": "near Lower Frog Lake",
+    "node_id": 1836158136,
+    "lat": 38.049105,
+    "lon": -119.279262,
+    "category": "lake",
+    "near_water": "Lower Frog Lake",
+    "water_distance_m": 90.1,
+    "local_grade": 0.086
+  },
+  {
+    "name": "near Elizabeth Lake",
+    "node_id": 1967217376,
+    "lat": 37.846524,
+    "lon": -119.367334,
+    "category": "lake",
+    "near_water": "Elizabeth Lake",
+    "water_distance_m": 341.3,
+    "local_grade": 0.019
+  },
+  {
+    "name": "near Upper Cathedral Lake",
+    "node_id": 3077687129,
+    "lat": 37.839923,
+    "lon": -119.414315,
+    "category": "lake",
+    "near_water": "Upper Cathedral Lake",
+    "water_distance_m": 117.7,
+    "local_grade": 0.0
+  },
+  {
+    "name": "near Upper Cathedral Lake",
+    "node_id": 3616658909,
+    "lat": 37.841847,
+    "lon": -119.413474,
+    "category": "lake",
+    "near_water": "Upper Cathedral Lake",
+    "water_distance_m": 318.7,
+    "local_grade": 0.028
+  },
+  {
+    "name": "near Walker Lake",
+    "node_id": 3975688597,
+    "lat": 37.872359,
+    "lon": -119.159049,
+    "category": "lake",
+    "near_water": "Walker Lake",
+    "water_distance_m": 594.2,
+    "local_grade": 0.0
+  },
+  {
+    "name": "near Lower Cathedral Lake",
+    "node_id": 5292056570,
+    "lat": 37.846463,
+    "lon": -119.426625,
+    "category": "lake",
+    "near_water": "Lower Cathedral Lake",
+    "water_distance_m": 271.4,
+    "local_grade": 0.0
+  },
+  {
+    "name": "near Upper Cathedral Lake",
+    "node_id": 6839494851,
+    "lat": 37.840092,
+    "lon": -119.414703,
+    "category": "lake",
+    "near_water": "Upper Cathedral Lake",
+    "water_distance_m": 99.3,
+    "local_grade": 0.017
+  },
+  {
+    "name": "near Walker Lake",
+    "node_id": 7777160759,
+    "lat": 37.878504,
+    "lon": -119.160097,
+    "category": "lake",
+    "near_water": "Walker Lake",
+    "water_distance_m": 626.6,
+    "local_grade": 0.0
+  },
+  {
+    "name": "near Parker Lake",
+    "node_id": 7782955880,
+    "lat": 37.832232,
+    "lon": -119.158761,
+    "category": "lake",
+    "near_water": "Parker Lake",
+    "water_distance_m": 215.8,
+    "local_grade": 0.026
+  },
+  {
+    "name": "near Carson Lake",
+    "node_id": 7782960130,
+    "lat": 37.783349,
+    "lon": -119.128142,
+    "category": "lake",
+    "near_water": "Carson Lake",
+    "water_distance_m": 335.1,
+    "local_grade": 0.017
+  },
+  {
+    "name": "near Nelson Lake",
+    "node_id": 7855439619,
+    "lat": 37.809233,
+    "lon": -119.379609,
+    "category": "lake",
+    "near_water": "Nelson Lake",
+    "water_distance_m": 232.6,
+    "local_grade": 0.031
+  },
+  {
+    "name": "near Bernice Lake",
+    "node_id": 7891656207,
+    "lat": 37.766194,
+    "lon": -119.335229,
+    "category": "lake",
+    "near_water": "Bernice Lake",
+    "water_distance_m": 233.2,
+    "local_grade": 0.053
+  },
+  {
+    "name": "near Fletcher Lake",
+    "node_id": 7982154276,
+    "lat": 37.795211,
+    "lon": -119.345227,
+    "category": "lake",
+    "near_water": "Fletcher Lake",
+    "water_distance_m": 436.9,
+    "local_grade": 0.036
+  },
+  {
+    "name": "near Fletcher Lake",
+    "node_id": 7982154278,
+    "lat": 37.795138,
+    "lon": -119.345209,
+    "category": "lake",
+    "near_water": "Fletcher Lake",
+    "water_distance_m": 438.8,
+    "local_grade": 0.0
+  },
+  {
+    "name": "near Fletcher Lake",
+    "node_id": 7982154279,
+    "lat": 37.795424,
+    "lon": -119.34528,
+    "category": "lake",
+    "near_water": "Fletcher Lake",
+    "water_distance_m": 432.0,
+    "local_grade": 0.0
+  },
+  {
+    "name": "near Fletcher Lake",
+    "node_id": 7982154281,
+    "lat": 37.795236,
+    "lon": -119.34542,
+    "category": "lake",
+    "near_water": "Fletcher Lake",
+    "water_distance_m": 451.2,
+    "local_grade": 0.0
+  },
+  {
+    "name": "near Fletcher Lake",
+    "node_id": 7982154284,
+    "lat": 37.79464,
+    "lon": -119.345211,
+    "category": "lake",
+    "near_water": "Fletcher Lake",
+    "water_distance_m": 465.4,
+    "local_grade": 0.0
+  },
+  {
+    "name": "near Fletcher Lake",
+    "node_id": 7982166889,
+    "lat": 37.795172,
+    "lon": -119.345593,
+    "category": "lake",
+    "near_water": "Fletcher Lake",
+    "water_distance_m": 468.0,
+    "local_grade": 0.0
+  },
+  {
+    "name": "near Fletcher Lake",
+    "node_id": 7982166896,
+    "lat": 37.795631,
+    "lon": -119.345188,
+    "category": "lake",
+    "near_water": "Fletcher Lake",
+    "water_distance_m": 416.5,
+    "local_grade": 0.048
+  },
+  {
+    "name": "near Fletcher Lake",
+    "node_id": 7982166898,
+    "lat": 37.796334,
+    "lon": -119.343194,
+    "category": "lake",
+    "near_water": "Fletcher Lake",
+    "water_distance_m": 226.3,
+    "local_grade": 0.036
+  },
+  {
+    "name": "near Fletcher Lake",
+    "node_id": 7982166899,
+    "lat": 37.796464,
+    "lon": -119.338931,
+    "category": "lake",
+    "near_water": "Fletcher Lake",
+    "water_distance_m": 160.1,
+    "local_grade": 0.02
+  },
+  {
+    "name": "near Ireland Lake",
+    "node_id": 7982166927,
+    "lat": 37.791861,
+    "lon": -119.306272,
+    "category": "lake",
+    "near_water": "Ireland Lake",
+    "water_distance_m": 382.2,
+    "local_grade": 0.056
+  },
+  {
+    "name": "near Fletcher Lake",
+    "node_id": 7982167212,
+    "lat": 37.797684,
+    "lon": -119.344084,
+    "category": "lake",
+    "near_water": "Fletcher Lake",
+    "water_distance_m": 312.7,
+    "local_grade": 0.0
+  },
+  {
+    "name": "near Babcock Lake",
+    "node_id": 7987642615,
+    "lat": 37.757471,
+    "lon": -119.395342,
+    "category": "lake",
+    "near_water": "Babcock Lake",
+    "water_distance_m": 110.2,
+    "local_grade": 0.034
+  },
+  {
+    "name": "near McCabe Lake",
+    "node_id": 7989583046,
+    "lat": 37.993702,
+    "lon": -119.351917,
+    "category": "lake",
+    "near_water": "McCabe Lake",
+    "water_distance_m": 338.5,
+    "local_grade": 0.066
+  },
+  {
+    "name": "near Boothe Lake",
+    "node_id": 8059433213,
+    "lat": 37.795137,
+    "lon": -119.346973,
+    "category": "lake",
+    "near_water": "Boothe Lake",
+    "water_distance_m": 530.2,
+    "local_grade": 0.089
+  },
+  {
+    "name": "near Upper Cathedral Lake",
+    "node_id": 8151007390,
+    "lat": 37.841051,
+    "lon": -119.414308,
+    "category": "lake",
+    "near_water": "Upper Cathedral Lake",
+    "water_distance_m": 204.6,
+    "local_grade": 0.017
+  },
+  {
+    "name": "near Upper Cathedral Lake",
+    "node_id": 8151007395,
+    "lat": 37.840811,
+    "lon": -119.413538,
+    "category": "lake",
+    "near_water": "Upper Cathedral Lake",
+    "water_distance_m": 229.0,
+    "local_grade": 0.0
+  },
+  {
+    "name": "near Upper Cathedral Lake",
+    "node_id": 8151017134,
+    "lat": 37.84086,
+    "lon": -119.412935,
+    "category": "lake",
+    "near_water": "Upper Cathedral Lake",
+    "water_distance_m": 274.7,
+    "local_grade": 0.052
+  },
+  {
+    "name": "near Upper Cathedral Lake",
+    "node_id": 8151017162,
+    "lat": 37.838666,
+    "lon": -119.415113,
+    "category": "lake",
+    "near_water": "Upper Cathedral Lake",
+    "water_distance_m": 98.9,
+    "local_grade": 0.0
+  },
+  {
+    "name": "near Upper Cathedral Lake",
+    "node_id": 8151035701,
+    "lat": 37.841048,
+    "lon": -119.413159,
+    "category": "lake",
+    "near_water": "Upper Cathedral Lake",
+    "water_distance_m": 271.5,
+    "local_grade": 0.011
+  },
+  {
+    "name": "near Alger Lakes",
+    "node_id": 8211714379,
+    "lat": 37.793335,
+    "lon": -119.1669,
+    "category": "lake",
+    "near_water": "Alger Lakes",
+    "water_distance_m": 678.4,
+    "local_grade": 0.02
+  },
+  {
+    "name": "near Alger Lakes",
+    "node_id": 8211714408,
+    "lat": 37.794394,
+    "lon": -119.17529,
+    "category": "lake",
+    "near_water": "Alger Lakes",
+    "water_distance_m": 324.2,
+    "local_grade": 0.0
+  },
+  {
+    "name": "near Summit Lake",
+    "node_id": 8214600218,
+    "lat": 37.852077,
+    "lon": -119.215873,
+    "category": "lake",
+    "near_water": "Summit Lake",
+    "water_distance_m": 353.7,
+    "local_grade": 0.057
+  },
+  {
+    "name": "near Walker Lake",
+    "node_id": 8214757123,
+    "lat": 37.878813,
+    "lon": -119.160381,
+    "category": "lake",
+    "near_water": "Walker Lake",
+    "water_distance_m": 634.1,
+    "local_grade": 0.056
+  },
+  {
+    "name": "near Walker Lake",
+    "node_id": 8214757185,
+    "lat": 37.872474,
+    "lon": -119.165204,
+    "category": "lake",
+    "near_water": "Walker Lake",
+    "water_distance_m": 233.3,
+    "local_grade": 0.0
+  },
+  {
+    "name": "near Lower Sunrise Lake",
+    "node_id": 8505468838,
+    "lat": 37.803089,
+    "lon": -119.453715,
+    "category": "lake",
+    "near_water": "Lower Sunrise Lake",
+    "water_distance_m": 186.7,
+    "local_grade": 0.016
+  },
+  {
+    "name": "near Little Virginia Lake",
+    "node_id": 8569451810,
+    "lat": 38.049025,
+    "lon": -119.26003,
+    "category": "lake",
+    "near_water": "Little Virginia Lake",
+    "water_distance_m": 236.8,
+    "local_grade": 0.0
+  },
+  {
+    "name": "near Little Virginia Lake",
+    "node_id": 8569451811,
+    "lat": 38.049584,
+    "lon": -119.259963,
+    "category": "lake",
+    "near_water": "Little Virginia Lake",
+    "water_distance_m": 293.5,
+    "local_grade": 0.0
+  },
+  {
+    "name": "near Big Virginia Lake",
+    "node_id": 8569451834,
+    "lat": 38.049479,
+    "lon": -119.263616,
+    "category": "lake",
+    "near_water": "Big Virginia Lake",
+    "water_distance_m": 306.0,
+    "local_grade": 0.05
+  },
+  {
+    "name": "near Big Virginia Lake",
+    "node_id": 8569451841,
+    "lat": 38.049411,
+    "lon": -119.264561,
+    "category": "lake",
+    "near_water": "Big Virginia Lake",
+    "water_distance_m": 277.9,
+    "local_grade": 0.088
+  },
+  {
+    "name": "near Lower Frog Lake",
+    "node_id": 8569451903,
+    "lat": 38.050689,
+    "lon": -119.27931,
+    "category": "lake",
+    "near_water": "Lower Frog Lake",
+    "water_distance_m": 182.0,
+    "local_grade": 0.048
+  },
+  {
+    "name": "near Bernice Lake",
+    "node_id": 10061606960,
+    "lat": 37.767649,
+    "lon": -119.33167,
+    "category": "lake",
+    "near_water": "Bernice Lake",
+    "water_distance_m": 167.8,
+    "local_grade": 0.003
+  },
+  {
+    "name": "near Lower Cathedral Lake",
+    "node_id": 10290274624,
+    "lat": 37.846384,
+    "lon": -119.422454,
+    "category": "lake",
+    "near_water": "Lower Cathedral Lake",
+    "water_distance_m": 217.3,
+    "local_grade": 0.02
+  },
+  {
+    "name": "near Lower Cathedral Lake",
+    "node_id": 10683634525,
+    "lat": 37.847181,
+    "lon": -119.422406,
+    "category": "lake",
+    "near_water": "Lower Cathedral Lake",
+    "water_distance_m": 290.0,
+    "local_grade": 0.062
+  },
+  {
+    "name": "near Lower Cathedral Lake",
+    "node_id": 10683634535,
+    "lat": 37.846691,
+    "lon": -119.423532,
+    "category": "lake",
+    "near_water": "Lower Cathedral Lake",
+    "water_distance_m": 198.7,
+    "local_grade": 0.023
+  },
+  {
+    "name": "near Agnew Lake",
+    "node_id": 11573470704,
+    "lat": 37.758197,
+    "lon": -119.132741,
+    "category": "lake",
+    "near_water": "Agnew Lake",
+    "water_distance_m": 390.1,
+    "local_grade": 0.0
+  },
+  {
+    "name": "near Black's Pond",
+    "node_id": 12813101724,
+    "lat": 37.770927,
+    "lon": -119.127132,
+    "category": "lake",
+    "near_water": "Black's Pond",
+    "water_distance_m": 395.2,
+    "local_grade": 0.0
+  },
+  {
+    "name": "near Black's Pond",
+    "node_id": 12813101725,
+    "lat": 37.772258,
+    "lon": -119.128087,
+    "category": "lake",
+    "near_water": "Black's Pond",
+    "water_distance_m": 482.1,
+    "local_grade": 0.0
+  },
+  {
+    "name": "near Silver Lake",
+    "node_id": 12813101750,
+    "lat": 37.773837,
+    "lon": -119.128991,
+    "category": "lake",
+    "near_water": "Silver Lake",
+    "water_distance_m": 469.9,
+    "local_grade": 0.0
+  },
+  {
+    "name": "near Silver Lake",
+    "node_id": 12813101755,
+    "lat": 37.774451,
+    "lon": -119.13028,
+    "category": "lake",
+    "near_water": "Silver Lake",
+    "water_distance_m": 504.8,
+    "local_grade": 0.0
+  },
+  {
+    "name": "near Carson Lake",
+    "node_id": 13118698593,
+    "lat": 37.77911,
+    "lon": -119.129495,
+    "category": "lake",
+    "near_water": "Carson Lake",
+    "water_distance_m": 154.9,
+    "local_grade": 0.0
+  },
+  {
+    "name": "near Green Lake",
+    "node_id": 6035018550,
+    "lat": 38.085449,
+    "lon": -119.306652,
+    "category": "lake",
+    "near_water": "Green Lake",
+    "water_distance_m": 227.3,
+    "local_grade": 0.059
+  },
+  {
+    "name": "near Tamarack Lake",
+    "node_id": 8033603799,
+    "lat": 38.12754,
+    "lon": -119.314951,
+    "category": "lake",
+    "near_water": "Tamarack Lake",
+    "water_distance_m": 252.2,
+    "local_grade": 0.075
+  },
+  {
+    "name": "near Green Lake",
+    "node_id": 13021150717,
+    "lat": 38.084624,
+    "lon": -119.311329,
+    "category": "lake",
+    "near_water": "Green Lake",
+    "water_distance_m": 192.4,
+    "local_grade": 0.0
+  },
+  {
+    "name": "near Green Lake",
+    "node_id": 13021150720,
+    "lat": 38.084668,
+    "lon": -119.31164,
+    "category": "lake",
+    "near_water": "Green Lake",
+    "water_distance_m": 218.5,
+    "local_grade": 0.068
+  },
+  {
+    "name": "near Crescent Lake",
+    "node_id": 1755673568,
+    "lat": 37.566366,
+    "lon": -119.532862,
+    "category": "lake",
+    "near_water": "Crescent Lake",
+    "water_distance_m": 223.0,
+    "local_grade": 0.037
+  },
+  {
+    "name": "near Crescent Lake",
+    "node_id": 1755673719,
+    "lat": 37.567772,
+    "lon": -119.533528,
+    "category": "lake",
+    "near_water": "Crescent Lake",
+    "water_distance_m": 359.4,
+    "local_grade": 0.052
+  },
+  {
+    "name": "near Ostrander Lake",
+    "node_id": 13288528723,
+    "lat": 37.62611,
+    "lon": -119.551034,
+    "category": "lake",
+    "near_water": "Ostrander Lake",
+    "water_distance_m": 185.8,
+    "local_grade": 0.061
+  },
+  {
+    "name": "near Birch Lake",
+    "node_id": 95101567,
+    "lat": 37.877256,
+    "lon": -119.858573,
+    "category": "lake",
+    "near_water": "Birch Lake",
+    "water_distance_m": 327.9,
+    "local_grade": 0.087
+  },
+  {
+    "name": "near Birch Lake",
+    "node_id": 95101591,
+    "lat": 37.875441,
+    "lon": -119.857885,
+    "category": "lake",
+    "near_water": "Birch Lake",
+    "water_distance_m": 468.7,
+    "local_grade": 0.0
+  },
+  {
+    "name": "near May Lake",
+    "node_id": 332601129,
+    "lat": 37.844104,
+    "lon": -119.491122,
+    "category": "lake",
+    "near_water": "May Lake",
+    "water_distance_m": 409.9,
+    "local_grade": 0.083
+  },
+  {
+    "name": "near May Lake",
+    "node_id": 332601131,
+    "lat": 37.844796,
+    "lon": -119.491337,
+    "category": "lake",
+    "near_water": "May Lake",
+    "water_distance_m": 333.4,
+    "local_grade": 0.0
+  },
+  {
+    "name": "near Ten Lakes",
+    "node_id": 1444820439,
+    "lat": 37.9031,
+    "lon": -119.526965,
+    "category": "lake",
+    "near_water": "Ten Lakes",
+    "water_distance_m": 227.8,
+    "local_grade": 0.062
+  },
+  {
+    "name": "near Ten Lakes",
+    "node_id": 1453318393,
+    "lat": 37.902762,
+    "lon": -119.526538,
+    "category": "lake",
+    "near_water": "Ten Lakes",
+    "water_distance_m": 238.6,
+    "local_grade": 0.005
+  },
+  {
+    "name": "near Birch Lake",
+    "node_id": 1744954288,
+    "lat": 37.883878,
+    "lon": -119.850888,
+    "category": "lake",
+    "near_water": "Birch Lake",
+    "water_distance_m": 670.8,
+    "local_grade": 0.045
+  },
+  {
+    "name": "Lower Grant Lake",
+    "node_id": 1744955126,
+    "lat": 37.886751,
+    "lon": -119.539785,
+    "category": "lake",
+    "near_water": "Lower Grant Lake",
+    "water_distance_m": 54.0,
+    "local_grade": 0.059
+  },
+  {
+    "name": "near Harden Lake",
+    "node_id": 1744956652,
+    "lat": 37.893189,
+    "lon": -119.67527,
+    "category": "lake",
+    "near_water": "Harden Lake",
+    "water_distance_m": 272.9,
+    "local_grade": 0.038
+  },
+  {
+    "name": "near Harden Lake",
+    "node_id": 1744957510,
+    "lat": 37.895453,
+    "lon": -119.673198,
+    "category": "lake",
+    "near_water": "Harden Lake",
+    "water_distance_m": 227.1,
+    "local_grade": 0.069
+  },
+  {
+    "name": "near Gravel Pit Lake",
+    "node_id": 1744991925,
+    "lat": 37.960813,
+    "lon": -119.833117,
+    "category": "lake",
+    "near_water": "Gravel Pit Lake",
+    "water_distance_m": 577.6,
+    "local_grade": 0.014
+  },
+  {
+    "name": "near Gravel Pit Lake",
+    "node_id": 1744996603,
+    "lat": 37.964649,
+    "lon": -119.827073,
+    "category": "lake",
+    "near_water": "Gravel Pit Lake",
+    "water_distance_m": 168.2,
+    "local_grade": 0.002
+  },
+  {
+    "name": "near Neall Lake",
+    "node_id": 1745028775,
+    "lat": 37.988433,
+    "lon": -119.505031,
+    "category": "lake",
+    "near_water": "Neall Lake",
+    "water_distance_m": 141.7,
+    "local_grade": 0.0
+  },
+  {
+    "name": "near Tenaya Lake",
+    "node_id": 1967081585,
+    "lat": 37.833944,
+    "lon": -119.463138,
+    "category": "lake",
+    "near_water": "Tenaya Lake",
+    "water_distance_m": 356.2,
+    "local_grade": 0.077
+  },
+  {
+    "name": "near Birch Lake",
+    "node_id": 4022829802,
+    "lat": 37.88327,
+    "lon": -119.853645,
+    "category": "lake",
+    "near_water": "Birch Lake",
+    "water_distance_m": 478.7,
+    "local_grade": 0.043
+  },
+  {
+    "name": "near Birch Lake",
+    "node_id": 4228815279,
+    "lat": 37.877288,
+    "lon": -119.85273,
+    "category": "lake",
+    "near_water": "Birch Lake",
+    "water_distance_m": 368.0,
+    "local_grade": 0.0
+  },
+  {
+    "name": "near Birch Lake",
+    "node_id": 4228815280,
+    "lat": 37.877376,
+    "lon": -119.85331,
+    "category": "lake",
+    "near_water": "Birch Lake",
+    "water_distance_m": 323.3,
+    "local_grade": 0.067
+  },
+  {
+    "name": "near Birch Lake",
+    "node_id": 4228815284,
+    "lat": 37.877498,
+    "lon": -119.856177,
+    "category": "lake",
+    "near_water": "Birch Lake",
+    "water_distance_m": 209.8,
+    "local_grade": 0.075
+  },
+  {
+    "name": "near Birch Lake",
+    "node_id": 4228815393,
+    "lat": 37.878274,
+    "lon": -119.851803,
+    "category": "lake",
+    "near_water": "Birch Lake",
+    "water_distance_m": 386.7,
+    "local_grade": 0.034
+  },
+  {
+    "name": "near Birch Lake",
+    "node_id": 4228815394,
+    "lat": 37.878355,
+    "lon": -119.855328,
+    "category": "lake",
+    "near_water": "Birch Lake",
+    "water_distance_m": 127.5,
+    "local_grade": 0.045
+  },
+  {
+    "name": "near Birch Lake",
+    "node_id": 4228815395,
+    "lat": 37.87847,
+    "lon": -119.851578,
+    "category": "lake",
+    "near_water": "Birch Lake",
+    "water_distance_m": 399.4,
+    "local_grade": 0.0
+  },
+  {
+    "name": "near Birch Lake",
+    "node_id": 4228815401,
+    "lat": 37.878691,
+    "lon": -119.850068,
+    "category": "lake",
+    "near_water": "Birch Lake",
+    "water_distance_m": 524.5,
+    "local_grade": 0.0
+  },
+  {
+    "name": "near Birch Lake",
+    "node_id": 4228815408,
+    "lat": 37.87887,
+    "lon": -119.850591,
+    "category": "lake",
+    "near_water": "Birch Lake",
+    "water_distance_m": 476.4,
+    "local_grade": 0.041
+  },
+  {
+    "name": "near Birch Lake",
+    "node_id": 4228815439,
+    "lat": 37.879398,
+    "lon": -119.851474,
+    "category": "lake",
+    "near_water": "Birch Lake",
+    "water_distance_m": 395.5,
+    "local_grade": 0.047
+  },
+  {
+    "name": "near Birch Lake",
+    "node_id": 4228815448,
+    "lat": 37.879512,
+    "lon": -119.853241,
+    "category": "lake",
+    "near_water": "Birch Lake",
+    "water_distance_m": 240.8,
+    "local_grade": 0.06
+  },
+  {
+    "name": "near Birch Lake",
+    "node_id": 4228815458,
+    "lat": 37.879932,
+    "lon": -119.84983,
+    "category": "lake",
+    "near_water": "Birch Lake",
+    "water_distance_m": 543.3,
+    "local_grade": 0.029
+  },
+  {
+    "name": "near Birch Lake",
+    "node_id": 4228815459,
+    "lat": 37.879984,
+    "lon": -119.853186,
+    "category": "lake",
+    "near_water": "Birch Lake",
+    "water_distance_m": 254.3,
+    "local_grade": 0.015
+  },
+  {
+    "name": "near Birch Lake",
+    "node_id": 4228815466,
+    "lat": 37.880294,
+    "lon": -119.85628,
+    "category": "lake",
+    "near_water": "Birch Lake",
+    "water_distance_m": 105.0,
+    "local_grade": 0.026
+  },
+  {
+    "name": "near Birch Lake",
+    "node_id": 4228815470,
+    "lat": 37.880396,
+    "lon": -119.856521,
+    "category": "lake",
+    "near_water": "Birch Lake",
+    "water_distance_m": 122.7,
+    "local_grade": 0.045
+  },
+  {
+    "name": "near Birch Lake",
+    "node_id": 4228815477,
+    "lat": 37.880716,
+    "lon": -119.851201,
+    "category": "lake",
+    "near_water": "Birch Lake",
+    "water_distance_m": 445.1,
+    "local_grade": 0.02
+  },
+  {
+    "name": "near Birch Lake",
+    "node_id": 4228815479,
+    "lat": 37.88073,
+    "lon": -119.855098,
+    "category": "lake",
+    "near_water": "Birch Lake",
+    "water_distance_m": 168.9,
+    "local_grade": 0.026
+  },
+  {
+    "name": "near Birch Lake",
+    "node_id": 4228815484,
+    "lat": 37.881087,
+    "lon": -119.855848,
+    "category": "lake",
+    "near_water": "Birch Lake",
+    "water_distance_m": 190.3,
+    "local_grade": 0.0
+  },
+  {
+    "name": "near Birch Lake",
+    "node_id": 4228815490,
+    "lat": 37.88148,
+    "lon": -119.853128,
+    "category": "lake",
+    "near_water": "Birch Lake",
+    "water_distance_m": 342.4,
+    "local_grade": 0.023
+  },
+  {
+    "name": "near Birch Lake",
+    "node_id": 4228815499,
+    "lat": 37.882058,
+    "lon": -119.851216,
+    "category": "lake",
+    "near_water": "Birch Lake",
+    "water_distance_m": 513.3,
+    "local_grade": 0.01
+  },
+  {
+    "name": "near Birch Lake",
+    "node_id": 4228815500,
+    "lat": 37.882046,
+    "lon": -119.855086,
+    "category": "lake",
+    "near_water": "Birch Lake",
+    "water_distance_m": 306.8,
+    "local_grade": 0.042
+  },
+  {
+    "name": "near Birch Lake",
+    "node_id": 4423972251,
+    "lat": 37.881678,
+    "lon": -119.853862,
+    "category": "lake",
+    "near_water": "Birch Lake",
+    "water_distance_m": 316.1,
+    "local_grade": 0.042
+  },
+  {
+    "name": "near Birch Lake",
+    "node_id": 4423972252,
+    "lat": 37.881403,
+    "lon": -119.853933,
+    "category": "lake",
+    "near_water": "Birch Lake",
+    "water_distance_m": 288.0,
+    "local_grade": 0.0
+  },
+  {
+    "name": "near Birch Lake",
+    "node_id": 4565638363,
+    "lat": 37.876467,
+    "lon": -119.857219,
+    "category": "lake",
+    "near_water": "Birch Lake",
+    "water_distance_m": 341.6,
+    "local_grade": 0.0
+  },
+  {
+    "name": "near Birch Lake",
+    "node_id": 4565638366,
+    "lat": 37.875523,
+    "lon": -119.858179,
+    "category": "lake",
+    "near_water": "Birch Lake",
+    "water_distance_m": 470.2,
+    "local_grade": 0.002
+  },
+  {
+    "name": "near Birch Lake",
+    "node_id": 4565638373,
+    "lat": 37.876495,
+    "lon": -119.860028,
+    "category": "lake",
+    "near_water": "Birch Lake",
+    "water_distance_m": 478.6,
+    "local_grade": 0.023
+  },
+  {
+    "name": "near Birch Lake",
+    "node_id": 4565642418,
+    "lat": 37.876435,
+    "lon": -119.859045,
+    "category": "lake",
+    "near_water": "Birch Lake",
+    "water_distance_m": 423.7,
+    "local_grade": 0.007
+  },
+  {
+    "name": "near Birch Lake",
+    "node_id": 4896125496,
+    "lat": 37.874646,
+    "lon": -119.855327,
+    "category": "lake",
+    "near_water": "Birch Lake",
+    "water_distance_m": 529.4,
+    "local_grade": 0.067
+  },
+  {
+    "name": "near Birch Lake",
+    "node_id": 4896125503,
+    "lat": 37.87988,
+    "lon": -119.849291,
+    "category": "lake",
+    "near_water": "Birch Lake",
+    "water_distance_m": 589.7,
+    "local_grade": 0.05
+  },
+  {
+    "name": "near Birch Lake",
+    "node_id": 4896125515,
+    "lat": 37.880676,
+    "lon": -119.851192,
+    "category": "lake",
+    "near_water": "Birch Lake",
+    "water_distance_m": 444.3,
+    "local_grade": 0.015
+  },
+  {
+    "name": "near Birch Lake",
+    "node_id": 4896125519,
+    "lat": 37.88117,
+    "lon": -119.852831,
+    "category": "lake",
+    "near_water": "Birch Lake",
+    "water_distance_m": 340.6,
+    "local_grade": 0.023
+  },
+  {
+    "name": "near May Lake",
+    "node_id": 5292056603,
+    "lat": 37.844445,
+    "lon": -119.490811,
+    "category": "lake",
+    "near_water": "May Lake",
+    "water_distance_m": 391.0,
+    "local_grade": 0.0
+  },
+  {
+    "name": "near May Lake",
+    "node_id": 5292056604,
+    "lat": 37.844898,
+    "lon": -119.4908,
+    "category": "lake",
+    "near_water": "May Lake",
+    "water_distance_m": 350.6,
+    "local_grade": 0.034
+  },
+  {
+    "name": "near Tenaya Lake",
+    "node_id": 5491618870,
+    "lat": 37.827426,
+    "lon": -119.467845,
+    "category": "lake",
+    "near_water": "Tenaya Lake",
+    "water_distance_m": 688.5,
+    "local_grade": 0.042
+  },
+  {
+    "name": "near Tenaya Lake",
+    "node_id": 5491618871,
+    "lat": 37.827416,
+    "lon": -119.467706,
+    "category": "lake",
+    "near_water": "Tenaya Lake",
+    "water_distance_m": 679.3,
+    "local_grade": 0.024
+  },
+  {
+    "name": "near Polly Dome Lakes",
+    "node_id": 7711045194,
+    "lat": 37.864655,
+    "lon": -119.461437,
+    "category": "lake",
+    "near_water": "Polly Dome Lakes",
+    "water_distance_m": 609.7,
+    "local_grade": 0.046
+  },
+  {
+    "name": "near Polly Dome Lakes",
+    "node_id": 7711045224,
+    "lat": 37.862657,
+    "lon": -119.456019,
+    "category": "lake",
+    "near_water": "Polly Dome Lakes",
+    "water_distance_m": 140.7,
+    "local_grade": 0.046
+  },
+  {
+    "name": "near Tenaya Lake",
+    "node_id": 8150973879,
+    "lat": 37.829549,
+    "lon": -119.467902,
+    "category": "lake",
+    "near_water": "Tenaya Lake",
+    "water_distance_m": 588.5,
+    "local_grade": 0.0
+  },
+  {
+    "name": "near Lower Sunrise Lake",
+    "node_id": 8505468831,
+    "lat": 37.803527,
+    "lon": -119.453117,
+    "category": "lake",
+    "near_water": "Lower Sunrise Lake",
+    "water_distance_m": 115.3,
+    "local_grade": 0.0
+  },
+  {
+    "name": "near May Lake",
+    "node_id": 8586917704,
+    "lat": 37.845391,
+    "lon": -119.491146,
+    "category": "lake",
+    "near_water": "May Lake",
+    "water_distance_m": 288.9,
+    "local_grade": 0.044
+  },
+  {
+    "name": "near May Lake",
+    "node_id": 8586917705,
+    "lat": 37.846634,
+    "lon": -119.490395,
+    "category": "lake",
+    "near_water": "May Lake",
+    "water_distance_m": 265.4,
+    "local_grade": 0.044
+  },
+  {
+    "name": "near Tenaya Lake",
+    "node_id": 9068930430,
+    "lat": 37.832868,
+    "lon": -119.464254,
+    "category": "lake",
+    "near_water": "Tenaya Lake",
+    "water_distance_m": 319.3,
+    "local_grade": 0.0
+  },
+  {
+    "name": "near Birch Lake",
+    "node_id": 9096684404,
+    "lat": 37.87671,
+    "lon": -119.857624,
+    "category": "lake",
+    "near_water": "Birch Lake",
+    "water_distance_m": 330.0,
+    "local_grade": 0.0
+  },
+  {
+    "name": "near Birch Lake",
+    "node_id": 9096692621,
+    "lat": 37.877978,
+    "lon": -119.852402,
+    "category": "lake",
+    "near_water": "Birch Lake",
+    "water_distance_m": 350.6,
+    "local_grade": 0.0
+  },
+  {
+    "name": "near Birch Lake",
+    "node_id": 9096692622,
+    "lat": 37.878101,
+    "lon": -119.8537,
+    "category": "lake",
+    "near_water": "Birch Lake",
+    "water_distance_m": 245.4,
+    "local_grade": 0.006
+  },
+  {
+    "name": "near Birch Lake",
+    "node_id": 9096692637,
+    "lat": 37.876052,
+    "lon": -119.857187,
+    "category": "lake",
+    "near_water": "Birch Lake",
+    "water_distance_m": 384.8,
+    "local_grade": 0.038
+  },
+  {
+    "name": "near Birch Lake",
+    "node_id": 9096692640,
+    "lat": 37.876767,
+    "lon": -119.856763,
+    "category": "lake",
+    "near_water": "Birch Lake",
+    "water_distance_m": 298.4,
+    "local_grade": 0.087
+  },
+  {
+    "name": "near Birch Lake",
+    "node_id": 9104218989,
+    "lat": 37.87744,
+    "lon": -119.855404,
+    "category": "lake",
+    "near_water": "Birch Lake",
+    "water_distance_m": 221.4,
+    "local_grade": 0.038
+  },
+  {
+    "name": "near May Lake",
+    "node_id": 9342558759,
+    "lat": 37.850152,
+    "lon": -119.491556,
+    "category": "lake",
+    "near_water": "May Lake",
+    "water_distance_m": 343.1,
+    "local_grade": 0.03
+  },
+  {
+    "name": "near May Lake",
+    "node_id": 9342558767,
+    "lat": 37.849258,
+    "lon": -119.490102,
+    "category": "lake",
+    "near_water": "May Lake",
+    "water_distance_m": 347.7,
+    "local_grade": 0.041
+  },
+  {
+    "name": "near Birch Lake",
+    "node_id": 10289984589,
+    "lat": 37.876928,
+    "lon": -119.858297,
+    "category": "lake",
+    "near_water": "Birch Lake",
+    "water_distance_m": 340.0,
+    "local_grade": 0.005
+  },
+  {
+    "name": "near Tenaya Lake",
+    "node_id": 10574700882,
+    "lat": 37.827526,
+    "lon": -119.467535,
+    "category": "lake",
+    "near_water": "Tenaya Lake",
+    "water_distance_m": 659.9,
+    "local_grade": 0.0
+  },
+  {
+    "name": "near Tenaya Lake",
+    "node_id": 11617764240,
+    "lat": 37.833137,
+    "lon": -119.464447,
+    "category": "lake",
+    "near_water": "Tenaya Lake",
+    "water_distance_m": 351.7,
+    "local_grade": 0.0
+  },
+  {
+    "name": "near Birch Lake",
+    "node_id": 12180973051,
+    "lat": 37.875531,
+    "lon": -119.858278,
+    "category": "lake",
+    "near_water": "Birch Lake",
+    "water_distance_m": 473.0,
+    "local_grade": 0.007
+  },
+  {
+    "name": "near Tenaya Lake",
+    "node_id": 12817518265,
+    "lat": 37.833046,
+    "lon": -119.4644,
+    "category": "lake",
+    "near_water": "Tenaya Lake",
+    "water_distance_m": 341.9,
+    "local_grade": 0.064
+  },
+  {
+    "name": "near Poore Lake",
+    "node_id": 89668405,
+    "lat": 38.315683,
+    "lon": -119.52489,
+    "category": "lake",
+    "near_water": "Poore Lake",
+    "water_distance_m": 658.9,
+    "local_grade": 0.0
+  },
+  {
+    "name": "near Leavitt Lake",
+    "node_id": 89835908,
+    "lat": 38.275719,
+    "lon": -119.616835,
+    "category": "lake",
+    "near_water": "Leavitt Lake",
+    "water_distance_m": 272.2,
+    "local_grade": 0.057
+  },
+  {
+    "name": "near Leavitt Lake",
+    "node_id": 89835924,
+    "lat": 38.276614,
+    "lon": -119.617834,
+    "category": "lake",
+    "near_water": "Leavitt Lake",
+    "water_distance_m": 332.6,
+    "local_grade": 0.035
+  },
+  {
+    "name": "near Herring Creek Reservoir",
+    "node_id": 94615563,
+    "lat": 38.24971,
+    "lon": -119.925931,
+    "category": "lake",
+    "near_water": "Herring Creek Reservoir",
+    "water_distance_m": 322.9,
+    "local_grade": 0.055
+  },
+  {
+    "name": "near Bloomer Lake",
+    "node_id": 95118419,
+    "lat": 38.269338,
+    "lon": -119.863557,
+    "category": "lake",
+    "near_water": "Bloomer Lake",
+    "water_distance_m": 336.4,
+    "local_grade": 0.094
+  },
+  {
+    "name": "near Upper Long Lake",
+    "node_id": 539449513,
+    "lat": 38.226257,
+    "lon": -119.576365,
+    "category": "lake",
+    "near_water": "Upper Long Lake",
+    "water_distance_m": 547.9,
+    "local_grade": 0.021
+  },
+  {
+    "name": "near Upper Long Lake",
+    "node_id": 539450162,
+    "lat": 38.225026,
+    "lon": -119.573851,
+    "category": "lake",
+    "near_water": "Upper Long Lake",
+    "water_distance_m": 289.2,
+    "local_grade": 0.055
+  },
+  {
+    "name": "near Fremont Lake",
+    "node_id": 539452432,
+    "lat": 38.254072,
+    "lon": -119.551228,
+    "category": "lake",
+    "near_water": "Fremont Lake",
+    "water_distance_m": 262.7,
+    "local_grade": 0.006
+  },
+  {
+    "name": "near Hidden Lake",
+    "node_id": 539453281,
+    "lat": 38.259625,
+    "lon": -119.532386,
+    "category": "lake",
+    "near_water": "Hidden Lake",
+    "water_distance_m": 392.2,
+    "local_grade": 0.08
+  },
+  {
+    "name": "near Hidden Lake",
+    "node_id": 539453292,
+    "lat": 38.261313,
+    "lon": -119.535327,
+    "category": "lake",
+    "near_water": "Hidden Lake",
+    "water_distance_m": 92.4,
+    "local_grade": 0.08
+  },
+  {
+    "name": "near Camp Lake",
+    "node_id": 919326555,
+    "lat": 38.166517,
+    "lon": -119.877005,
+    "category": "lake",
+    "near_water": "Camp Lake",
+    "water_distance_m": 266.8,
+    "local_grade": 0.012
+  },
+  {
+    "name": "near Karls Lake",
+    "node_id": 919336787,
+    "lat": 38.150913,
+    "lon": -119.760251,
+    "category": "lake",
+    "near_water": "Karls Lake",
+    "water_distance_m": 616.8,
+    "local_grade": 0.013
+  },
+  {
+    "name": "near Karls Lake",
+    "node_id": 919336929,
+    "lat": 38.146504,
+    "lon": -119.764159,
+    "category": "lake",
+    "near_water": "Karls Lake",
+    "water_distance_m": 117.3,
+    "local_grade": 0.003
+  },
+  {
+    "name": "near Wood Lake",
+    "node_id": 919336937,
+    "lat": 38.149094,
+    "lon": -119.75187,
+    "category": "lake",
+    "near_water": "Wood Lake",
+    "water_distance_m": 260.7,
+    "local_grade": 0.018
+  },
+  {
+    "name": "near Wood Lake",
+    "node_id": 919337005,
+    "lat": 38.150733,
+    "lon": -119.751537,
+    "category": "lake",
+    "near_water": "Wood Lake",
+    "water_distance_m": 93.6,
+    "local_grade": 0.036
+  },
+  {
+    "name": "near Pingree Lake",
+    "node_id": 927089993,
+    "lat": 38.134544,
+    "lon": -119.796198,
+    "category": "lake",
+    "near_water": "Pingree Lake",
+    "water_distance_m": 227.4,
+    "local_grade": 0.045
+  },
+  {
+    "name": "near Boundary Lake",
+    "node_id": 1745088373,
+    "lat": 38.090733,
+    "lon": -119.792832,
+    "category": "lake",
+    "near_water": "Boundary Lake",
+    "water_distance_m": 354.2,
+    "local_grade": 0.064
+  },
+  {
+    "name": "near Twin Lakes",
+    "node_id": 1745101644,
+    "lat": 38.135555,
+    "lon": -119.653136,
+    "category": "lake",
+    "near_water": "Twin Lakes",
+    "water_distance_m": 347.3,
+    "local_grade": 0.001
+  },
+  {
+    "name": "near Lertora Lake",
+    "node_id": 1745102672,
+    "lat": 38.138699,
+    "lon": -119.726049,
+    "category": "lake",
+    "near_water": "Lertora Lake",
+    "water_distance_m": 389.7,
+    "local_grade": 0.042
+  },
+  {
+    "name": "near Bigelow Lake",
+    "node_id": 1745104498,
+    "lat": 38.156912,
+    "lon": -119.633973,
+    "category": "lake",
+    "near_water": "Bigelow Lake",
+    "water_distance_m": 400.8,
+    "local_grade": 0.019
+  },
+  {
+    "name": "near Bigelow Lake",
+    "node_id": 1745104517,
+    "lat": 38.157102,
+    "lon": -119.639815,
+    "category": "lake",
+    "near_water": "Bigelow Lake",
+    "water_distance_m": 292.1,
+    "local_grade": 0.059
+  },
+  {
+    "name": "near Snow Lake",
+    "node_id": 1745106003,
+    "lat": 38.171273,
+    "lon": -119.62333,
+    "category": "lake",
+    "near_water": "Snow Lake",
+    "water_distance_m": 331.9,
+    "local_grade": 0.046
+  },
+  {
+    "name": "near Snow Lake",
+    "node_id": 1745106803,
+    "lat": 38.174655,
+    "lon": -119.621722,
+    "category": "lake",
+    "near_water": "Snow Lake",
+    "water_distance_m": 590.7,
+    "local_grade": 0.046
+  },
+  {
+    "name": "near Toejam Lake",
+    "node_id": 1931540097,
+    "lat": 38.187747,
+    "lon": -119.800714,
+    "category": "lake",
+    "near_water": "Toejam Lake",
+    "water_distance_m": 179.3,
+    "local_grade": 0.004
+  },
+  {
+    "name": "near Deer Lake",
+    "node_id": 1931618690,
+    "lat": 38.166612,
+    "lon": -119.765578,
+    "category": "lake",
+    "near_water": "Deer Lake",
+    "water_distance_m": 324.3,
+    "local_grade": 0.047
+  },
+  {
+    "name": "near Starvation Lake",
+    "node_id": 1931619391,
+    "lat": 38.183214,
+    "lon": -119.763765,
+    "category": "lake",
+    "near_water": "Starvation Lake",
+    "water_distance_m": 345.9,
+    "local_grade": 0.047
+  },
+  {
+    "name": "near Piute Lake",
+    "node_id": 1931828169,
+    "lat": 38.159814,
+    "lon": -119.811815,
+    "category": "lake",
+    "near_water": "Piute Lake",
+    "water_distance_m": 253.7,
+    "local_grade": 0.061
+  },
+  {
+    "name": "near Piute Lake",
+    "node_id": 1931828410,
+    "lat": 38.162524,
+    "lon": -119.812267,
+    "category": "lake",
+    "near_water": "Piute Lake",
+    "water_distance_m": 114.0,
+    "local_grade": 0.061
+  },
+  {
+    "name": "near Wire Lakes",
+    "node_id": 1931829356,
+    "lat": 38.179652,
+    "lon": -119.774597,
+    "category": "lake",
+    "near_water": "Wire Lakes",
+    "water_distance_m": 303.4,
+    "local_grade": 0.005
+  },
+  {
+    "name": "near Starvation Lake",
+    "node_id": 1931829467,
+    "lat": 38.183981,
+    "lon": -119.765031,
+    "category": "lake",
+    "near_water": "Starvation Lake",
+    "water_distance_m": 356.9,
+    "local_grade": 0.039
+  },
+  {
+    "name": "near Emigrant Meadow Lake",
+    "node_id": 1931829555,
+    "lat": 38.20389,
+    "lon": -119.644518,
+    "category": "lake",
+    "near_water": "Emigrant Meadow Lake",
+    "water_distance_m": 366.2,
+    "local_grade": 0.033
+  },
+  {
+    "name": "near Kennedy Lake",
+    "node_id": 1931830583,
+    "lat": 38.262217,
+    "lon": -119.65178,
+    "category": "lake",
+    "near_water": "Kennedy Lake",
+    "water_distance_m": 207.2,
+    "local_grade": 0.031
+  },
+  {
+    "name": "near Blackbird Lake",
+    "node_id": 2351810315,
+    "lat": 38.178877,
+    "lon": -119.673877,
+    "category": "lake",
+    "near_water": "Blackbird Lake",
+    "water_distance_m": 246.8,
+    "local_grade": 0.057
+  },
+  {
+    "name": "near Secret Lake",
+    "node_id": 4419686518,
+    "lat": 38.303048,
+    "lon": -119.543538,
+    "category": "lake",
+    "near_water": "Secret Lake",
+    "water_distance_m": 624.8,
+    "local_grade": 0.043
+  },
+  {
+    "name": "near Deer Lake",
+    "node_id": 5064385809,
+    "lat": 38.16367,
+    "lon": -119.757685,
+    "category": "lake",
+    "near_water": "Deer Lake",
+    "water_distance_m": 465.0,
+    "local_grade": 0.05
+  },
+  {
+    "name": "near Y Meadows Reservoir",
+    "node_id": 5910985167,
+    "lat": 38.190466,
+    "lon": -119.830181,
+    "category": "lake",
+    "near_water": "Y Meadows Reservoir",
+    "water_distance_m": 371.3,
+    "local_grade": 0.031
+  },
+  {
+    "name": "near Relief Reservoir",
+    "node_id": 5924429188,
+    "lat": 38.269239,
+    "lon": -119.734409,
+    "category": "lake",
+    "near_water": "Relief Reservoir",
+    "water_distance_m": 331.1,
+    "local_grade": 0.0
+  },
+  {
+    "name": "near Relief Reservoir",
+    "node_id": 5924429206,
+    "lat": 38.268928,
+    "lon": -119.735304,
+    "category": "lake",
+    "near_water": "Relief Reservoir",
+    "water_distance_m": 281.0,
+    "local_grade": 0.097
+  },
+  {
+    "name": "near Relief Reservoir",
+    "node_id": 5924429214,
+    "lat": 38.269439,
+    "lon": -119.736503,
+    "category": "lake",
+    "near_water": "Relief Reservoir",
+    "water_distance_m": 164.1,
+    "local_grade": 0.097
+  },
+  {
+    "name": "near Koenig Lake",
+    "node_id": 7799996682,
+    "lat": 38.280555,
+    "lon": -119.622646,
+    "category": "lake",
+    "near_water": "Koenig Lake",
+    "water_distance_m": 511.2,
+    "local_grade": 0.099
+  },
+  {
+    "name": "near Koenig Lake",
+    "node_id": 7800005812,
+    "lat": 38.281613,
+    "lon": -119.626758,
+    "category": "lake",
+    "near_water": "Koenig Lake",
+    "water_distance_m": 139.2,
+    "local_grade": 0.04
+  },
+  {
+    "name": "near Koenig Lake",
+    "node_id": 7800005846,
+    "lat": 38.283203,
+    "lon": -119.62589,
+    "category": "lake",
+    "near_water": "Koenig Lake",
+    "water_distance_m": 279.7,
+    "local_grade": 0.0
+  },
+  {
+    "name": "near Powell Lake",
+    "node_id": 7891641630,
+    "lat": 38.205021,
+    "lon": -119.858748,
+    "category": "lake",
+    "near_water": "Powell Lake",
+    "water_distance_m": 135.1,
+    "local_grade": 0.04
+  },
+  {
+    "name": "near Powell Lake",
+    "node_id": 7891641654,
+    "lat": 38.202077,
+    "lon": -119.859637,
+    "category": "lake",
+    "near_water": "Powell Lake",
+    "water_distance_m": 280.1,
+    "local_grade": 0.04
+  },
+  {
+    "name": "near Beartrap Lake",
+    "node_id": 7898281096,
+    "lat": 38.191514,
+    "lon": -119.514384,
+    "category": "lake",
+    "near_water": "Beartrap Lake",
+    "water_distance_m": 107.1,
+    "local_grade": 0.089
+  },
+  {
+    "name": "near Leavitt Lake",
+    "node_id": 7929399770,
+    "lat": 38.276157,
+    "lon": -119.617471,
+    "category": "lake",
+    "near_water": "Leavitt Lake",
+    "water_distance_m": 291.5,
+    "local_grade": 0.0
+  },
+  {
+    "name": "near Leavitt Lake",
+    "node_id": 7929399771,
+    "lat": 38.276385,
+    "lon": -119.617144,
+    "category": "lake",
+    "near_water": "Leavitt Lake",
+    "water_distance_m": 325.3,
+    "local_grade": 0.084
+  },
+  {
+    "name": "near Leavitt Lake",
+    "node_id": 7929399778,
+    "lat": 38.276656,
+    "lon": -119.615853,
+    "category": "lake",
+    "near_water": "Leavitt Lake",
+    "water_distance_m": 406.6,
+    "local_grade": 0.084
+  },
+  {
+    "name": "near Leavitt Lake",
+    "node_id": 7929399779,
+    "lat": 38.276604,
+    "lon": -119.615381,
+    "category": "lake",
+    "near_water": "Leavitt Lake",
+    "water_distance_m": 427.4,
+    "local_grade": 0.063
+  },
+  {
+    "name": "near Leavitt Lake",
+    "node_id": 7929399799,
+    "lat": 38.27596,
+    "lon": -119.61487,
+    "category": "lake",
+    "near_water": "Leavitt Lake",
+    "water_distance_m": 409.7,
+    "local_grade": 0.057
+  },
+  {
+    "name": "near Leavitt Lake",
+    "node_id": 7929399823,
+    "lat": 38.278107,
+    "lon": -119.61753,
+    "category": "lake",
+    "near_water": "Leavitt Lake",
+    "water_distance_m": 500.7,
+    "local_grade": 0.082
+  },
+  {
+    "name": "near Bear Lake",
+    "node_id": 8037446024,
+    "lat": 38.176983,
+    "lon": -119.861714,
+    "category": "lake",
+    "near_water": "Bear Lake",
+    "water_distance_m": 299.4,
+    "local_grade": 0.011
+  },
+  {
+    "name": "near Dorothy Lake",
+    "node_id": 8538382290,
+    "lat": 38.176958,
+    "lon": -119.592458,
+    "category": "lake",
+    "near_water": "Dorothy Lake",
+    "water_distance_m": 153.5,
+    "local_grade": 0.017
+  },
+  {
+    "name": "near Dorothy Lake",
+    "node_id": 8538382301,
+    "lat": 38.172235,
+    "lon": -119.592093,
+    "category": "lake",
+    "near_water": "Dorothy Lake",
+    "water_distance_m": 386.2,
+    "local_grade": 0.003
+  },
+  {
+    "name": "near Dorothy Lake",
+    "node_id": 8538382313,
+    "lat": 38.174365,
+    "lon": -119.59492,
+    "category": "lake",
+    "near_water": "Dorothy Lake",
+    "water_distance_m": 314.7,
+    "local_grade": 0.034
+  },
+  {
+    "name": "near Leavitt Lake",
+    "node_id": 8738308312,
+    "lat": 38.270487,
+    "lon": -119.619116,
+    "category": "lake",
+    "near_water": "Leavitt Lake",
+    "water_distance_m": 358.1,
+    "local_grade": 0.041
+  },
+  {
+    "name": "near Latopie Lake",
+    "node_id": 8738309136,
+    "lat": 38.287523,
+    "lon": -119.636244,
+    "category": "lake",
+    "near_water": "Latopie Lake",
+    "water_distance_m": 170.9,
+    "local_grade": 0.0
+  },
+  {
+    "name": "near Leavitt Lake",
+    "node_id": 8738412987,
+    "lat": 38.272629,
+    "lon": -119.615799,
+    "category": "lake",
+    "near_water": "Leavitt Lake",
+    "water_distance_m": 267.3,
+    "local_grade": 0.0
+  },
+  {
+    "name": "near Leavitt Lake",
+    "node_id": 8738412994,
+    "lat": 38.271951,
+    "lon": -119.615817,
+    "category": "lake",
+    "near_water": "Leavitt Lake",
+    "water_distance_m": 306.5,
+    "local_grade": 0.063
+  },
+  {
+    "name": "near Leavitt Lake",
+    "node_id": 8738412995,
+    "lat": 38.271719,
+    "lon": -119.615532,
+    "category": "lake",
+    "near_water": "Leavitt Lake",
+    "water_distance_m": 342.0,
+    "local_grade": 0.0
+  },
+  {
+    "name": "near Kennedy Lake",
+    "node_id": 8738518218,
+    "lat": 38.258696,
+    "lon": -119.650358,
+    "category": "lake",
+    "near_water": "Kennedy Lake",
+    "water_distance_m": 257.4,
+    "local_grade": 0.0
+  },
+  {
+    "name": "near Kennedy Lake",
+    "node_id": 8738518230,
+    "lat": 38.259308,
+    "lon": -119.649201,
+    "category": "lake",
+    "near_water": "Kennedy Lake",
+    "water_distance_m": 300.3,
+    "local_grade": 0.0
+  },
+  {
+    "name": "near Kennedy Lake",
+    "node_id": 8738518233,
+    "lat": 38.258907,
+    "lon": -119.648209,
+    "category": "lake",
+    "near_water": "Kennedy Lake",
+    "water_distance_m": 397.6,
+    "local_grade": 0.034
+  },
+  {
+    "name": "near Kennedy Lake",
+    "node_id": 8738518236,
+    "lat": 38.258739,
+    "lon": -119.648771,
+    "category": "lake",
+    "near_water": "Kennedy Lake",
+    "water_distance_m": 362.8,
+    "local_grade": 0.03
+  },
+  {
+    "name": "near Kennedy Lake",
+    "node_id": 8738518244,
+    "lat": 38.260269,
+    "lon": -119.649122,
+    "category": "lake",
+    "near_water": "Kennedy Lake",
+    "water_distance_m": 281.6,
+    "local_grade": 0.089
+  },
+  {
+    "name": "near Kennedy Lake",
+    "node_id": 8738518249,
+    "lat": 38.258792,
+    "lon": -119.648822,
+    "category": "lake",
+    "near_water": "Kennedy Lake",
+    "water_distance_m": 356.1,
+    "local_grade": 0.0
+  },
+  {
+    "name": "near Kennedy Lake",
+    "node_id": 8738518273,
+    "lat": 38.260006,
+    "lon": -119.64939,
+    "category": "lake",
+    "near_water": "Kennedy Lake",
+    "water_distance_m": 261.6,
+    "local_grade": 0.079
+  },
+  {
+    "name": "near Kennedy Lake",
+    "node_id": 8738526565,
+    "lat": 38.262006,
+    "lon": -119.653705,
+    "category": "lake",
+    "near_water": "Kennedy Lake",
+    "water_distance_m": 213.9,
+    "local_grade": 0.0
+  },
+  {
+    "name": "near Relief Reservoir",
+    "node_id": 8740948306,
+    "lat": 38.269126,
+    "lon": -119.734956,
+    "category": "lake",
+    "near_water": "Relief Reservoir",
+    "water_distance_m": 294.2,
+    "local_grade": 0.0
+  },
+  {
+    "name": "near Lake Harriet",
+    "node_id": 8740994892,
+    "lat": 38.184674,
+    "lon": -119.566984,
+    "category": "lake",
+    "near_water": "Lake Harriet",
+    "water_distance_m": 263.4,
+    "local_grade": 0.058
+  },
+  {
+    "name": "near Lake Harriet",
+    "node_id": 8741009427,
+    "lat": 38.189263,
+    "lon": -119.569207,
+    "category": "lake",
+    "near_water": "Lake Harriet",
+    "water_distance_m": 337.9,
+    "local_grade": 0.058
+  },
+  {
+    "name": "near Kennedy Lake",
+    "node_id": 8748482572,
+    "lat": 38.262289,
+    "lon": -119.652874,
+    "category": "lake",
+    "near_water": "Kennedy Lake",
+    "water_distance_m": 214.3,
+    "local_grade": 0.031
+  },
+  {
+    "name": "near Relief Reservoir",
+    "node_id": 8748575916,
+    "lat": 38.271999,
+    "lon": -119.732324,
+    "category": "lake",
+    "near_water": "Relief Reservoir",
+    "water_distance_m": 514.1,
+    "local_grade": 0.013
+  },
+  {
+    "name": "near Dorothy Lake",
+    "node_id": 8748782057,
+    "lat": 38.1768,
+    "lon": -119.59226,
+    "category": "lake",
+    "near_water": "Dorothy Lake",
+    "water_distance_m": 130.7,
+    "local_grade": 0.0
+  },
+  {
+    "name": "near Leavitt Lake",
+    "node_id": 9028909660,
+    "lat": 38.278772,
+    "lon": -119.613849,
+    "category": "lake",
+    "near_water": "Leavitt Lake",
+    "water_distance_m": 699.7,
+    "local_grade": 0.063
+  },
+  {
+    "name": "near Lane Lake",
+    "node_id": 9041715884,
+    "lat": 38.290821,
+    "lon": -119.540949,
+    "category": "lake",
+    "near_water": "Lane Lake",
+    "water_distance_m": 174.3,
+    "local_grade": 0.039
+  },
+  {
+    "name": "near Wood Lake",
+    "node_id": 9047164719,
+    "lat": 38.150647,
+    "lon": -119.745261,
+    "category": "lake",
+    "near_water": "Wood Lake",
+    "water_distance_m": 479.4,
+    "local_grade": 0.036
+  },
+  {
+    "name": "near Buck Lake",
+    "node_id": 9112688646,
+    "lat": 38.165194,
+    "lon": -119.741895,
+    "category": "lake",
+    "near_water": "Buck Lake",
+    "water_distance_m": 269.0,
+    "local_grade": 0.017
+  },
+  {
+    "name": "near Koenig Lake",
+    "node_id": 9407651417,
+    "lat": 38.282473,
+    "lon": -119.623797,
+    "category": "lake",
+    "near_water": "Koenig Lake",
+    "water_distance_m": 409.5,
+    "local_grade": 0.024
+  },
+  {
+    "name": "near Long Lake",
+    "node_id": 10539919529,
+    "lat": 38.178535,
+    "lon": -119.754099,
+    "category": "lake",
+    "near_water": "Long Lake",
+    "water_distance_m": 352.2,
+    "local_grade": 0.03
+  },
+  {
+    "name": "near Kennedy Lake",
+    "node_id": 11538736600,
+    "lat": 38.262,
+    "lon": -119.655723,
+    "category": "lake",
+    "near_water": "Kennedy Lake",
+    "water_distance_m": 344.2,
+    "local_grade": 0.008
+  },
+  {
+    "name": "near Poore Lake",
+    "node_id": 13205110768,
+    "lat": 38.315686,
+    "lon": -119.524631,
+    "category": "lake",
+    "near_water": "Poore Lake",
+    "water_distance_m": 660.8,
+    "local_grade": 0.005
+  },
+  {
+    "name": "near Poore Lake",
+    "node_id": 13574830733,
+    "lat": 38.306644,
+    "lon": -119.530987,
+    "category": "lake",
+    "near_water": "Poore Lake",
+    "water_distance_m": 607.1,
+    "local_grade": 0.047
+  },
+  {
+    "name": "near Secret Lake",
+    "node_id": 13574830847,
+    "lat": 38.305909,
+    "lon": -119.539071,
+    "category": "lake",
+    "near_water": "Secret Lake",
+    "water_distance_m": 148.3,
+    "local_grade": 0.032
+  }
+]
