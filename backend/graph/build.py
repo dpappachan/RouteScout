@@ -28,7 +28,6 @@ from . import elevation
 
 DATA_DIR = Path(__file__).resolve().parents[2] / "data"
 GRAPH_PATH = DATA_DIR / "sierra_graph.graphml"
-LEGACY_GRAPH_PATH = DATA_DIR / "yosemite_graph.graphml"
 
 # Keep OSMnx's Overpass cache inside data/ so the repo root stays tidy.
 ox.settings.cache_folder = str(DATA_DIR / "cache")
@@ -60,13 +59,6 @@ def build(rebuild: bool = False):
     if GRAPH_PATH.exists() and not rebuild:
         print(f"Loading cached graph: {GRAPH_PATH.name}")
         return ox.load_graphml(GRAPH_PATH)
-
-    # Smooth migration: if a legacy yosemite_graph.graphml exists but no
-    # sierra_graph.graphml, fall back to it so the app keeps working until
-    # the rebuild completes.
-    if LEGACY_GRAPH_PATH.exists() and not rebuild:
-        print(f"Loading legacy cached graph: {LEGACY_GRAPH_PATH.name}")
-        return ox.load_graphml(LEGACY_GRAPH_PATH)
 
     print(f"Downloading OSM trail network for: {PLACE}")
     print(f"  bbox: N={BBOX['north']} S={BBOX['south']} W={BBOX['west']} E={BBOX['east']}")

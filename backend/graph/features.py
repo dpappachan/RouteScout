@@ -22,7 +22,6 @@ import pandas as pd
 from .build import BBOX, DATA_DIR, PLACE, build
 
 FEATURES_PATH = DATA_DIR / "sierra_features.json"
-LEGACY_FEATURES_PATH = DATA_DIR / "yosemite_features.json"
 
 # A feature farther than this from any trail node is effectively unreachable
 # and just pollutes the optimizer's scoring. Half-km matches hiker intuition.
@@ -172,14 +171,6 @@ def _audit_sac_scale(graph) -> None:
     if distribution:
         for grade, n in distribution.most_common():
             print(f"    {grade}: {n}")
-
-
-def features_path() -> Path:
-    """Returns the live features file path, falling back to the legacy
-    yosemite_features.json so the app keeps working until the rebuild."""
-    if FEATURES_PATH.exists():
-        return FEATURES_PATH
-    return LEGACY_FEATURES_PATH
 
 
 if __name__ == "__main__":

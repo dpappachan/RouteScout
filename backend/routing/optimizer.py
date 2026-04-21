@@ -70,7 +70,29 @@ def plan(
     trailheads: list[dict],
     camps: list[dict],
     spec: TripSpec,
-    beam_width: int = 8,
+    beam_width: int = 12,
+    adaptive: bool = False,
+) -> Itinerary | None:
+    """Plan an itinerary. If `adaptive=True`, transparently widens the beam
+    (×2, ×3) before declaring infeasibility — feature-preference scoring can
+    push the top-K toward dead-end branches that fail the penultimate-day
+    lookahead, and a wider beam gives the search more breathing room."""
+    if adaptive:
+        for bw in (beam_width, beam_width * 2, beam_width * 3):
+            result = _plan_once(graph, features, trailheads, camps, spec, bw)
+            if result is not None:
+                return result
+        return None
+    return _plan_once(graph, features, trailheads, camps, spec, beam_width)
+
+
+def _plan_once(
+    graph: nx.MultiDiGraph,
+    features: list[dict],
+    trailheads: list[dict],
+    camps: list[dict],
+    spec: TripSpec,
+    beam_width: int,
 ) -> Itinerary | None:
     trailheads_by_name: dict[str, dict] = {t["name"]: t for t in trailheads}
     if spec.start not in trailheads_by_name:

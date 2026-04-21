@@ -23,7 +23,6 @@ from .build import DATA_DIR, build
 # the contents now span the wider Sierra coverage area.
 TRAILHEADS_SOURCE = DATA_DIR / "yosemite_trailheads.json"
 TRAILHEADS_SNAPPED = DATA_DIR / "sierra_trailheads_snapped.json"
-LEGACY_TRAILHEADS_SNAPPED = DATA_DIR / "yosemite_trailheads_snapped.json"
 
 MAX_SNAP_DISTANCE_M = 1500  # trailheads sit by the road — allow more tolerance
 
@@ -43,8 +42,6 @@ def build_trailheads(force: bool = False) -> list[dict]:
     start."""
     if TRAILHEADS_SNAPPED.exists() and not force:
         return json.loads(TRAILHEADS_SNAPPED.read_text())
-    if LEGACY_TRAILHEADS_SNAPPED.exists() and not force:
-        return json.loads(LEGACY_TRAILHEADS_SNAPPED.read_text())
 
     graph = build()
     raw = json.loads(TRAILHEADS_SOURCE.read_text())

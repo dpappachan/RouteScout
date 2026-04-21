@@ -13,7 +13,7 @@ import matplotlib.pyplot as plt
 import osmnx as ox
 
 from .build import DATA_DIR, PLACE, build
-from .features import features_path
+from .features import FEATURES_PATH
 
 OUTPUT_PATH = DATA_DIR / "sierra_graph.png"
 
@@ -29,10 +29,9 @@ CATEGORY_STYLE = {
 
 
 def _load_features() -> list[dict]:
-    p = features_path()
-    if not p.exists():
+    if not FEATURES_PATH.exists():
         return []
-    return json.loads(p.read_text())
+    return json.loads(FEATURES_PATH.read_text())
 
 
 def render(save_to: Path = OUTPUT_PATH) -> Path:
