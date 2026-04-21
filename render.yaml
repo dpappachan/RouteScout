@@ -1,0 +1,32 @@
+# Render service descriptor for the RouteScout backend.
+#
+# Deployed instance reads the GEMINI_API_KEY from a Render env-var (set in
+# the dashboard, not committed). Caches under /app/data are pre-built into
+# the Docker image so the first request doesn't trigger a graph rebuild.
+
+services:
+  - type: web
+    name: routescout-backend
+    runtime: docker
+    plan: free
+    rootDir: .
+    dockerfilePath: backend/Dockerfile
+    dockerContext: .
+    healthCheckPath: /health
+    envVars:
+      - key: GEMINI_API_KEY
+        sync: false  # set in dashboard
+      - key: GEMINI_MODEL
+        value: gemini-2.5-flash-lite
+      - key: CORS_ORIGINS
+        value: https://routescout.vercel.app
+      - key: PLAN_RATE_LIMIT
+        value: 30/hour
+      - key: DAILY_PLAN_CAP
+        value: 300
+      - key: BEAM_WIDTH
+        value: 12
+      - key: HOST
+        value: 0.0.0.0
+      - key: PORT
+        value: 8000
