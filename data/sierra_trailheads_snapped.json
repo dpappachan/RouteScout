@@ -253,12 +253,12 @@
   },
   {
     "name": "Tenaya Lake trailhead",
-    "lat": 37.8287,
-    "lon": -119.4483,
+    "lat": 37.831,
+    "lon": -119.452,
     "region": "Tioga Road",
-    "accesses": "Tenaya Lake, Sunrise Lakes, Clouds Rest via Tenaya, Mildred Lake",
-    "node_id": 3736959931,
-    "snap_distance_m": 472.6
+    "accesses": "Tenaya Lake, Mildred Lake, Cathedral Pass via Tenaya, lake-shore loop",
+    "node_id": 3736959973,
+    "snap_distance_m": 297.5
   },
   {
     "name": "Tuolumne Grove trailhead",
