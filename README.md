@@ -27,7 +27,7 @@ About 2,200 trail nodes, 5,200 edges, 343 named features (175 lakes, 72 peaks, 3
 
 ## Stack
 
-Python 3.12, FastAPI, OSMnx, NetworkX, scikit-learn (for snap-to-graph), Gemini 2.5 Flash-Lite. React 19 + Vite + Tailwind on the frontend with Leaflet for the map and recharts for the elevation chart. OpenTopoMap tiles. Hosted on Render (backend, Docker) + Vercel (frontend).
+Python, FastAPI, OSMnx, NetworkX, scikit-learn, Gemini 2.5 Flash-Lite. React 19 + Vite + Tailwind on the frontend with Leaflet for the map and recharts for the elevation chart. OpenTopoMap tiles. Hosted on Render (backend, Docker) + Vercel (frontend).
 
 ## Running it locally
 
