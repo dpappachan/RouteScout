@@ -10,6 +10,7 @@ export function NarrativeBlock({ response }: Props) {
     response.elapsed_seconds.parse +
     response.elapsed_seconds.plan +
     response.elapsed_seconds.narrate;
+
   return (
     <section className="bg-white border border-stone-200 rounded-xl p-5 shadow-sm rs-fade">
       <header className="flex items-center justify-between mb-3 gap-3">
@@ -17,7 +18,7 @@ export function NarrativeBlock({ response }: Props) {
           Trip description
         </h3>
         <span className="flex items-center gap-1 text-[11px] text-stone-400 font-mono">
-          <Clock size={10} /> {total.toFixed(1)}s total
+          <Clock size={10} /> {total.toFixed(1)}s
         </span>
       </header>
       <div className="text-[15px] text-stone-800 leading-relaxed whitespace-pre-line font-normal">

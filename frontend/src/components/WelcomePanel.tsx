@@ -1,3 +1,5 @@
+import { useState } from "react";
+
 interface Props {
   onSample: (prompt: string) => void;
 }
@@ -10,18 +12,46 @@ const EXAMPLES = [
   "Easy overnight trip to a lake",
 ];
 
+// Personal JMT photos shot on a Fujifilm; one is picked at random per page load.
+const PHOTOS = [
+  { src: "/photos/jmt-1.jpg", caption: "Half Dome from Olmsted Point" },
+  { src: "/photos/jmt-2.jpg", caption: "Half Dome, late afternoon" },
+  { src: "/photos/jmt-3.jpg", caption: "Half Dome, vertical" },
+  { src: "/photos/jmt-4.jpg", caption: "Lyell Canyon" },
+  { src: "/photos/jmt-5.jpg", caption: "The Minarets, Ansel Adams Wilderness" },
+];
+
 export function WelcomePanel({ onSample }: Props) {
+  // useState's lazy initializer runs once at mount — random pick that stays
+  // stable for the rest of the session, no flash on rerender.
+  const [photo] = useState(() => PHOTOS[Math.floor(Math.random() * PHOTOS.length)]);
+
   return (
-    <div className="max-w-2xl mx-auto py-10">
-      <h1 className="text-2xl font-medium text-stone-900 tracking-tight">
-        Type a hiking trip request.
-      </h1>
-      <p className="mt-2 text-sm text-stone-600">
-        Plain English — duration, region, distance, what you'd like to see. The
-        planner picks a trailhead, routes a day-by-day path through the Yosemite
-        trail graph, and writes it up.
+    <div className="max-w-3xl mx-auto py-6">
+      <div className="relative w-full h-64 md:h-80 rounded-2xl overflow-hidden mb-8 shadow-sm bg-stone-100">
+        <img
+          src={photo.src}
+          alt={photo.caption}
+          className="absolute inset-0 w-full h-full object-cover"
+          loading="eager"
+          decoding="async"
+        />
+        <div className="absolute inset-0 bg-gradient-to-t from-stone-900/70 via-stone-900/10 to-transparent" />
+        <div className="absolute bottom-4 left-5 right-5 flex items-end justify-between gap-4">
+          <h1 className="text-white text-2xl md:text-3xl font-medium tracking-tight drop-shadow">
+            Plan a hike across the Sierra.
+          </h1>
+          <span className="hidden sm:block text-[10px] uppercase tracking-wider text-white/70">
+            {photo.caption}
+          </span>
+        </div>
+      </div>
+      <p className="text-sm text-stone-600 max-w-xl">
+        Type a hiking trip request in plain English — duration, region, distance,
+        what you'd like to see. The planner picks a trailhead, routes a day-by-day
+        path through the OpenStreetMap trail graph, and writes it up.
       </p>
-      <div className="mt-8 flex flex-wrap gap-2">
+      <div className="mt-6 flex flex-wrap gap-2">
         {EXAMPLES.map((p) => (
           <button
             key={p}
