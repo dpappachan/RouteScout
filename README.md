@@ -15,9 +15,6 @@ A hiker types something in plain English. Behind the scenes:
 3. **Generate** — Gemini writes the trip narrative grounded only on the resolved itinerary (no hallucination of features or distances).
 4. **Render** — Frontend draws the route on OpenTopoMap tiles with elevation profile, day-by-day breakdown, and wilderness-specific regulation notes.
 
-## Why this is technically interesting
-
-Most "AI-powered X" portfolio projects are prompt-engineering wrappers. The work here is in the planner that runs *underneath* the LLM.
 
 - **A\* + beam search hybrid.** A\* with great-circle distance heuristic for single-day shortest paths. Beam search across overnight camp sequences for multi-day; states track visited edges so the scoring penalizes reused trails (no figure-8 routes pretending to be loops). Penultimate-day lookahead filter keeps the search from committing to camps with no feasible return path.
 - **Adaptive beam width.** When feature-preference scoring (e.g., "prefer lakes") pushes the top-K beam toward dead-end branches, the planner widens to 24 → 36 candidates before declaring infeasibility. Same effect as IDA\* — try harder before giving up.
