@@ -48,6 +48,13 @@ export interface Regulations {
   notes: string[];
 }
 
+export interface TrailheadInfo {
+  name: string;
+  lat: number;
+  lon: number;
+  region: string;
+}
+
 export type Difficulty = "easy" | "moderate" | "strenuous" | "very strenuous";
 
 export interface PlanResponse {
@@ -58,6 +65,8 @@ export interface PlanResponse {
   score: number;
   difficulty: Difficulty;
   estimated_hours_per_day: number[];
+  start_trailhead: TrailheadInfo;
+  end_trailhead: TrailheadInfo;
   days: DayPlan[];
   narrative: string;
   regulations: Regulations;

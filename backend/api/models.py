@@ -59,6 +59,17 @@ class Regulations(BaseModel):
     notes: list[str]
 
 
+class TrailheadInfo(BaseModel):
+    """Used for the start/end map markers. Coords come from the curated
+    trailhead JSON (where the parking lot actually is), NOT from the
+    snapped trail-graph node — those can sit hundreds of meters away and
+    looked wrong on the map (a 'parking' pin partway up a peak)."""
+    name: str
+    lat: float
+    lon: float
+    region: str
+
+
 class PlanResponse(BaseModel):
     prompt: str
     parsed: ParsedSpec
@@ -67,6 +78,8 @@ class PlanResponse(BaseModel):
     score: float
     difficulty: str  # "easy" | "moderate" | "strenuous" | "very strenuous"
     estimated_hours_per_day: list[float]  # one entry per day
+    start_trailhead: TrailheadInfo
+    end_trailhead: TrailheadInfo
     days: list[DayPlan]
     narrative: str
     regulations: Regulations

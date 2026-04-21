@@ -15,7 +15,7 @@ from backend.llm.parser import ParsedTripSpec, parse
 from backend.routing.optimizer import plan
 from backend.routing.trip_spec import TripSpec
 
-from .models import ParsedSpec, PlanResponse
+from .models import ParsedSpec, PlanResponse, TrailheadInfo
 from .regulations import regulations_for
 from .response_builders import build_day_plans, difficulty_label, estimate_daily_hours
 from .state import STATE
@@ -69,9 +69,9 @@ def plan_from_prompt(prompt: str, *, beam_width: int) -> PlanResponse:
     timings["narrate"] = round(time.perf_counter() - t0, 3)
 
     # 4. Assemble the public PlanResponse
-    start_trailhead = next(
-        (t for t in STATE.trailheads if t["name"] == parsed_spec.start), None,
-    )
+    start_trailhead = _find_trailhead(parsed_spec.start)
+    end_trailhead = _find_trailhead(parsed_spec.end or parsed_spec.start)
+
     return PlanResponse(
         prompt=prompt,
         parsed=_parsed_spec_to_public(parsed_spec),
@@ -80,10 +80,30 @@ def plan_from_prompt(prompt: str, *, beam_width: int) -> PlanResponse:
         score=round(itinerary.score, 3),
         difficulty=difficulty_label(itinerary),
         estimated_hours_per_day=estimate_daily_hours(itinerary),
+        start_trailhead=_to_trailhead_info(start_trailhead),
+        end_trailhead=_to_trailhead_info(end_trailhead),
         days=build_day_plans(STATE.graph, itinerary),
         narrative=narrative,
         regulations=regulations_for(STATE.graph, itinerary, parsed_spec, start_trailhead),
         elapsed_seconds=timings,
+    )
+
+
+def _find_trailhead(name: str) -> dict:
+    """Look up a trailhead by name; raise loudly if missing (parser already
+    validated this, so it shouldn't fail in practice)."""
+    th = next((t for t in STATE.trailheads if t["name"] == name), None)
+    if th is None:
+        raise ValueError(f"Trailhead {name!r} not found in state.")
+    return th
+
+
+def _to_trailhead_info(th: dict) -> TrailheadInfo:
+    """Public response uses the curated parking-lot lat/lon, NOT the snapped
+    graph node, so the map pin sits where the car actually parks."""
+    return TrailheadInfo(
+        name=th["name"], lat=th["lat"], lon=th["lon"],
+        region=th.get("region", ""),
     )
 
 

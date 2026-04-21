@@ -51,10 +51,16 @@ const FEATURE_COLOR: Record<FeatureCategory, string> = {
 function FitBounds({ response }: { response: PlanResponse }) {
   const map = useMap();
   useEffect(() => {
-    const allCoords = response.days.flatMap((d) => d.path_coords);
+    // Include the trailhead in the bounds — it's on the curated parking-lot
+    // coords, not the snapped graph node, so it can sit slightly outside the
+    // route's bbox.
+    const allCoords: [number, number][] = [
+      [response.start_trailhead.lat, response.start_trailhead.lon],
+      [response.end_trailhead.lat, response.end_trailhead.lon],
+      ...response.days.flatMap((d) => d.path_coords as [number, number][]),
+    ];
     if (allCoords.length > 1) {
-      const bounds = L.latLngBounds(allCoords as [number, number][]);
-      map.fitBounds(bounds, { padding: [32, 32], animate: true });
+      map.fitBounds(L.latLngBounds(allCoords), { padding: [32, 32], animate: true });
     }
   }, [response, map]);
   return null;
@@ -62,8 +68,15 @@ function FitBounds({ response }: { response: PlanResponse }) {
 
 export function MapView({ response, selectedDay }: Props) {
   const dim = (day: number) => selectedDay !== null && selectedDay !== day;
-  const startCoord = response.days[0]?.path_coords[0];
-  const center: [number, number] = startCoord ?? [37.85, -119.55];
+  const startCoord: [number, number] = [
+    response.start_trailhead.lat,
+    response.start_trailhead.lon,
+  ];
+  const endCoord: [number, number] = [
+    response.end_trailhead.lat,
+    response.end_trailhead.lon,
+  ];
+  const isLoop = response.start_trailhead.name === response.end_trailhead.name;
 
   // dedupe features across days; show each only once on the map
   const featuresShown = new Map<string, { feature: PlanResponse["days"][number]["features_passed"][number]; day: number }>();
@@ -77,7 +90,7 @@ export function MapView({ response, selectedDay }: Props) {
 
   return (
     <MapContainer
-      center={center}
+      center={startCoord}
       zoom={11}
       scrollWheelZoom
       className="h-full w-full"
@@ -142,28 +155,35 @@ export function MapView({ response, selectedDay }: Props) {
         );
       })}
 
-      {startCoord && (
-        <Marker position={startCoord} icon={TRAILHEAD_ICON}>
+      <Marker position={startCoord} icon={TRAILHEAD_ICON}>
+        <Popup>
+          <div className="text-xs font-semibold uppercase tracking-wider text-stone-500">
+            {isLoop ? "Trailhead — start & finish" : "Start trailhead"}
+          </div>
+          <div className="text-sm font-medium text-stone-900">
+            {response.start_trailhead.name}
+          </div>
+        </Popup>
+      </Marker>
+
+      {!isLoop && (
+        <Marker position={endCoord} icon={TRAILHEAD_ICON}>
           <Popup>
             <div className="text-xs font-semibold uppercase tracking-wider text-stone-500">
-              Trailhead — start &amp; finish
+              End trailhead
             </div>
-            <div className="text-sm font-medium text-stone-900">{response.parsed.start}</div>
+            <div className="text-sm font-medium text-stone-900">
+              {response.end_trailhead.name}
+            </div>
           </Popup>
         </Marker>
       )}
 
       {response.days.map((day, i) => {
-        // Skip last-day camp if it's the same node as the trailhead — the
-        // trailhead pin already shows the return point.
-        if (
-          i === response.days.length - 1 &&
-          startCoord &&
-          Math.abs(day.camp_lat - startCoord[0]) < 1e-4 &&
-          Math.abs(day.camp_lon - startCoord[1]) < 1e-4
-        ) {
-          return null;
-        }
+        // Skip the last-day "camp" — for loops/out-and-backs it's just the
+        // return to the trailhead, already marked by the trailhead pin.
+        const isReturnDay = i === response.days.length - 1 && day.camp_name === response.end_trailhead.name;
+        if (isReturnDay) return null;
         const color = DAY_COLORS[(day.day - 1) % DAY_COLORS.length];
         return (
           <Marker
