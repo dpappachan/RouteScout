@@ -29,37 +29,6 @@ About 2,200 trail nodes, 5,200 edges, 343 named features (175 lakes, 72 peaks, 3
 
 Python, FastAPI, OSMnx, NetworkX, scikit-learn, Gemini 2.5 Flash-Lite. React 19 + Vite + Tailwind on the frontend with Leaflet for the map and recharts for the elevation chart. OpenTopoMap tiles. Hosted on Render (backend, Docker) + Vercel (frontend).
 
-## Running it locally
-
-```bash
-# Backend (Python 3.12)
-cd backend && python3.12 -m venv venv && source venv/bin/activate
-pip install -r requirements.txt
-cp .env.example .env  # add your GEMINI_API_KEY
-uvicorn backend.api.main:app --reload
-
-# Frontend (Node ≥ 20.19, in another terminal)
-cd frontend && npm install && npm run dev
-```
-
-Open http://localhost:5173.
-
-The trail graph, features, trailheads, and camp candidates are precomputed and committed into `data/`, so first request is fast. To rebuild from scratch (takes a few minutes for the OSM download + elevation API calls):
-
-```bash
-python -m backend.graph.build --rebuild
-python -m backend.graph.features
-python -m backend.graph.trailheads
-python -m backend.graph.camps
-```
-
-## Tests
-
-```bash
-cd backend && pytest tests
-```
-
-26 tests covering the optimizer (per-day target scaling, edge dedupe, day-hike branch, unknown-start error), pathfinder (haversine, A\*, length sum, ascent-only gain), parser tolerant lookup (case, parens, suffix add/remove, "X or Y" disjunction), and trip spec invariants. Runs in about a second; no network or LLM calls.
 
 ## What's still rough
 
