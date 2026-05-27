@@ -30,7 +30,7 @@ About 2,200 trail nodes, 5,200 edges, 343 named features (175 lakes, 72 peaks, 3
 Python, FastAPI, OSMnx, NetworkX, scikit-learn, Gemini 2.5 Flash-Lite. React 19 + Vite + Tailwind on the frontend with Leaflet for the map and recharts for the elevation chart. OpenTopoMap tiles. Hosted on Render (backend, Docker) + Vercel (frontend).
 
 
-## What's still rough
+## WIP
 
 - **OSM coverage outside Yosemite is patchy.** Some Hoover and Emigrant trailheads can't snap to the hiking-only graph and got dropped. Mt Dana, Lukens Lake, and Mariposa Grove are in the source JSON but didn't make it through.
 - **Naismith time estimates ignore trail surface.** A talus scramble and a smooth fire road of the same distance get the same hours.
